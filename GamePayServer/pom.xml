@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.orange</groupId>
+		<artifactId>Ynd_WebGame_GameServer</artifactId>
+		<version>1</version>
+	</parent>
+	<artifactId>GamePayServer</artifactId>
+
+	<properties>
+		<!-- jdk -->
+		<java.version>17</java.version>
+		<!-- maven -->
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<!-- 编码 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<encoding>UTF-8</encoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.orange</groupId>
+			<artifactId>GameApiServer</artifactId>
+			<version>1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${springboot.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.apis/google-api-services-androidpublisher -->
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-androidpublisher</artifactId>
+			<version>v3-rev142-1.25.0</version>
+		</dependency>
+	</dependencies>
+	<!-- mvn dependency:copy-dependencies -DoutputDirectory=target/lib -->
+	<build>
+		<plugins>
+			<!-- 打的包太大，包含依赖文件 <plugin> <groupId>org.springframework.boot</groupId> 
+				<artifactId>spring-boot-maven-plugin</artifactId> <configuration> <mainClass>com.game.PublicMain</mainClass> 
+				</configuration> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.game.PayMain</mainClass> <!--//指定Springboot程序启动类 -->
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix> <!--//指定依赖的jar包相对于本程序jar的位置 -->
+						</manifest>
+						<manifestEntries>
+							<Class-Path>./</Class-Path>
+						</manifestEntries>
+					</archive>
+					<excludes>
+						<!-- //指定打包时要排除的文件,支持正则 -->
+						<exclude>logs/</exclude>
+						<exclude>application.yml</exclude>
+						<!--<exclude>banner.txt</exclude>-->
+						<exclude>log4j2.xml</exclude>
+						<exclude>redis.xml</exclude>
+						<exclude>start.sh</exclude>
+						<exclude>stop.sh</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- 把jar包拷贝到指定目录位置 -->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<copy todir="/data/editions/pay_orange">
+									<fileset dir="${project.build.directory}">
+										<include name="${project.artifactId}-${project.version}.jar" />
+									</fileset>
+								</copy>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- 把依赖jar包拷贝到指定目录位置 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>/data/editions/pay_orange/lib</outputDirectory>
+							<!-- 已存在的Release版本不重复copy -->
+							<overWriteReleases>false</overWriteReleases>
+							<!-- 已存在的SnapShot版本不重复copy -->
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<!-- 不存在或者有更新版本的依赖才copy -->
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+					<!-- 把依赖jar包拷贝到指定目录位置，target也放入一份，docker使用 -->
+					<execution>
+						<id>>copy-to-target</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/lib</outputDirectory>
+							<!-- 已存在的Release版本不重复copy -->
+							<overWriteReleases>false</overWriteReleases>
+							<!-- 已存在的SnapShot版本不重复copy -->
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<!-- 不存在或者有更新版本的依赖才copy -->
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redis>
+	<!-- redis客户端配置 -->
+	<redisInfo>
+		<key>server</key>
+		<ip>47.108.135.62</ip>
+		<port>6379</port>
+		<auth>xxx</auth>
+		<maxTotal>100</maxTotal>
+		<maxIdle>32</maxIdle>
+		<minIdle>0</minIdle>
+		<blockWhenExhausted>true</blockWhenExhausted>
+		<maxWaitMillis>0</maxWaitMillis>
+		<timeout>10000</timeout>
+		<testOnBorrow>false</testOnBorrow>
+		<testOnReturn>false</testOnReturn>
+		<showMemoryInfo>false</showMemoryInfo>
+		<!-- redis客户端配置 2 -->
+		<evictionPolicyClassName>org.apache.commons.pool2.impl.DefaultEvictionPolicy
+		</evictionPolicyClassName>
+		<jmxEnabled>true</jmxEnabled>
+		<jmxNamePrefix>pool</jmxNamePrefix>
+		<setLifo>true</setLifo>
+		<softMinEvictableIdleTimeMillis>1800000
+		</softMinEvictableIdleTimeMillis>
+		<!-- redis空闲资源检测 3 -->
+		<testWhileIdle>false</testWhileIdle>
+		<timeBetweenEvictionRunsMillis>-1</timeBetweenEvictionRunsMillis>
+		<minEvictableIdleTimeMillis>1800000</minEvictableIdleTimeMillis>
+		<numTestsPerEvictionRun>3</numTestsPerEvictionRun>
+	</redisInfo>
+	<redisInfo>
+		<key>center</key>
+		<ip>47.108.135.62</ip>
+		<port>6379</port>
+		<auth>xxx</auth>
+		<maxTotal>100</maxTotal>
+		<maxIdle>32</maxIdle>
+		<minIdle>0</minIdle>
+		<blockWhenExhausted>true</blockWhenExhausted>
+		<maxWaitMillis>0</maxWaitMillis>
+		<timeout>10000</timeout>
+		<testOnBorrow>false</testOnBorrow>
+		<testOnReturn>false</testOnReturn>
+		<showMemoryInfo>false</showMemoryInfo>
+		<!-- redis客户端配置 2 -->
+		<evictionPolicyClassName>org.apache.commons.pool2.impl.DefaultEvictionPolicy
+		</evictionPolicyClassName>
+		<jmxEnabled>true</jmxEnabled>
+		<jmxNamePrefix>pool</jmxNamePrefix>
+		<setLifo>true</setLifo>
+		<softMinEvictableIdleTimeMillis>1800000
+		</softMinEvictableIdleTimeMillis>
+		<!-- redis空闲资源检测 3 -->
+		<testWhileIdle>false</testWhileIdle>
+		<timeBetweenEvictionRunsMillis>-1</timeBetweenEvictionRunsMillis>
+		<minEvictableIdleTimeMillis>1800000</minEvictableIdleTimeMillis>
+		<numTestsPerEvictionRun>3</numTestsPerEvictionRun>
+	</redisInfo>
+</redis>

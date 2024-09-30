@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error" shutdownHook="disable">
+
+	<!-- Appenders输出源 -->
+	<Appenders>
+
+		<!-- Console：控制台输出源是将日志打印到控制台上，开发的时候一般都会配置，以便调试 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+		</Console>
+
+		<!-- center.log -->
+		<!-- 该输出源也是写入到文件，不同的是比File更加强大，可以指定当文件达到一定大小（如20MB）时，另起一个文件继续写入日志，另起一个文件就涉及到新文件的名字命名规则，因此需要配置文件命名规则 
+			这种方式更加实用，因为你不可能一直往一个文件中写，如果一直写，文件过大，打开就会卡死，也不便于查找日志。 -->
+		<!-- fileName 指定当前日志文件的位置和文件名称 -->
+		<!-- filePattern 指定当发生Rolling时，文件的转移和重命名规则 -->
+		<RollingRandomAccessFile name="game"
+			fileName="logs/center.log" filePattern="logs/center.log.%d{yyyyMMdd}-%i">
+			<!-- PatternLayout：日志格式，控制台或文件输出源（Console、File、RollingRandomAccessFile）都必须包含一个 -->
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+			<Policies>
+				<!-- 这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是%d{yyyyMMddHHmmss}-%i，最小的时间粒度是mm，即分钟 
+					interval表示1个单位时间 -->
+				<TimeBasedTriggeringPolicy interval="1" />
+				<!-- SizeBasedTriggeringPolicy 指定当文件体积大于size指定的值时，触发Rolling文件后缀+1 -->
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<!-- 生成文件个数 默认7个 -->
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+		<!-- 异步，需要通过AppenderRef来指定要对哪种输出源进行异步（一般用于配置RollingRandomAccessFile） -->
+		<Async name="AsyncAppenderGame">
+			<AppenderRef ref="game" />
+		</Async>
+
+		<!-- sessionclose.log -->
+		<!-- 该输出源也是写入到文件，不同的是比File更加强大，可以指定当文件达到一定大小（如20MB）时，另起一个文件继续写入日志，另起一个文件就涉及到新文件的名字命名规则，因此需要配置文件命名规则 
+			这种方式更加实用，因为你不可能一直往一个文件中写，如果一直写，文件过大，打开就会卡死，也不便于查找日志。 -->
+		<!-- fileName 指定当前日志文件的位置和文件名称 -->
+		<!-- filePattern 指定当发生Rolling时，文件的转移和重命名规则 -->
+		<RollingRandomAccessFile name="sessionclose"
+			fileName="logs/sessionclose.log"
+			filePattern="logs/sessionclose.log.%d{yyyyMMdd}-%i">
+			<!-- PatternLayout：日志格式，控制台或文件输出源（Console、File、RollingRandomAccessFile）都必须包含一个 -->
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+			<Policies>
+				<!-- 这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是%d{yyyyMMddHHmmss}-%i，最小的时间粒度是mm，即分钟 
+					interval表示1个单位时间 -->
+				<TimeBasedTriggeringPolicy interval="1" />
+				<!-- SizeBasedTriggeringPolicy 指定当文件体积大于size指定的值时，触发Rolling文件后缀+1 -->
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<!-- 生成文件个数 默认7个 -->
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+		<!-- 异步，需要通过AppenderRef来指定要对哪种输出源进行异步（一般用于配置RollingRandomAccessFile） -->
+		<Async name="AsyncAppenderSessionClose">
+			<AppenderRef ref="sessionclose" />
+		</Async>
+		
+		<!-- db.log -->
+		<!-- 该输出源也是写入到文件，不同的是比File更加强大，可以指定当文件达到一定大小（如20MB）时，另起一个文件继续写入日志，另起一个文件就涉及到新文件的名字命名规则，因此需要配置文件命名规则 
+			这种方式更加实用，因为你不可能一直往一个文件中写，如果一直写，文件过大，打开就会卡死，也不便于查找日志。 -->
+		<!-- fileName 指定当前日志文件的位置和文件名称 -->
+		<!-- filePattern 指定当发生Rolling时，文件的转移和重命名规则 -->
+		<RollingRandomAccessFile name="db"
+			fileName="logs/db.log" filePattern="logs/db.log.%d{yyyyMMdd}-%i">
+			<!-- PatternLayout：日志格式，控制台或文件输出源（Console、File、RollingRandomAccessFile）都必须包含一个 -->
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+			<Policies>
+				<!-- 这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是%d{yyyyMMddHHmmss}-%i，最小的时间粒度是mm，即分钟 
+					interval表示1个单位时间 -->
+				<TimeBasedTriggeringPolicy interval="1" />
+				<!-- SizeBasedTriggeringPolicy 指定当文件体积大于size指定的值时，触发Rolling文件后缀+1 -->
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<!-- 生成文件个数 默认7个 -->
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+		<!-- 异步，需要通过AppenderRef来指定要对哪种输出源进行异步（一般用于配置RollingRandomAccessFile） -->
+		<Async name="AsyncAppenderDb">
+			<AppenderRef ref="db" />
+		</Async>
+		
+		<!-- message.log -->
+		<!-- 该输出源也是写入到文件，不同的是比File更加强大，可以指定当文件达到一定大小（如20MB）时，另起一个文件继续写入日志，另起一个文件就涉及到新文件的名字命名规则，因此需要配置文件命名规则 
+			这种方式更加实用，因为你不可能一直往一个文件中写，如果一直写，文件过大，打开就会卡死，也不便于查找日志。 -->
+		<!-- fileName 指定当前日志文件的位置和文件名称 -->
+		<!-- filePattern 指定当发生Rolling时，文件的转移和重命名规则 -->
+		<RollingRandomAccessFile name="message"
+			fileName="logs/message.log" filePattern="logs/message.log.%d{yyyyMMdd}-%i">
+			<!-- PatternLayout：日志格式，控制台或文件输出源（Console、File、RollingRandomAccessFile）都必须包含一个 -->
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+			<Policies>
+				<!-- 这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是%d{yyyyMMddHHmmss}-%i，最小的时间粒度是mm，即分钟 
+					interval表示1个单位时间 -->
+				<TimeBasedTriggeringPolicy interval="1" />
+				<!-- SizeBasedTriggeringPolicy 指定当文件体积大于size指定的值时，触发Rolling文件后缀+1 -->
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<!-- 生成文件个数 默认7个 -->
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+		<!-- 异步，需要通过AppenderRef来指定要对哪种输出源进行异步（一般用于配置RollingRandomAccessFile） -->
+		<Async name="AsyncAppenderMessage">
+			<AppenderRef ref="message" />
+		</Async>
+		
+		<!-- redis.log -->
+		<!-- 该输出源也是写入到文件，不同的是比File更加强大，可以指定当文件达到一定大小（如20MB）时，另起一个文件继续写入日志，另起一个文件就涉及到新文件的名字命名规则，因此需要配置文件命名规则 
+			这种方式更加实用，因为你不可能一直往一个文件中写，如果一直写，文件过大，打开就会卡死，也不便于查找日志。 -->
+		<!-- fileName 指定当前日志文件的位置和文件名称 -->
+		<!-- filePattern 指定当发生Rolling时，文件的转移和重命名规则 -->
+		<RollingRandomAccessFile name="redis"
+			fileName="logs/redis.log" filePattern="logs/redis.log.%d{yyyyMMdd}-%i">
+			<!-- PatternLayout：日志格式，控制台或文件输出源（Console、File、RollingRandomAccessFile）都必须包含一个 -->
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+			<Policies>
+				<!-- 这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是%d{yyyyMMddHHmmss}-%i，最小的时间粒度是mm，即分钟 
+					interval表示1个单位时间 -->
+				<TimeBasedTriggeringPolicy interval="1" />
+				<!-- SizeBasedTriggeringPolicy 指定当文件体积大于size指定的值时，触发Rolling文件后缀+1 -->
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<!-- 生成文件个数 默认7个 -->
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+		<!-- 异步，需要通过AppenderRef来指定要对哪种输出源进行异步（一般用于配置RollingRandomAccessFile） -->
+		<Async name="AsyncAppenderRedis">
+			<AppenderRef ref="redis" />
+		</Async>
+		
+		<!-- redata.log -->
+		<!-- 该输出源也是写入到文件，不同的是比File更加强大，可以指定当文件达到一定大小（如20MB）时，另起一个文件继续写入日志，另起一个文件就涉及到新文件的名字命名规则，因此需要配置文件命名规则 
+			这种方式更加实用，因为你不可能一直往一个文件中写，如果一直写，文件过大，打开就会卡死，也不便于查找日志。 -->
+		<!-- fileName 指定当前日志文件的位置和文件名称 -->
+		<!-- filePattern 指定当发生Rolling时，文件的转移和重命名规则 -->
+		<RollingRandomAccessFile name="redata"
+			fileName="logs/redata.log" filePattern="logs/redata.log.%d{yyyyMMdd}-%i">
+			<!-- PatternLayout：日志格式，控制台或文件输出源（Console、File、RollingRandomAccessFile）都必须包含一个 -->
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss} %p][%t][%c{1}.%M() line=%L]%m%n" />
+			<Policies>
+				<!-- 这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是%d{yyyyMMddHHmmss}-%i，最小的时间粒度是mm，即分钟 
+					interval表示1个单位时间 -->
+				<TimeBasedTriggeringPolicy interval="1" />
+				<!-- SizeBasedTriggeringPolicy 指定当文件体积大于size指定的值时，触发Rolling文件后缀+1 -->
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<!-- 生成文件个数 默认7个 -->
+			<DefaultRolloverStrategy max="10" />
+		</RollingRandomAccessFile>
+		<!-- 异步，需要通过AppenderRef来指定要对哪种输出源进行异步（一般用于配置RollingRandomAccessFile） -->
+		<Async name="AsyncAppenderRedata">
+			<AppenderRef ref="redata" />
+		</Async>
+
+	</Appenders>
+
+	<Loggers>
+
+		<Logger name="com" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderGame" />
+		</Logger>
+
+		<Logger name="game" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderGame" />
+		</Logger>
+
+		<Logger name="SESSIONCLOSE" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderSessionClose" />
+		</Logger>
+
+		<Logger name="DB" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderDb" />
+		</Logger>
+
+		<Logger name="MESSAGE" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderMessage" />
+		</Logger>
+
+		<Logger name="REDIS" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderRedis" />
+		</Logger>
+
+		<Logger name="REDATA" level="info" additivity="true">
+			<AppenderRef ref="AsyncAppenderRedata" />
+		</Logger>
+
+		<root level="info">
+			<appender-ref ref="Console" />
+		</root>
+
+	</Loggers>
+
+</Configuration>

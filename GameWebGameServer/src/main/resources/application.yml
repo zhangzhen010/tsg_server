@@ -1,0 +1,119 @@
+#服务器基本信息
+server:
+  #服务器内网ip，用于上报grpc地址，当可以获取多个内网ip的时候，代码获取的不准确
+  serverIp: 192.168.0.106
+  #tcp端口（外网）
+  outPort: 0
+  #tcp端口（内网）
+  inPort: 0
+  #http端口（外网）
+  httpPort: 0
+  #grpc端口（内网）
+  grpcPort: 19451
+  #服务器Id
+  serverId: 21101
+  # 服务器的HTTP端口，默认为80
+  port: 19401
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # 连接数满后的排队数，默认为100
+    accept-count: 1000
+    threads:
+      # tomcat最大线程数，默认为200
+      max: 200
+      # Tomcat启动初始化的线程数，默认值10
+      min-spare: 5
+  #discord相关
+  discord:
+    # 机器人 Token
+    token: xxxxxxxxxxxxxxxxxxx
+    # 登录授权 clientId
+    clientId: xxxxxx
+    # 登录授权 clientSecret
+    clientSecret: xxxxxxxxxxxx
+    # 登录授权 accessTokenUrl
+    accessTokenUrl: https://discord.com/api/v10/oauth2/token
+    # 登录授权 redirectUrl
+    redirectUri: https://tokyostupidgames.io
+    # 登录授权 获取用户信息url
+    userInfoUrl: https://discord.com/api/v10/users/@me
+  # twitter相关
+  twitter:
+    # APP TokyoStupid
+    # 获取数据 apiKey
+    apiKey: xxxxxxxxxxx
+    # 获取数据 Secret Key
+    apiSecretKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    # 获取数据 accessToken
+    accessToken: xxxxxxxxxxxxxxxxx-xxxxx
+    # 获取数据 access Token Secret
+    accessTokenSecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    # 需要分享的内容包含的链接（任务：分享关于tsg的文章）
+    shareUrl: https://tokyostupidgames.io
+    # 获取数据 bearerToken
+    bearerToken: xxxx%xxxxxxxxxxxx%xxxxxxxx
+    # 登录授权
+    clientId: xxxxxxxxxxxxxxx
+    # 登录授权
+    clientSecret: xxxxxxxxxxxx-xxxxxxxxxxxxx
+    # 登录授权 token url
+    tokenUrl: https://api.twitter.com/2/oauth2/token
+    # 登录授权 redirectUrl
+    redirectUri: https://tokyostupidgames.io
+  # telegram 相关
+  telegram:
+    # 机器人 Token
+    botToken: xxxxxxxx:xxxxxxxx-xxxxxxxxx
+    # 机器人 name
+    botName: xxxxxxxxxxx
+  # MoonPay
+  moonPay:
+    # url
+    url: https://api.moonpay.com/v3/currencies/
+    # apiKey
+    apiKey: xxxxxxxxxxxx
+    # secret
+    secret: xxxxxxxxxxx
+    # webhook
+    webhook: xxxxxxxxxxxxxx
+  # Google登录
+  google:
+    # clientId
+    clientId: x-x.apps.x.com
+    # clientSecret
+    clientSecret: GOCSPX-xxxx
+    # redirectUri  https://tokyostupidgames.com   http://localhost:3050
+    redirectUri: https://toysverseparty.com
+
+# 项目相关配置
+orange-web:
+  # 文件上传下载路径示例（项目运行根目录下）
+  profile: uploads/
+  # tsg项目上传资源（项目运行根目录下）
+  tsg: tsg/
+
+# Spring配置
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  #mongodb
+  data:
+    mongodb:
+      #db库连接地址
+      uri: mongodb://xx:xxxx@192.168.110.111:27017/webgame_game?authSource=admin
+      #配置库连接地址（自定义）
+      data:
+        uri: mongodb://xx:xxxx@192.168.110.111:27017/webgame_game_data?authSource=admin
+      logs:
+        uri: mongodb://xx:xxxx@192.168.110.111:27017/webgame_game_log?authSource=admin
+      #根据注解自动生成mongo索引
+      auto-index-creation: true
+      #生成复合索引，下面的注解放在实体类名上面
+      #@Document
+      #@CompoundIndexes({ @CompoundIndex(name = "oIndex", def = "{'userId': 1, 'payState': 1}") })
+      #或者单个索引，放在字段名字上面
+      #@Indexed(unique = true)

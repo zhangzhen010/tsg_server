@@ -1,0 +1,45 @@
+#服务器基本信息
+server:
+  #服务器内网ip，用于上报grpc地址，当可以获取多个内网ip的时候，代码获取的不准确
+  serverIp: 192.168.2.234
+  #tcp端口（外网）
+  outPort: 0
+  #tcp端口（内网）
+  inPort: 0
+  #http端口（外网）
+  httpPort: 0
+  #grpc端口（内网）
+  grpcPort: 18371
+  #服务器Id
+  serverId: 20201
+  # 服务器的HTTP端口，默认为80
+  port: 18351
+  # MoonPay
+  moonPay:
+    # url
+    url: https://api.moonpay.com/v3/currencies/
+    # apiKey
+    apiKey: xxx
+    # secret
+    secret: xxx
+    # webhook
+    webhook: xxx
+
+#mongodb
+spring:
+  data:
+    mongodb:
+      #db库连接地址
+      uri: mongodb://xxx:xxx@47.108.135.62:27017/webgame_game?authSource=admin
+      #配置库连接地址（自定义）
+      data:
+        uri: mongodb://xxx:xxx@47.108.135.62:27017/webgame_game_data?authSource=admin
+      logs:
+        uri: mongodb://xxx:xxx@47.108.135.62:27017/webgame_game_log?authSource=admin
+      #根据注解自动生成mongo索引
+      auto-index-creation: true
+      #生成复合索引，下面的注解放在实体类名上面
+      #@Document
+      #@CompoundIndexes({ @CompoundIndex(name = "oIndex", def = "{'userId': 1, 'payState': 1}") })
+      #或者单个索引，放在字段名字上面
+      #@Indexed(unique = true)
