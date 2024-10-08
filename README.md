@@ -48,5 +48,5 @@ tsg server, written in pure Java.
 <auth>Orange_qnmw2018_3</auth>
 ```
 
-## 🚀 start
+## 🚀 run
 Run the WebGameMain.java file located at GameWebGameServer/src/main/java/com/game/WebGameMain.java
