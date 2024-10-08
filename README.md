@@ -44,7 +44,7 @@ tsg server, written in pure Java.
 
 ```sh
 <ip>192.168.110.111</ip>
-		<port>6379</port>
+<port>6379</port>
 <auth>Orange_qnmw2018_3</auth>
 ```
 
