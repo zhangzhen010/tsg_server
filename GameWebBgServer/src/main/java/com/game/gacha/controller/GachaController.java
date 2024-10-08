@@ -10,6 +10,7 @@ import com.game.datagroup.structs.GachaPoolAnimationData;
 import com.game.datagroup.structs.SolanaMintQueueData;
 import com.game.gacha.structs.ReqMintCardInfo;
 import com.game.gacha.structs.ReqUploadGachaPoolImageInfo;
+import com.game.player.structs.*;
 import com.game.solana.manager.SolanaManager;
 import com.game.solana.timer.SolanaAddNftMintQueueTimer;
 import com.game.solana.timer.SolanaCancelNftMintQueueTimer;

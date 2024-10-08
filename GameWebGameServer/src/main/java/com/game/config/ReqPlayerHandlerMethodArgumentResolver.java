@@ -67,6 +67,7 @@ public class ReqPlayerHandlerMethodArgumentResolver implements HandlerMethodArgu
                 log.error("请求方法中token解析失败,找不到playerId");
                 return null;
             }
+            // 这里装入的时候是Long类型，但是值比较小，他这里会自动变成Integer类型
             Long playerId = Long.parseLong(pid.toString());
             WebPlayer player = playerManager.getPlayer(playerId, true);
             {

@@ -1,5 +1,6 @@
 package com.game.quest.manager;
 
+import com.alibaba.fastjson2.JSON;
 import com.game.award.manager.AwardManager;
 import com.game.award.structs.AwardList;
 import com.game.data.bean.B_quest_Bean;
@@ -15,6 +16,7 @@ import com.game.data.myenum.MyEnumResourceId;
 import com.game.discord.manager.DiscordManager;
 import com.game.player.manager.PlayerManager;
 import com.game.player.manager.PlayerOtherManager;
+import com.game.player.structs.*;
 import com.game.quest.structs.*;
 import com.game.twitter.manager.TwitterManager;
 import com.game.utils.ListUtils;
@@ -620,11 +622,13 @@ public class QuestManager {
         try {
             B_quest_target_Bean targetBean = dataManager.c_quest_target_Container.getMap().get(targetId);
             if (targetValue < targetBean.getTargetValue()) {
+                log.info("任务未完成 player=" + player.getPlayerId() + " targetValue=" + targetValue + " < targetBean.getTargetValue()=" + targetBean.getTargetValue() + "targetBean=" + JSON.toJSONString(targetBean));
                 return QuestState.DOING;// 未完成
             } else {
                 return QuestState.COMPLETE;
             }
         } catch (Exception e) {
+            log.error("计算任务进度类型player=" + player.getPlayerId() + " targetId=" + targetId + " targetValue" + targetValue, e);
             return 0;
         }
     }
@@ -757,7 +761,7 @@ public class QuestManager {
                 Quest quest = questList.get(i);
                 int questCurrentState = getQuestCurrentState(player, quest);
                 if (questCurrentState != QuestState.COMPLETE) {
-                    log.error("请求任务领取奖励任务不是完成状态，player=" + player.getPlayerId() + " questId=" + quest.getConfigId() + " state=" + questCurrentState);
+                    log.error("请求任务领取奖励任务不是完成状态，player=" + player.getPlayerId() + " questId=" + quest.getConfigId() + " state=" + questCurrentState + " quest=" + JSON.toJSONString(quest));
                     return null;
                 }
             }

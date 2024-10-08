@@ -5,7 +5,7 @@
 		<key>server</key>
 		<ip>47.108.135.62</ip>
 		<port>6379</port>
-		<auth>xxx</auth>
+		<auth>Orange_qnmw2018_3</auth>
 		<maxTotal>100</maxTotal>
 		<maxIdle>32</maxIdle>
 		<minIdle>0</minIdle>
@@ -33,7 +33,7 @@
 		<key>center</key>
 		<ip>47.108.135.62</ip>
 		<port>6379</port>
-		<auth>xxx</auth>
+		<auth>Orange_qnmw2018_3</auth>
 		<maxTotal>100</maxTotal>
 		<maxIdle>32</maxIdle>
 		<minIdle>0</minIdle>

@@ -13,15 +13,13 @@ import com.game.login.structs.ResetPlayerType;
 import com.game.pack.manager.PackManager;
 import com.game.player.manager.PlayerManager;
 import com.game.player.manager.PlayerOtherManager;
-import com.game.player.structs.ReqUpdatePlayerInfo;
+import com.game.player.structs.*;
 import com.game.player.timer.SolanaAddBurnQueueTimer;
 import com.game.player.timer.SolanaAddTransferQueueTimer;
 import com.game.redis.manager.RedisManager;
 import com.game.thread.manager.ThreadManager;
 import com.game.twitter.manager.TwitterManager;
-import com.game.utils.FileUploadUtils;
-import com.game.utils.MimeTypeUtils;
-import com.google.apps.card.v1.Card;
+import com.game.utils.*;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.PageRequest;
@@ -614,11 +612,11 @@ public class PlayerController {
                     // 排除已被抽走的卡片
                     query.addCriteria(Criteria.where("ownerPlayerId").is(0));
                     // 排除已被其他卡池选中的卡片
-                    query.addCriteria(Criteria.where("gachaPoolId").is(0));
+                    query.addCriteria(Criteria.where("gachaPoolId").is(gachaPoolId));
                     // 在卡片库中找到此卡片(前面已经随机过模板类型，这里直接获取找到的第一个卡片)
                     GachaCard gachaCard = mongoTemplate.findOne(query, GachaCard.class);
                     if (gachaCard == null) {
-                        log.error("卡池中卡片不存在，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId);
+                        log.error("卡池中卡片不存在，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " templateId=" + cardInfo.getCardTemplateId() + " cardInfo=" + JSON.toJSONString(cardInfo));
                         return ResponseBean.fail("gachaCard is not exist");
                     }
                     log.info("抽卡成功playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " gachaCardId=" + gachaCard.getId());
@@ -701,6 +699,42 @@ public class PlayerController {
                 SolanaAddBurnQueueTimer solanaAddBurnQueueTimer = new SolanaAddBurnQueueTimer(gachaCardRefund);
                 threadManager.getThread(threadManager.getSolanaNftThreadName()).addTimerEvent(solanaAddBurnQueueTimer);
             }
+            // 返回结果
+            return ResponseBean.success();
+        } catch (Exception e) {
+            log.error("请求销毁卡片异常：", e);
+            return ResponseBean.fail("burnCard error: " + e.getMessage());
+        }
+    }
+
+    /**
+     * 请求销毁卡片（测试使用，不去链上验证）
+     *
+     * @param player
+     * @param cardId
+     * @return
+     */
+    @PostMapping("/burnCardNoVerify")
+    public ResponseBean<Object> burnCardNoVerify(@CurrentPlayer WebPlayer player, @RequestBody String cardId) {
+        try {
+            // burn成功后，删除卡片信息发放奖励
+            GachaCard gachaCard = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(cardId)), GachaCard.class);
+            // 设置已销毁
+            gachaCard.setBurn(true);
+            gachaCard.setOwnerPlayerId(0);
+            mongoTemplate.save(gachaCard);
+            // 移除玩家背包卡片
+            packManager.removeCard(player, Long.parseLong(cardId), MyDefineItemChangeReason.SOLANA_BURN);
+            // 计算返利
+            // candy与美分比例 1:10，即1000candy=1美元
+            int addCandy = (int) (gachaCard.getUsd() / GameUtil.bfb * gachaCard.getBurnCandyRatio()) * 10;
+            if (addCandy <= 0) {
+                log.error("测试：销毁卡片返还资源异常：卡牌销毁比例异常，playerId=" + player.getPlayerId() + " data=" + JSON.toJSONString(gachaCard) + " addCandy=" + addCandy);
+                return ResponseBean.fail("burnCard error: candy ratio error");
+            }
+            // 返利candy
+            packManager.addItemByConfigId(player, MyEnumResourceId.CANDY.getId(), addCandy, MyDefineItemChangeReason.SOLANA_BURN);
+            log.info("测试：玩家成功销毁卡片返还Candy资源：playerId=" + player.getPlayerId() + " id=" + cardId + " addCandy=" + addCandy);
             // 返回结果
             return ResponseBean.success();
         } catch (Exception e) {

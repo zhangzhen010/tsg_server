@@ -1,0 +1,16849 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : TSG正式服_mongo
+ Source Server Type    : MongoDB
+ Source Server Version : 70012 (7.0.12)
+ Source Host           : 172.31.38.87:27017
+ Source Schema         : webgame_game_data
+
+ Target Server Type    : MongoDB
+ Target Server Version : 70012 (7.0.12)
+ File Encoding         : 65001
+
+ Date: 08/10/2024 15:22:44
+*/
+
+
+// ----------------------------
+// Collection structure for des
+// ----------------------------
+db.getCollection("des").drop();
+db.createCollection("des");
+
+// ----------------------------
+// Documents of des
+// ----------------------------
+db.getCollection("des").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    zh_cn: "玩家设置数据超出范围",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("2"),
+    id: NumberInt("2"),
+    zh_cn: "资源不足",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("3"),
+    id: NumberInt("3"),
+    zh_cn: "不满足领取条件",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("4"),
+    id: NumberInt("4"),
+    zh_cn: "任务已领取",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("5"),
+    id: NumberInt("5"),
+    zh_cn: "任务未完成",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("6"),
+    id: NumberInt("6"),
+    zh_cn: "请求参数错误",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("7"),
+    id: NumberInt("7"),
+    zh_cn: "玩家名字长度错误",
+    en_us: "Player Name Length Error"
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("8"),
+    id: NumberInt("8"),
+    zh_cn: "玩家名字已存在",
+    en_us: "Player Name Already Exists"
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("9"),
+    id: NumberInt("9"),
+    zh_cn: "玩家名字包含敏感字符",
+    en_us: "Player Name Contains Sensitive Characters"
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("10"),
+    id: NumberInt("10"),
+    zh_cn: "连接战斗服务器失败！",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("11"),
+    id: NumberInt("11"),
+    zh_cn: "连接登录服务器失败！",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("12"),
+    id: NumberInt("12"),
+    zh_cn: "关卡已通关",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1000"),
+    id: NumberInt("1000"),
+    zh_cn: "登录服登录成功",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1001"),
+    id: NumberInt("1001"),
+    zh_cn: "目前启用ip白名单登录",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1002"),
+    id: NumberInt("1002"),
+    zh_cn: "该账号已被封号，禁止登陆",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1003"),
+    id: NumberInt("1003"),
+    zh_cn: "ip黑名单中，无法登录",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1004"),
+    id: NumberInt("1004"),
+    zh_cn: "md5验证不通过",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1005"),
+    id: NumberInt("1005"),
+    zh_cn: "账号不存在",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("1006"),
+    id: NumberInt("1006"),
+    zh_cn: "没有可进入的逻辑服",
+    en_us: ""
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("10001"),
+    id: NumberInt("10001"),
+    zh_cn: "金币",
+    en_us: "gole"
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("10002"),
+    id: NumberInt("10002"),
+    zh_cn: "钻石",
+    en_us: "gems"
+} ]);
+db.getCollection("des").insert([ {
+    _id: NumberInt("10003"),
+    id: NumberInt("10003"),
+    zh_cn: "糖果",
+    en_us: "candy"
+} ]);
+
+// ----------------------------
+// Collection structure for item
+// ----------------------------
+db.getCollection("item").drop();
+db.createCollection("item");
+
+// ----------------------------
+// Documents of item
+// ----------------------------
+db.getCollection("item").insert([ {
+    _id: NumberInt("101"),
+    id: NumberInt("101"),
+    nameId: NumberInt("10001"),
+    desId: NumberInt("0"),
+    quality: NumberInt("0"),
+    iconBig: "",
+    iconlittle: "",
+    iconType: NumberInt("0"),
+    type: NumberInt("1"),
+    subType: NumberInt("0"),
+    subTypeValue: NumberInt("0"),
+    merge: true,
+    mergeMax: NumberLong("0"),
+    delTimeSec: NumberInt("0"),
+    delTimeActivity: NumberInt("0"),
+    mergeList: [ ],
+    backPrice: [ ],
+    showInBag: false,
+    redDotInBag: false,
+    orderInBag: NumberInt("0"),
+    reward: NumberInt("0")
+} ]);
+db.getCollection("item").insert([ {
+    _id: NumberInt("102"),
+    id: NumberInt("102"),
+    nameId: NumberInt("10002"),
+    desId: NumberInt("0"),
+    quality: NumberInt("0"),
+    iconBig: "",
+    iconlittle: "",
+    iconType: NumberInt("0"),
+    type: NumberInt("1"),
+    subType: NumberInt("0"),
+    subTypeValue: NumberInt("0"),
+    merge: true,
+    mergeMax: NumberLong("0"),
+    delTimeSec: NumberInt("0"),
+    delTimeActivity: NumberInt("0"),
+    mergeList: [ ],
+    backPrice: [ ],
+    showInBag: false,
+    redDotInBag: false,
+    orderInBag: NumberInt("0"),
+    reward: NumberInt("0")
+} ]);
+db.getCollection("item").insert([ {
+    _id: NumberInt("103"),
+    id: NumberInt("103"),
+    nameId: NumberInt("10003"),
+    desId: NumberInt("0"),
+    quality: NumberInt("0"),
+    iconBig: "",
+    iconlittle: "",
+    iconType: NumberInt("0"),
+    type: NumberInt("1"),
+    subType: NumberInt("0"),
+    subTypeValue: NumberInt("0"),
+    merge: true,
+    mergeMax: NumberLong("0"),
+    delTimeSec: NumberInt("0"),
+    delTimeActivity: NumberInt("0"),
+    mergeList: [ ],
+    backPrice: [ ],
+    showInBag: false,
+    redDotInBag: false,
+    orderInBag: NumberInt("0"),
+    reward: NumberInt("0")
+} ]);
+db.getCollection("item").insert([ {
+    _id: NumberInt("10001"),
+    id: NumberInt("10001"),
+    nameId: NumberInt("0"),
+    desId: NumberInt("0"),
+    quality: NumberInt("0"),
+    iconBig: "",
+    iconlittle: "",
+    iconType: NumberInt("0"),
+    type: NumberInt("3"),
+    subType: NumberInt("0"),
+    subTypeValue: NumberInt("0"),
+    merge: false,
+    mergeMax: NumberLong("0"),
+    delTimeSec: NumberInt("0"),
+    delTimeActivity: NumberInt("0"),
+    mergeList: [ ],
+    backPrice: [ ],
+    showInBag: false,
+    redDotInBag: false,
+    orderInBag: NumberInt("0"),
+    reward: NumberInt("0")
+} ]);
+
+// ----------------------------
+// Collection structure for item_change_reason
+// ----------------------------
+db.getCollection("item_change_reason").drop();
+db.createCollection("item_change_reason");
+
+// ----------------------------
+// Documents of item_change_reason
+// ----------------------------
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1000"),
+    id: NumberInt("1000"),
+    describe: "占位"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1001"),
+    id: NumberInt("1001"),
+    describe: "GM修改"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1002"),
+    id: NumberInt("1002"),
+    describe: "体力回复"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1003"),
+    id: NumberInt("1003"),
+    describe: "使用道具"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1004"),
+    id: NumberInt("1004"),
+    describe: "邮件获取"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1005"),
+    id: NumberInt("1005"),
+    describe: "任务获取"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1006"),
+    id: NumberInt("1006"),
+    describe: "充值获取"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1007"),
+    id: NumberInt("1007"),
+    describe: "好友获取"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1008"),
+    id: NumberInt("1008"),
+    describe: "竞技比赛匹配成功"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1009"),
+    id: NumberInt("1009"),
+    describe: "角色创角获得"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1010"),
+    id: NumberInt("1010"),
+    describe: "抽卡"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1011"),
+    id: NumberInt("1011"),
+    describe: "抽卡进度自选奖励"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1012"),
+    id: NumberInt("1012"),
+    describe: "商店购买"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1013"),
+    id: NumberInt("1013"),
+    describe: "小月卡领取每日奖励"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1014"),
+    id: NumberInt("1014"),
+    describe: "大月卡购买经验"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1015"),
+    id: NumberInt("1015"),
+    describe: "大月卡重置"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1016"),
+    id: NumberInt("1016"),
+    describe: "修改玩家名"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1017"),
+    id: NumberInt("1017"),
+    describe: "转盘"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1018"),
+    id: NumberInt("1018"),
+    describe: "KNW游戏"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1019"),
+    id: NumberInt("1019"),
+    describe: "国王游戏加注"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1020"),
+    id: NumberInt("1020"),
+    describe: "国王游戏下注结算"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1021"),
+    id: NumberInt("1021"),
+    describe: "国王游戏减注"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1022"),
+    id: NumberInt("1022"),
+    describe: "萝卜游戏胜利"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1023"),
+    id: NumberInt("1023"),
+    describe: "过马路游戏胜利"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1024"),
+    id: NumberInt("1024"),
+    describe: "独角仙游戏加注"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1025"),
+    id: NumberInt("1025"),
+    describe: "独角仙游戏下注结算"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1026"),
+    id: NumberInt("1026"),
+    describe: "完成新手引导奖励"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1027"),
+    id: NumberInt("1027"),
+    describe: "转盘游戏加注"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: NumberInt("1028"),
+    id: NumberInt("1028"),
+    describe: "转盘游戏下注结算"
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: 1029,
+    id: 1029
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: 1030,
+    id: 1030
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: 1031,
+    id: 1031
+} ]);
+db.getCollection("item_change_reason").insert([ {
+    _id: 1032,
+    id: 1032
+} ]);
+
+// ----------------------------
+// Collection structure for quest
+// ----------------------------
+db.getCollection("quest").drop();
+db.createCollection("quest");
+
+// ----------------------------
+// Documents of quest
+// ----------------------------
+db.getCollection("quest").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    nextId: NumberInt("0"),
+    questType: NumberInt("1"),
+    questResetType: NumberInt("1"),
+    describe: "Say something in our Discord Channel",
+    skipUrl: "https://discord.gg/8cDjR2p2JE",
+    platform: "discord",
+    targetIdList: [
+        NumberInt("10001")
+    ],
+    discordRoleName: "",
+    awardId: NumberInt("1"),
+    activityId: NumberInt("0")
+} ]);
+db.getCollection("quest").insert([ {
+    _id: NumberInt("2"),
+    id: NumberInt("2"),
+    nextId: NumberInt("0"),
+    questType: NumberInt("1"),
+    questResetType: NumberInt("1"),
+    describe: "Share our latest post on X",
+    skipUrl: "https://x.com/TokyoStupidGame",
+    platform: "discord",
+    targetIdList: [
+        NumberInt("10002")
+    ],
+    discordRoleName: "01 Share our Post",
+    awardId: NumberInt("2"),
+    activityId: NumberInt("0")
+} ]);
+db.getCollection("quest").insert([ {
+    _id: NumberInt("3"),
+    id: NumberInt("3"),
+    nextId: NumberInt("0"),
+    questType: NumberInt("1"),
+    questResetType: NumberInt("1"),
+    describe: " Post how you feel about TSG and tag @TokyoStupidGame",
+    skipUrl: "https://x.com/home",
+    platform: "twitter",
+    targetIdList: [
+        NumberInt("10003")
+    ],
+    discordRoleName: "",
+    awardId: NumberInt("6"),
+    activityId: NumberInt("0")
+} ]);
+db.getCollection("quest").insert([ {
+    _id: NumberInt("1001"),
+    id: NumberInt("1001"),
+    nextId: NumberInt("0"),
+    questType: NumberInt("2"),
+    questResetType: NumberInt("0"),
+    describe: "Follow our X account",
+    skipUrl: "https://x.com/TokyoStupidGame",
+    platform: "twitter",
+    targetIdList: [
+        NumberInt("20001")
+    ],
+    discordRoleName: "",
+    awardId: NumberInt("3"),
+    activityId: NumberInt("0")
+} ]);
+db.getCollection("quest").insert([ {
+    _id: NumberInt("1002"),
+    id: NumberInt("1002"),
+    nextId: NumberInt("0"),
+    questType: NumberInt("2"),
+    questResetType: NumberInt("0"),
+    describe: "Change your X banner to the same as Tsg's X",
+    skipUrl: "https://x.com/TokyoStupidGame",
+    platform: "discord",
+    targetIdList: [
+        NumberInt("20002")
+    ],
+    discordRoleName: "03 Change X banner",
+    awardId: NumberInt("4"),
+    activityId: NumberInt("0")
+} ]);
+db.getCollection("quest").insert([ {
+    _id: NumberInt("1003"),
+    id: NumberInt("1003"),
+    nextId: NumberInt("0"),
+    questType: NumberInt("2"),
+    questResetType: NumberInt("0"),
+    describe: "Add $TSG after your X's name",
+    skipUrl: "https://x.com/home",
+    platform: "discord",
+    targetIdList: [
+        NumberInt("20003")
+    ],
+    discordRoleName: "04 Add $TSG",
+    awardId: NumberInt("5"),
+    activityId: NumberInt("0")
+} ]);
+
+// ----------------------------
+// Collection structure for quest_target
+// ----------------------------
+db.getCollection("quest_target").drop();
+db.createCollection("quest_target");
+
+// ----------------------------
+// Documents of quest_target
+// ----------------------------
+db.getCollection("quest_target").insert([ {
+    _id: NumberInt("10001"),
+    id: NumberInt("10001"),
+    targetType: NumberInt("1"),
+    targetExt1: NumberInt("0"),
+    targetExt2: NumberInt("0"),
+    targetValue: NumberInt("1"),
+    record: false
+} ]);
+db.getCollection("quest_target").insert([ {
+    _id: NumberInt("10002"),
+    id: NumberInt("10002"),
+    targetType: NumberInt("2"),
+    targetExt1: NumberInt("0"),
+    targetExt2: NumberInt("0"),
+    targetValue: NumberInt("1"),
+    record: false
+} ]);
+db.getCollection("quest_target").insert([ {
+    _id: NumberInt("10003"),
+    id: NumberInt("10003"),
+    targetType: NumberInt("6"),
+    targetExt1: NumberInt("0"),
+    targetExt2: NumberInt("0"),
+    targetValue: NumberInt("1"),
+    record: false
+} ]);
+db.getCollection("quest_target").insert([ {
+    _id: NumberInt("20001"),
+    id: NumberInt("20001"),
+    targetType: NumberInt("3"),
+    targetExt1: NumberInt("0"),
+    targetExt2: NumberInt("0"),
+    targetValue: NumberInt("1"),
+    record: false
+} ]);
+db.getCollection("quest_target").insert([ {
+    _id: NumberInt("20002"),
+    id: NumberInt("20002"),
+    targetType: NumberInt("4"),
+    targetExt1: NumberInt("0"),
+    targetExt2: NumberInt("0"),
+    targetValue: NumberInt("1"),
+    record: false
+} ]);
+db.getCollection("quest_target").insert([ {
+    _id: NumberInt("20003"),
+    id: NumberInt("20003"),
+    targetType: NumberInt("5"),
+    targetExt1: NumberInt("0"),
+    targetExt2: NumberInt("0"),
+    targetValue: NumberInt("1"),
+    record: false
+} ]);
+
+// ----------------------------
+// Collection structure for quest_target_collect
+// ----------------------------
+db.getCollection("quest_target_collect").drop();
+db.createCollection("quest_target_collect");
+
+// ----------------------------
+// Documents of quest_target_collect
+// ----------------------------
+db.getCollection("quest_target_collect").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    type: NumberInt("0")
+} ]);
+db.getCollection("quest_target_collect").insert([ {
+    _id: NumberInt("2"),
+    id: NumberInt("2"),
+    type: NumberInt("1")
+} ]);
+db.getCollection("quest_target_collect").insert([ {
+    _id: NumberInt("3"),
+    id: NumberInt("3"),
+    type: NumberInt("1")
+} ]);
+db.getCollection("quest_target_collect").insert([ {
+    _id: NumberInt("4"),
+    id: NumberInt("4"),
+    type: NumberInt("1")
+} ]);
+db.getCollection("quest_target_collect").insert([ {
+    _id: NumberInt("5"),
+    id: NumberInt("5"),
+    type: NumberInt("1")
+} ]);
+db.getCollection("quest_target_collect").insert([ {
+    _id: NumberInt("6"),
+    id: NumberInt("6"),
+    type: NumberInt("1")
+} ]);
+
+// ----------------------------
+// Collection structure for reward
+// ----------------------------
+db.getCollection("reward").drop();
+db.createCollection("reward");
+
+// ----------------------------
+// Documents of reward
+// ----------------------------
+db.getCollection("reward").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    fixedAwardList: [
+        [
+            NumberInt("103"),
+            NumberInt("100")
+        ]
+    ],
+    weightAwardIdList: [ ],
+    weightAwardList: [ ],
+    weightNumAwardList: [ ],
+    ratioAwardList: [ ]
+} ]);
+db.getCollection("reward").insert([ {
+    _id: NumberInt("2"),
+    id: NumberInt("2"),
+    fixedAwardList: [
+        [
+            NumberInt("103"),
+            NumberInt("250")
+        ]
+    ],
+    weightAwardIdList: [ ],
+    weightAwardList: [ ],
+    weightNumAwardList: [ ],
+    ratioAwardList: [ ]
+} ]);
+db.getCollection("reward").insert([ {
+    _id: NumberInt("3"),
+    id: NumberInt("3"),
+    fixedAwardList: [
+        [
+            NumberInt("103"),
+            NumberInt("500")
+        ]
+    ],
+    weightAwardIdList: [ ],
+    weightAwardList: [ ],
+    weightNumAwardList: [ ],
+    ratioAwardList: [ ]
+} ]);
+db.getCollection("reward").insert([ {
+    _id: NumberInt("4"),
+    id: NumberInt("4"),
+    fixedAwardList: [
+        [
+            NumberInt("103"),
+            NumberInt("1500")
+        ]
+    ],
+    weightAwardIdList: [ ],
+    weightAwardList: [ ],
+    weightNumAwardList: [ ],
+    ratioAwardList: [ ]
+} ]);
+db.getCollection("reward").insert([ {
+    _id: NumberInt("5"),
+    id: NumberInt("5"),
+    fixedAwardList: [
+        [
+            NumberInt("103"),
+            NumberInt("1500")
+        ]
+    ],
+    weightAwardIdList: [ ],
+    weightAwardList: [ ],
+    weightNumAwardList: [ ],
+    ratioAwardList: [ ]
+} ]);
+db.getCollection("reward").insert([ {
+    _id: NumberInt("6"),
+    id: NumberInt("6"),
+    fixedAwardList: [
+        [
+            NumberInt("103"),
+            NumberInt("200")
+        ]
+    ],
+    weightAwardIdList: [ ],
+    weightAwardList: [ ],
+    weightNumAwardList: [ ],
+    ratioAwardList: [ ]
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_agent
+// ----------------------------
+db.getCollection("z_server_agent").drop();
+db.createCollection("z_server_agent");
+
+// ----------------------------
+// Documents of z_server_agent
+// ----------------------------
+db.getCollection("z_server_agent").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    agentName: "白包",
+    sdkId: NumberInt("0"),
+    sdkName: "白包SDK",
+    pfId: NumberInt("0"),
+    pfName: "白包PF",
+    appId: "",
+    appName: "Dz",
+    loginUrl: "",
+    backUrl: "",
+    data1: "",
+    data2: "",
+    data3: "",
+    data4: "",
+    data5: "",
+    data6: "",
+    data7: "",
+    data8: "",
+    data9: "",
+    data10: ""
+} ]);
+db.getCollection("z_server_agent").insert([ {
+    _id: NumberInt("2"),
+    id: NumberInt("2"),
+    agentName: "FaceBook",
+    sdkId: NumberInt("1000"),
+    sdkName: "FB",
+    pfId: NumberInt("1001"),
+    pfName: "FB",
+    appId: "1241921137213653",
+    appName: "fb",
+    loginUrl: "https://graph.facebook.com/debug_token",
+    backUrl: "",
+    data1: "3e588cf62fddd1df06f4a0820105c7e9",
+    data2: "",
+    data3: "",
+    data4: "",
+    data5: "",
+    data6: "",
+    data7: "",
+    data8: "",
+    data9: "",
+    data10: ""
+} ]);
+db.getCollection("z_server_agent").insert([ {
+    _id: NumberInt("3"),
+    id: NumberInt("3"),
+    agentName: "Google",
+    sdkId: NumberInt("2000"),
+    sdkName: "GOOGLE",
+    pfId: NumberInt("2001"),
+    pfName: "GOOGLE",
+    appId: "",
+    appName: "google",
+    loginUrl: "",
+    backUrl: "",
+    data1: "",
+    data2: "",
+    data3: "",
+    data4: "",
+    data5: "",
+    data6: "",
+    data7: "",
+    data8: "",
+    data9: "",
+    data10: ""
+} ]);
+db.getCollection("z_server_agent").insert([ {
+    _id: NumberInt("4"),
+    id: NumberInt("4"),
+    agentName: "声网",
+    sdkId: NumberInt("3000"),
+    sdkName: "SW",
+    pfId: NumberInt("3001"),
+    pfName: "SW",
+    appId: "0ba3dc9348034108ad4bba5147d1305b",
+    appName: "sw",
+    loginUrl: "",
+    backUrl: "",
+    data1: "6d3f529f6aef4176a6f7054d3d0ea933",
+    data2: "3600",
+    data3: "",
+    data4: "",
+    data5: "",
+    data6: "",
+    data7: "",
+    data8: "",
+    data9: "",
+    data10: ""
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_area
+// ----------------------------
+db.getCollection("z_server_area").drop();
+db.createCollection("z_server_area");
+
+// ----------------------------
+// Documents of z_server_area
+// ----------------------------
+db.getCollection("z_server_area").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    name: "大雪山"
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_data
+// ----------------------------
+db.getCollection("z_server_data").drop();
+db.createCollection("z_server_data");
+
+// ----------------------------
+// Documents of z_server_data
+// ----------------------------
+db.getCollection("z_server_data").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    name: "ip限制登录，value=（0=启用黑名单，1=启用白名单）",
+    value: NumberInt("0"),
+    valueList: [ ],
+    values: ""
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_ip_black
+// ----------------------------
+db.getCollection("z_server_ip_black").drop();
+db.createCollection("z_server_ip_black");
+
+// ----------------------------
+// Documents of z_server_ip_black
+// ----------------------------
+db.getCollection("z_server_ip_black").insert([ {
+    _id: NumberInt("1"),
+    id: NumberInt("1"),
+    ip: "192.168.1.1"
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_ip_white
+// ----------------------------
+db.getCollection("z_server_ip_white").drop();
+db.createCollection("z_server_ip_white");
+
+// ----------------------------
+// Documents of z_server_ip_white
+// ----------------------------
+db.getCollection("z_server_ip_white").insert([ {
+    _id: NumberInt("1"),
+    ip: "192.168.110.110",
+    _class: "com.game.data.bean.B_z_server_ip_white_Bean"
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_notice
+// ----------------------------
+db.getCollection("z_server_notice").drop();
+db.createCollection("z_server_notice");
+
+// ----------------------------
+// Documents of z_server_notice
+// ----------------------------
+db.getCollection("z_server_notice").insert([ {
+    _id: NumberInt("1"),
+    agentId: NumberInt("1"),
+    title: "测试公告标题",
+    content: "测试公告内容阿斯顿联发收到爱丽丝的腹肌拉伤的看法埃里克第三方哦i哦俩圣诞节iOS大家flak收到法理上看分厘卡",
+    stime: NumberLong("1710748585000"),
+    etime: NumberLong("1988121600000"),
+    _class: "com.game.data.bean.B_z_server_notice_Bean"
+} ]);
+
+// ----------------------------
+// Collection structure for z_server_serverlist
+// ----------------------------
+db.getCollection("z_server_serverlist").drop();
+db.createCollection("z_server_serverlist");
+
+// ----------------------------
+// Documents of z_server_serverlist
+// ----------------------------
+db.getCollection("z_server_serverlist").insert([ {
+    _id: NumberInt("1"),
+    name: "张震逻辑服",
+    areaId: NumberInt("1"),
+    type: NumberInt("0"),
+    ip: "192.168.2.110",
+    port: NumberInt("10000"),
+    time: NumberLong("1719654505000"),
+    state: NumberInt("3"),
+    _class: "com.game.data.bean.B_z_server_serverlist_Bean"
+} ]);
+db.getCollection("z_server_serverlist").insert([ {
+    _id: 2,
+    name: "内网服务器",
+    areaId: 1,
+    type: 0,
+    ip: "192.168.2.119",
+    port: 10001,
+    state: 2,
+    time: 1719654505000,
+    _class: "com.game.data.bean.B_z_server_serverlist_Bean"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_config
+// ----------------------------
+db.getCollection("z_web_sys_config").drop();
+db.createCollection("z_web_sys_config");
+
+// ----------------------------
+// Documents of z_web_sys_config
+// ----------------------------
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("1"),
+    configName: "主框架页-默认皮肤样式名称",
+    configKey: "sys.index.skinName",
+    configValue: "skin-red",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "admin",
+    updateTime: ISODate("2024-01-31T17:39:39.000Z"),
+    remark: "蓝色 skin-blue、绿色 skin-green、紫色 skin-purple、红色 skin-red、黄色 skin-yellow",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("2"),
+    configName: "用户管理-账号初始密码",
+    configKey: "sys.user.initPassword",
+    configValue: "123456",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "初始化密码 123456",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("3"),
+    configName: "主框架页-侧边栏主题",
+    configKey: "sys.index.sideTheme",
+    configValue: "theme-dark",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "深黑主题theme-dark，浅色主题theme-light，深蓝主题theme-blue",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("4"),
+    configName: "账号自助-是否开启用户注册功能",
+    configKey: "sys.account.registerUser",
+    configValue: "false",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "是否开启注册用户功能（true开启，false关闭）",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("5"),
+    configName: "用户管理-密码字符范围",
+    configKey: "sys.account.chrtype",
+    configValue: "0",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "默认任意字符范围，0任意（密码可以输入任意字符），1数字（密码只能为0-9数字），2英文字母（密码只能为a-z和A-Z字母），3字母和数字（密码必须包含字母，数字）,4字母数字和特殊字符（目前支持的特殊字符包括：~!@#$%^&*()-=_+）",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("6"),
+    configName: "用户管理-初始密码修改策略",
+    configKey: "sys.account.initPasswordModify",
+    configValue: "0",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "0：初始密码修改策略关闭，没有任何提示，1：提醒用户，如果未修改初始密码，则在登录时就会提醒修改密码对话框",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("7"),
+    configName: "用户管理-账号密码更新周期",
+    configKey: "sys.account.passwordValidateDays",
+    configValue: "0",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "密码更新周期（填写数字，数据初始化值为0不限制，若修改必须为大于0小于365的正整数），如果超过这个周期登录系统时，则在登录时就会提醒修改密码对话框",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("8"),
+    configName: "主框架页-菜单导航显示风格",
+    configKey: "sys.index.menuStyle",
+    configValue: "default",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "菜单导航显示风格（default为左侧导航菜单，topnav为顶部导航菜单）",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("9"),
+    configName: "主框架页-是否开启页脚",
+    configKey: "sys.index.footer",
+    configValue: "true",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "是否开启底部页脚显示（true显示，false隐藏）",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("10"),
+    configName: "主框架页-是否开启页签",
+    configKey: "sys.index.tagsView",
+    configValue: "true",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "是否开启菜单多页签显示（true显示，false隐藏）",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+db.getCollection("z_web_sys_config").insert([ {
+    _id: NumberLong("11"),
+    configName: "用户登录-黑名单列表",
+    configKey: "sys.login.blackIPList",
+    configValue: "",
+    configType: "Y",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    remark: "设置登录IP黑名单限制，多个匹配项以分号分隔，支持匹配（*通配、网段）",
+    _class: "com.ruoyi.system.domain.SysConfig"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_dept
+// ----------------------------
+db.getCollection("z_web_sys_dept").drop();
+db.createCollection("z_web_sys_dept");
+
+// ----------------------------
+// Documents of z_web_sys_dept
+// ----------------------------
+db.getCollection("z_web_sys_dept").insert([ {
+    _id: NumberLong("100"),
+    parentId: NumberLong("0"),
+    deptName: "FM科技",
+    orderNum: NumberInt("0"),
+    leader: "大橘子",
+    phone: "18608045508",
+    email: "zhangaszhen@163.com",
+    status: "0",
+    parentName: "无",
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-06-02T13:49:13.772Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysDept"
+} ]);
+db.getCollection("z_web_sys_dept").insert([ {
+    _id: NumberLong("101"),
+    parentId: NumberLong("100"),
+    deptName: "冰雪",
+    orderNum: NumberInt("1"),
+    leader: "大橘子",
+    phone: "18608045508",
+    email: "zhangaszhen@163.com",
+    status: "0",
+    parentName: "",
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-06-02T13:49:27.728Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysDept"
+} ]);
+db.getCollection("z_web_sys_dept").insert([ {
+    _id: NumberLong("102"),
+    parentId: NumberLong("101"),
+    ancestors: "0,100,101",
+    deptName: "研发部门",
+    orderNum: NumberInt("1"),
+    leader: "大橘子",
+    phone: "18608045508",
+    email: "zhangaszhen@163.com",
+    status: "0",
+    delFlag: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysDept"
+} ]);
+db.getCollection("z_web_sys_dept").insert([ {
+    _id: NumberLong("103"),
+    parentId: NumberLong("101"),
+    ancestors: "0,100,101",
+    deptName: "运营部门",
+    orderNum: NumberInt("2"),
+    leader: "大橘子",
+    phone: "18608045508",
+    email: "zhangaszhen@163.com",
+    status: "0",
+    delFlag: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysDept"
+} ]);
+db.getCollection("z_web_sys_dept").insert([ {
+    _id: NumberLong("104"),
+    parentId: NumberLong("101"),
+    deptName: "测试部门",
+    orderNum: NumberInt("3"),
+    leader: "大橘子",
+    phone: "18608045508",
+    email: "zhangaszhen@163.com",
+    status: "0",
+    parentName: "",
+    updateBy: "admin",
+    updateTime: ISODate("2024-04-08T08:57:34.224Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysDept"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_dict_data
+// ----------------------------
+db.getCollection("z_web_sys_dict_data").drop();
+db.createCollection("z_web_sys_dict_data");
+
+// ----------------------------
+// Documents of z_web_sys_dict_data
+// ----------------------------
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("1"),
+    dictSort: NumberLong("1"),
+    dictLabel: "男",
+    dictValue: "0",
+    dictType: "sys_user_sex",
+    cssClass: "",
+    listClass: "",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "性别男",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("2"),
+    dictSort: NumberLong("2"),
+    dictLabel: "女",
+    dictValue: "1",
+    dictType: "sys_user_sex",
+    cssClass: "",
+    listClass: "",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "性别女",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("3"),
+    dictSort: NumberLong("3"),
+    dictLabel: "未知",
+    dictValue: "2",
+    dictType: "sys_user_sex",
+    cssClass: "",
+    listClass: "",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "性别未知",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("4"),
+    dictSort: NumberLong("1"),
+    dictLabel: "显示",
+    dictValue: "0",
+    dictType: "sys_show_hide",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "显示菜单",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("5"),
+    dictSort: NumberLong("2"),
+    dictLabel: "隐藏",
+    dictValue: "1",
+    dictType: "sys_show_hide",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "隐藏菜单",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("6"),
+    dictSort: NumberLong("1"),
+    dictLabel: "正常",
+    dictValue: "0",
+    dictType: "sys_normal_disable",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "正常状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("7"),
+    dictSort: NumberLong("2"),
+    dictLabel: "停用",
+    dictValue: "1",
+    dictType: "sys_normal_disable",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "停用状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("8"),
+    dictSort: NumberLong("1"),
+    dictLabel: "正常",
+    dictValue: "0",
+    dictType: "sys_job_status",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "正常状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("9"),
+    dictSort: NumberLong("2"),
+    dictLabel: "暂停",
+    dictValue: "1",
+    dictType: "sys_job_status",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "停用状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("10"),
+    dictSort: NumberLong("1"),
+    dictLabel: "默认",
+    dictValue: "DEFAULT",
+    dictType: "sys_job_group",
+    cssClass: "",
+    listClass: "",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "默认分组",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("11"),
+    dictSort: NumberLong("2"),
+    dictLabel: "系统",
+    dictValue: "SYSTEM",
+    dictType: "sys_job_group",
+    cssClass: "",
+    listClass: "",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "系统分组",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("12"),
+    dictSort: NumberLong("1"),
+    dictLabel: "是",
+    dictValue: "Y",
+    dictType: "sys_yes_no",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "系统默认是",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("13"),
+    dictSort: NumberLong("2"),
+    dictLabel: "否",
+    dictValue: "N",
+    dictType: "sys_yes_no",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "系统默认否",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("14"),
+    dictSort: NumberLong("1"),
+    dictLabel: "通知",
+    dictValue: "1",
+    dictType: "sys_notice_type",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "通知",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("15"),
+    dictSort: NumberLong("2"),
+    dictLabel: "公告",
+    dictValue: "2",
+    dictType: "sys_notice_type",
+    cssClass: "",
+    listClass: "success",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "公告",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("16"),
+    dictSort: NumberLong("1"),
+    dictLabel: "正常",
+    dictValue: "0",
+    dictType: "sys_notice_status",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "正常状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("17"),
+    dictSort: NumberLong("2"),
+    dictLabel: "关闭",
+    dictValue: "1",
+    dictType: "sys_notice_status",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "关闭状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("19"),
+    dictSort: NumberLong("1"),
+    dictLabel: "新增",
+    dictValue: "1",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "info",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "新增操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("20"),
+    dictSort: NumberLong("2"),
+    dictLabel: "修改",
+    dictValue: "2",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "info",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "修改操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("21"),
+    dictSort: NumberLong("3"),
+    dictLabel: "删除",
+    dictValue: "3",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "删除操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("22"),
+    dictSort: NumberLong("4"),
+    dictLabel: "授权",
+    dictValue: "4",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "授权操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("23"),
+    dictSort: NumberLong("5"),
+    dictLabel: "导出",
+    dictValue: "5",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "导出操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("24"),
+    dictSort: NumberLong("6"),
+    dictLabel: "导入",
+    dictValue: "6",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "导入操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("25"),
+    dictSort: NumberLong("7"),
+    dictLabel: "强退",
+    dictValue: "7",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "强退操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("26"),
+    dictSort: NumberLong("8"),
+    dictLabel: "生成代码",
+    dictValue: "8",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "生成操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("27"),
+    dictSort: NumberLong("9"),
+    dictLabel: "清空数据",
+    dictValue: "9",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "清空操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("18"),
+    dictSort: NumberLong("99"),
+    dictLabel: "其他",
+    dictValue: "0",
+    dictType: "sys_oper_type",
+    cssClass: "",
+    listClass: "info",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "其他操作",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("28"),
+    dictSort: NumberLong("1"),
+    dictLabel: "成功",
+    dictValue: "0",
+    dictType: "sys_common_status",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "正常状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("29"),
+    dictSort: NumberLong("2"),
+    dictLabel: "失败",
+    dictValue: "1",
+    dictType: "sys_common_status",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "N",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "停用状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("30"),
+    dictSort: NumberLong("1"),
+    dictLabel: "已启动",
+    dictValue: "1",
+    dictType: "game_server_state",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-05T19:34:05.000Z"),
+    remark: "游戏服务器正常运行中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("31"),
+    dictSort: NumberLong("2"),
+    dictLabel: "已关闭",
+    dictValue: "0",
+    dictType: "game_server_state",
+    listClass: "danger",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-05T19:35:07.000Z"),
+    remark: "游戏服务器关闭中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("38"),
+    dictSort: NumberLong("3"),
+    dictLabel: "启动中",
+    dictValue: "2",
+    dictType: "game_server_state",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-03-08T01:32:37.000Z"),
+    remark: "服务器启动中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("39"),
+    dictSort: NumberLong("4"),
+    dictLabel: "保存中",
+    dictValue: "3",
+    dictType: "game_server_state",
+    listClass: "warning",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-03-08T01:33:25.000Z"),
+    remark: "服务器数据保存中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("40"),
+    dictSort: NumberLong("5"),
+    dictLabel: "关闭中",
+    dictValue: "4",
+    dictType: "game_server_state",
+    listClass: "warning",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-03-08T01:33:47.000Z"),
+    remark: "服务器关闭中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("41"),
+    dictSort: NumberLong("6"),
+    dictLabel: "部署中",
+    dictValue: "5",
+    dictType: "game_server_state",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-03-08T01:34:23.000Z"),
+    updateBy: "admin",
+    updateTime: ISODate("2024-04-08T06:54:30.477Z"),
+    remark: "服务器部署中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("32"),
+    dictSort: NumberLong("1"),
+    dictLabel: "未发送",
+    dictValue: "0",
+    dictType: "mail_state",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-25T19:14:45.000Z"),
+    remark: "邮件创建还未发送",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("33"),
+    dictSort: NumberLong("2"),
+    dictLabel: "已发送",
+    dictValue: "1",
+    dictType: "mail_state",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-25T19:15:28.000Z"),
+    remark: "邮件已成功发送",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("34"),
+    dictSort: NumberLong("1"),
+    dictLabel: "未读",
+    dictValue: "0",
+    dictType: "mail_read_state",
+    listClass: "danger",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-28T01:15:34.000Z"),
+    remark: "未读取邮件",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("35"),
+    dictSort: NumberLong("2"),
+    dictLabel: "已读",
+    dictValue: "1",
+    dictType: "mail_read_state",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-28T01:15:55.000Z"),
+    remark: "已读取邮件",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("36"),
+    dictSort: NumberLong("1"),
+    dictLabel: "未领取",
+    dictValue: "0",
+    dictType: "mail_get_state",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-28T01:16:23.000Z"),
+    remark: "未领取邮件",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("37"),
+    dictSort: NumberLong("2"),
+    dictLabel: "已领取",
+    dictValue: "1",
+    dictType: "mail_get_state",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-28T01:16:42.000Z"),
+    remark: "已领取邮件",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("42"),
+    dictSort: NumberLong("1"),
+    dictLabel: "维护",
+    dictValue: "1",
+    dictType: "game_serverlist_state",
+    cssClass: "",
+    listClass: "success",
+    isDefault: "Y",
+    status: "0",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:46:41.308Z"),
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-05-16T13:48:37.613Z"),
+    remark: "维护中",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("43"),
+    dictSort: NumberLong("2"),
+    dictLabel: "期待",
+    dictValue: "2",
+    dictType: "game_serverlist_state",
+    cssClass: "",
+    listClass: "warning",
+    isDefault: "Y",
+    status: "0",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:47:24.961Z"),
+    remark: "等待开启",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("44"),
+    dictSort: NumberLong("3"),
+    dictLabel: "流畅",
+    dictValue: "3",
+    dictType: "game_serverlist_state",
+    cssClass: "",
+    listClass: "primary",
+    isDefault: "Y",
+    status: "0",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:47:50.835Z"),
+    remark: "流畅推荐服",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+db.getCollection("z_web_sys_dict_data").insert([ {
+    _id: NumberLong("45"),
+    dictSort: NumberLong("4"),
+    dictLabel: "爆满",
+    dictValue: "4",
+    dictType: "game_serverlist_state",
+    cssClass: "",
+    listClass: "danger",
+    isDefault: "Y",
+    status: "0",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:48:19.704Z"),
+    remark: "老服务器爆满",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictData"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_dict_type
+// ----------------------------
+db.getCollection("z_web_sys_dict_type").drop();
+db.createCollection("z_web_sys_dict_type");
+
+// ----------------------------
+// Documents of z_web_sys_dict_type
+// ----------------------------
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("1"),
+    dictName: "用户性别",
+    dictType: "sys_user_sex",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "用户性别列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("2"),
+    dictName: "菜单状态",
+    dictType: "sys_show_hide",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "菜单状态列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("3"),
+    dictName: "系统开关",
+    dictType: "sys_normal_disable",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "系统开关列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("4"),
+    dictName: "任务状态",
+    dictType: "sys_job_status",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "任务状态列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("5"),
+    dictName: "任务分组",
+    dictType: "sys_job_group",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "任务分组列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("6"),
+    dictName: "系统是否",
+    dictType: "sys_yes_no",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "系统是否列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("7"),
+    dictName: "通知类型",
+    dictType: "sys_notice_type",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "通知类型列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("8"),
+    dictName: "通知状态",
+    dictType: "sys_notice_status",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "通知状态列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("9"),
+    dictName: "操作类型",
+    dictType: "sys_oper_type",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "操作类型列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("10"),
+    dictName: "系统状态",
+    dictType: "sys_common_status",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "登录状态列表",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("11"),
+    dictName: "游戏服状态",
+    dictType: "game_server_state",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-05T19:31:24.000Z"),
+    remark: "游戏服务器状态",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("12"),
+    dictName: "邮件状态",
+    dictType: "mail_state",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-25T19:13:22.000Z"),
+    remark: "邮件状态（未发送 or 已发送）",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("13"),
+    dictName: "邮件读取状态",
+    dictType: "mail_read_state",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-28T01:14:22.000Z"),
+    remark: "邮件读取状态 0=未读 1=已读",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("14"),
+    dictName: "邮件领取状态",
+    dictType: "mail_get_state",
+    status: "0",
+    createBy: "admin",
+    createTime: ISODate("2024-02-28T01:14:51.000Z"),
+    remark: "邮件领取状态 0=未领取 1=已领取",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+db.getCollection("z_web_sys_dict_type").insert([ {
+    _id: NumberLong("15"),
+    dictName: "服务器列表状态",
+    dictType: "game_serverlist_state",
+    status: "0",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:46:07.389Z"),
+    remark: "服务器列表状态（0=维护 1=期待 2=流畅（推荐） 3=爆满）",
+    _class: "com.ruoyi.common.core.domain.entity.SysDictType"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_job
+// ----------------------------
+db.getCollection("z_web_sys_job").drop();
+db.createCollection("z_web_sys_job");
+
+// ----------------------------
+// Documents of z_web_sys_job
+// ----------------------------
+db.getCollection("z_web_sys_job").insert([ {
+    _id: NumberLong("1"),
+    jobName: "系统默认（无参）",
+    jobGroup: "DEFAULT",
+    invokeTarget: "ryTask.ryNoParams",
+    cronExpression: "0/10 * * * * ?",
+    misfirePolicy: "3",
+    concurrent: "1",
+    status: "1",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.quartz.domain.SysJob"
+} ]);
+db.getCollection("z_web_sys_job").insert([ {
+    _id: NumberLong("2"),
+    jobName: "系统默认（有参）",
+    jobGroup: "DEFAULT",
+    invokeTarget: "ryTask.ryParams('ry')",
+    cronExpression: "0/15 * * * * ?",
+    misfirePolicy: "3",
+    concurrent: "1",
+    status: "1",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.quartz.domain.SysJob"
+} ]);
+db.getCollection("z_web_sys_job").insert([ {
+    _id: NumberLong("3"),
+    jobName: "系统默认（多参）",
+    jobGroup: "DEFAULT",
+    invokeTarget: "ryTask.ryMultipleParams('ry', true, 2000L, 316.50D, 100)",
+    cronExpression: "0/20 * * * * ?",
+    misfirePolicy: "3",
+    concurrent: "1",
+    status: "1",
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.quartz.domain.SysJob"
+} ]);
+db.getCollection("z_web_sys_job").insert([ {
+    _id: NumberLong("4"),
+    jobName: "test123",
+    jobGroup: "DEFAULT",
+    invokeTarget: "ryTask.ryNoParams",
+    cronExpression: "* * * * * ?",
+    misfirePolicy: "1",
+    concurrent: "1",
+    status: "1",
+    createBy: "admin",
+    createTime: ISODate("2024-04-08T07:50:35.376Z"),
+    updateBy: "admin",
+    remark: "test",
+    _class: "com.ruoyi.quartz.domain.SysJob"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_menu
+// ----------------------------
+db.getCollection("z_web_sys_menu").drop();
+db.createCollection("z_web_sys_menu");
+
+// ----------------------------
+// Documents of z_web_sys_menu
+// ----------------------------
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1"),
+    menuName: "系统管理",
+    parentId: NumberLong("0"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-gear",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("2"),
+    menuName: "系统监控",
+    parentId: NumberLong("0"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-video-camera",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("3"),
+    menuName: "系统工具",
+    parentId: NumberLong("0"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-bars",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10000"),
+    menuName: "游戏日志",
+    parentId: NumberLong("0"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-paint-brush",
+    children: [ ],
+    createTime: ISODate("2023-12-25T01:21:37.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20000"),
+    menuName: "游戏工具",
+    parentId: NumberLong("0"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-legal",
+    children: [ ],
+    createTime: ISODate("2024-01-16T18:37:28.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30000"),
+    menuName: "游戏配置",
+    parentId: NumberLong("0"),
+    orderNum: "6",
+    url: "#",
+    target: "menuItem",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-briefcase",
+    children: [ ],
+    createTime: ISODate("2024-01-25T19:24:40.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("100"),
+    menuName: "用户管理",
+    parentId: NumberLong("1"),
+    orderNum: "1",
+    url: "/system/user",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:view",
+    icon: "fa fa-user-o",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("101"),
+    menuName: "角色管理",
+    parentId: NumberLong("1"),
+    orderNum: "2",
+    url: "/system/role",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:role:view",
+    icon: "fa fa-user-secret",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("102"),
+    menuName: "菜单管理",
+    parentId: NumberLong("1"),
+    orderNum: "3",
+    url: "/system/menu",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:menu:view",
+    icon: "fa fa-th-list",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("103"),
+    menuName: "部门管理",
+    parentId: NumberLong("1"),
+    orderNum: "4",
+    url: "/system/dept",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dept:view",
+    icon: "fa fa-outdent",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("104"),
+    menuName: "岗位管理",
+    parentId: NumberLong("1"),
+    orderNum: "5",
+    url: "/system/post",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:post:view",
+    icon: "fa fa-address-card-o",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("105"),
+    menuName: "字典管理",
+    parentId: NumberLong("1"),
+    orderNum: "6",
+    url: "/system/dict",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dict:view",
+    icon: "fa fa-bookmark-o",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("106"),
+    menuName: "参数设置",
+    parentId: NumberLong("1"),
+    orderNum: "7",
+    url: "/system/config",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:config:view",
+    icon: "fa fa-sun-o",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("107"),
+    menuName: "通知公告",
+    parentId: NumberLong("1"),
+    orderNum: "8",
+    url: "/system/notice",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:notice:view",
+    icon: "fa fa-bullhorn",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("108"),
+    menuName: "日志管理",
+    parentId: NumberLong("1"),
+    orderNum: "9",
+    url: "#",
+    target: "",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-pencil-square-o",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("109"),
+    menuName: "在线用户",
+    parentId: NumberLong("2"),
+    orderNum: "1",
+    url: "/monitor/online",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:online:view",
+    icon: "fa fa-user-circle",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("110"),
+    menuName: "定时任务",
+    parentId: NumberLong("2"),
+    orderNum: "2",
+    url: "/monitor/job",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:view",
+    icon: "fa fa-tasks",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("111"),
+    menuName: "数据监控",
+    parentId: NumberLong("2"),
+    orderNum: "3",
+    url: "/monitor/data",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:data:view",
+    icon: "fa fa-bug",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("112"),
+    menuName: "服务监控",
+    parentId: NumberLong("2"),
+    orderNum: "4",
+    url: "/monitor/server",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:server:view",
+    icon: "fa fa-server",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("113"),
+    menuName: "缓存监控",
+    parentId: NumberLong("2"),
+    orderNum: "5",
+    url: "/monitor/cache",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:cache:view",
+    icon: "fa fa-cube",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("114"),
+    menuName: "表单构建",
+    parentId: NumberLong("3"),
+    orderNum: "1",
+    url: "/tool/build",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "tool:build:view",
+    icon: "fa fa-wpforms",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("116"),
+    menuName: "系统接口",
+    parentId: NumberLong("3"),
+    orderNum: "3",
+    url: "/tool/swagger",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "tool:swagger:view",
+    icon: "fa fa-gg",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1000"),
+    menuName: "用户查询",
+    parentId: NumberLong("100"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1001"),
+    menuName: "用户新增",
+    parentId: NumberLong("100"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1002"),
+    menuName: "用户修改",
+    parentId: NumberLong("100"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1003"),
+    menuName: "用户删除",
+    parentId: NumberLong("100"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1004"),
+    menuName: "用户导出",
+    parentId: NumberLong("100"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1005"),
+    menuName: "用户导入",
+    parentId: NumberLong("100"),
+    orderNum: "6",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:import",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1006"),
+    menuName: "重置密码",
+    parentId: NumberLong("100"),
+    orderNum: "7",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:user:resetPwd",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1007"),
+    menuName: "角色查询",
+    parentId: NumberLong("101"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:role:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1008"),
+    menuName: "角色新增",
+    parentId: NumberLong("101"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:role:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1009"),
+    menuName: "角色修改",
+    parentId: NumberLong("101"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:role:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1010"),
+    menuName: "角色删除",
+    parentId: NumberLong("101"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:role:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1011"),
+    menuName: "角色导出",
+    parentId: NumberLong("101"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:role:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1012"),
+    menuName: "菜单查询",
+    parentId: NumberLong("102"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:menu:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1013"),
+    menuName: "菜单新增",
+    parentId: NumberLong("102"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:menu:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1014"),
+    menuName: "菜单修改",
+    parentId: NumberLong("102"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:menu:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1015"),
+    menuName: "菜单删除",
+    parentId: NumberLong("102"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:menu:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1016"),
+    menuName: "部门查询",
+    parentId: NumberLong("103"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dept:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1017"),
+    menuName: "部门新增",
+    parentId: NumberLong("103"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dept:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1018"),
+    menuName: "部门修改",
+    parentId: NumberLong("103"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dept:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1019"),
+    menuName: "部门删除",
+    parentId: NumberLong("103"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dept:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1020"),
+    menuName: "岗位查询",
+    parentId: NumberLong("104"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:post:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1021"),
+    menuName: "岗位新增",
+    parentId: NumberLong("104"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:post:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1022"),
+    menuName: "岗位修改",
+    parentId: NumberLong("104"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:post:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1023"),
+    menuName: "岗位删除",
+    parentId: NumberLong("104"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:post:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1024"),
+    menuName: "岗位导出",
+    parentId: NumberLong("104"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:post:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1025"),
+    menuName: "字典查询",
+    parentId: NumberLong("105"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dict:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1026"),
+    menuName: "字典新增",
+    parentId: NumberLong("105"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dict:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1027"),
+    menuName: "字典修改",
+    parentId: NumberLong("105"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dict:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1028"),
+    menuName: "字典删除",
+    parentId: NumberLong("105"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dict:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1029"),
+    menuName: "字典导出",
+    parentId: NumberLong("105"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:dict:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1030"),
+    menuName: "参数查询",
+    parentId: NumberLong("106"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:config:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1031"),
+    menuName: "参数新增",
+    parentId: NumberLong("106"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:config:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1032"),
+    menuName: "参数修改",
+    parentId: NumberLong("106"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:config:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1033"),
+    menuName: "参数删除",
+    parentId: NumberLong("106"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:config:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1034"),
+    menuName: "参数导出",
+    parentId: NumberLong("106"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:config:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1035"),
+    menuName: "公告查询",
+    parentId: NumberLong("107"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:notice:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1036"),
+    menuName: "公告新增",
+    parentId: NumberLong("107"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:notice:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1037"),
+    menuName: "公告修改",
+    parentId: NumberLong("107"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:notice:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1038"),
+    menuName: "公告删除",
+    parentId: NumberLong("107"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:notice:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("500"),
+    menuName: "操作日志",
+    parentId: NumberLong("108"),
+    orderNum: "1",
+    url: "/monitor/operlog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:operlog:view",
+    icon: "fa fa-address-book",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("501"),
+    menuName: "登录日志",
+    parentId: NumberLong("108"),
+    orderNum: "2",
+    url: "/monitor/logininfor",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:logininfor:view",
+    icon: "fa fa-file-image-o",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1047"),
+    menuName: "在线查询",
+    parentId: NumberLong("109"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:online:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1048"),
+    menuName: "批量强退",
+    parentId: NumberLong("109"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:online:batchForceLogout",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1049"),
+    menuName: "单条强退",
+    parentId: NumberLong("109"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:online:forceLogout",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1050"),
+    menuName: "任务查询",
+    parentId: NumberLong("110"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1051"),
+    menuName: "任务新增",
+    parentId: NumberLong("110"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1052"),
+    menuName: "任务修改",
+    parentId: NumberLong("110"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1053"),
+    menuName: "任务删除",
+    parentId: NumberLong("110"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1054"),
+    menuName: "状态修改",
+    parentId: NumberLong("110"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:changeStatus",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1055"),
+    menuName: "任务详细",
+    parentId: NumberLong("110"),
+    orderNum: "6",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:detail",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1056"),
+    menuName: "任务导出",
+    parentId: NumberLong("110"),
+    orderNum: "7",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:job:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1039"),
+    menuName: "操作查询",
+    parentId: NumberLong("500"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:operlog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1040"),
+    menuName: "操作删除",
+    parentId: NumberLong("500"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:operlog:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1041"),
+    menuName: "详细信息",
+    parentId: NumberLong("500"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:operlog:detail",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1042"),
+    menuName: "日志导出",
+    parentId: NumberLong("500"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:operlog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1043"),
+    menuName: "登录查询",
+    parentId: NumberLong("501"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:logininfor:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1044"),
+    menuName: "登录删除",
+    parentId: NumberLong("501"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:logininfor:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1045"),
+    menuName: "日志导出",
+    parentId: NumberLong("501"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:logininfor:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("1046"),
+    menuName: "账户解锁",
+    parentId: NumberLong("501"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "monitor:logininfor:unlock",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10100"),
+    menuName: "用户创建日志",
+    parentId: NumberLong("10000"),
+    orderNum: "1",
+    url: "/system/gamelog/usercreatelog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:usercreatelog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-25T22:14:39.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10200"),
+    menuName: "玩家创建日志",
+    parentId: NumberLong("10000"),
+    orderNum: "2",
+    url: "/system/gamelog/playercreatelog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playercreatelog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:02:03.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10300"),
+    menuName: "玩家登录日志",
+    parentId: NumberLong("10000"),
+    orderNum: "3",
+    url: "/system/gamelog/playerloginlog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerloginlog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:08:49.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10400"),
+    menuName: "玩家登出日志",
+    parentId: NumberLong("10000"),
+    orderNum: "4",
+    url: "/system/gamelog/playerlogoutlog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerlogoutlog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:09:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10600"),
+    menuName: "玩家道具变化日志",
+    parentId: NumberLong("10000"),
+    orderNum: "5",
+    url: "/system/gamelog/playeritemlog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playeritemlog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:21:12.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10700"),
+    menuName: "玩家竞技场积分日志",
+    parentId: NumberLong("10000"),
+    orderNum: "6",
+    url: "/system/gamelog/playerarenascorelog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerarenascorelog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:21:12.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10800"),
+    menuName: "玩家充值日志",
+    parentId: NumberLong("10000"),
+    orderNum: "7",
+    url: "/system/gamelog/playerpaylog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerpaylog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:21:12.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10500"),
+    menuName: "服务器在线日志",
+    parentId: NumberLong("10000"),
+    orderNum: "99",
+    url: "/system/gamelog/serveronlinelog",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:serveronlinelog:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:21:12.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10101"),
+    menuName: "用户创建日志查询",
+    parentId: NumberLong("10100"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:usercreatelog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-25T22:15:28.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10102"),
+    menuName: "用户创建日志导出",
+    parentId: NumberLong("10100"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:usercreatelog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-25T22:15:28.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10201"),
+    menuName: "玩家创建日志查询",
+    parentId: NumberLong("10200"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playercreatelog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:02:03.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10202"),
+    menuName: "玩家创建日志导出",
+    parentId: NumberLong("10200"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playercreatelog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:02:03.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10301"),
+    menuName: "玩家登录日志查询",
+    parentId: NumberLong("10300"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerloginlog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:08:49.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10302"),
+    menuName: "玩家登录日志导出",
+    parentId: NumberLong("10300"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerloginlog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:08:49.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10401"),
+    menuName: "玩家登出日志查询",
+    parentId: NumberLong("10400"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerlogoutlog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:09:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10402"),
+    menuName: "玩家登出日志导出",
+    parentId: NumberLong("10400"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerlogoutlog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T01:09:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10501"),
+    menuName: "服务器在线日志查询",
+    parentId: NumberLong("10500"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:serveronlinelog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10502"),
+    menuName: "服务器在线日志导出",
+    parentId: NumberLong("10500"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:serveronlinelog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10503"),
+    menuName: "服务器在线历史日志查询",
+    parentId: NumberLong("10500"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:serveronlinelog:historylog",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10601"),
+    menuName: "玩家道具变化日志查询",
+    parentId: NumberLong("10600"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playeritemlog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10602"),
+    menuName: "玩家道具变化日志导出",
+    parentId: NumberLong("10600"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playeritemlog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10701"),
+    menuName: "玩家竞技场积分日志查询",
+    parentId: NumberLong("10700"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerarenascorelog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10702"),
+    menuName: "玩家竞技场积分日志导出",
+    parentId: NumberLong("10700"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerarenascorelog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10801"),
+    menuName: "玩家充值日志查询",
+    parentId: NumberLong("10800"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerpaylog:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("10802"),
+    menuName: "玩家充值日志导出",
+    parentId: NumberLong("10800"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamelog:playerpaylog:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2023-12-28T00:23:14.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20100"),
+    menuName: "封号/解封",
+    parentId: NumberLong("20000"),
+    orderNum: "1",
+    url: "/system/gamegm/banned",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:banned:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20200"),
+    menuName: "后台邮件",
+    parentId: NumberLong("20000"),
+    orderNum: "2",
+    url: "/system/gamegm/mail",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20300"),
+    menuName: "玩家邮件",
+    parentId: NumberLong("20000"),
+    orderNum: "3",
+    url: "/system/gamegm/playermail",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playermail:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20400"),
+    menuName: "玩家物品",
+    parentId: NumberLong("20000"),
+    orderNum: "4",
+    url: "/system/gamegm/playeritem",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playeritem:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20500"),
+    menuName: "玩家充值",
+    parentId: NumberLong("20000"),
+    orderNum: "5",
+    url: "/system/gamegm/playerpay",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerpay:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20600"),
+    menuName: "充值订单",
+    parentId: NumberLong("20000"),
+    orderNum: "6",
+    url: "/system/gamegm/pay",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:pay:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20101"),
+    menuName: "查询封号/解封",
+    parentId: NumberLong("20100"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:banned:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20102"),
+    menuName: "确定封号/解封",
+    parentId: NumberLong("20100"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:banned:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20201"),
+    menuName: "查看后台邮件列表",
+    parentId: NumberLong("20200"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20202"),
+    menuName: "添加后台邮件",
+    parentId: NumberLong("20200"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20203"),
+    menuName: "发送后台邮件",
+    parentId: NumberLong("20200"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:send",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20204"),
+    menuName: "编辑后台邮件",
+    parentId: NumberLong("20200"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20205"),
+    menuName: "查看后台邮件",
+    parentId: NumberLong("20200"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:detail",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20206"),
+    menuName: "删除后台邮件",
+    parentId: NumberLong("20200"),
+    orderNum: "6",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:mail:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20301"),
+    menuName: "查看玩家邮件列表",
+    parentId: NumberLong("20300"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playermail:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20304"),
+    menuName: "编辑玩家邮件",
+    parentId: NumberLong("20300"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playermail:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20305"),
+    menuName: "查看玩家邮件",
+    parentId: NumberLong("20300"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playermail:detail",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20306"),
+    menuName: "删除玩家邮件",
+    parentId: NumberLong("20300"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playermail:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20401"),
+    menuName: "查看玩家物品列表",
+    parentId: NumberLong("20400"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playeritem:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20402"),
+    menuName: "添加玩家物品",
+    parentId: NumberLong("20400"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playeritem:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20403"),
+    menuName: "编辑玩家物品",
+    parentId: NumberLong("20400"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playeritem:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20404"),
+    menuName: "删除玩家物品",
+    parentId: NumberLong("20400"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playeritem:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20501"),
+    menuName: "玩家充值查询",
+    parentId: NumberLong("20500"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerpay:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20502"),
+    menuName: "玩家充值操作",
+    parentId: NumberLong("20500"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerpay:pay",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20503"),
+    menuName: "玩家充值挡位查询",
+    parentId: NumberLong("20500"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerpay:paymaplist",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-27T02:20:50.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20601"),
+    menuName: "充值订单查询",
+    parentId: NumberLong("20600"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:pay:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20602"),
+    menuName: "充值订单操作",
+    parentId: NumberLong("20600"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:pay:pay",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20603"),
+    menuName: "充值订单导出",
+    parentId: NumberLong("20600"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:pay:export",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30100"),
+    menuName: "上传配置表",
+    parentId: NumberLong("30000"),
+    orderNum: "1",
+    url: "/system/gameconfig/upload",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30400"),
+    menuName: "黑白名单(IP)",
+    parentId: NumberLong("30000"),
+    orderNum: "4",
+    url: "/system/gameconfig/ipconfig",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:ipconfig:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30500"),
+    menuName: "游戏公告",
+    parentId: NumberLong("30000"),
+    orderNum: "5",
+    url: "/system/gameconfig/gamenoticeconfig",
+    target: "",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gamenoticeconfig:view",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30101"),
+    menuName: "查看配置",
+    parentId: NumberLong("30100"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30102"),
+    menuName: "导入配置",
+    parentId: NumberLong("30100"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:importConfig",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30103"),
+    menuName: "热更配置选择服务器",
+    parentId: NumberLong("30100"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:selectgameserver",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30104"),
+    menuName: "热更配置",
+    parentId: NumberLong("30100"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:reload",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30105"),
+    menuName: "删除配置",
+    parentId: NumberLong("30100"),
+    orderNum: "5",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30106"),
+    menuName: "下载配置",
+    parentId: NumberLong("30100"),
+    orderNum: "6",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:download",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30401"),
+    menuName: "查看ip黑白名单列表",
+    parentId: NumberLong("30400"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:ipconfig:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30402"),
+    menuName: "激活ip黑白名单",
+    parentId: NumberLong("30400"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:ipconfig:operation",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30403"),
+    menuName: "添加ip黑白名单",
+    parentId: NumberLong("30400"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:ipconfig:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30404"),
+    menuName: "删除ip黑白名单",
+    parentId: NumberLong("30400"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:ipconfig:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30501"),
+    menuName: "查看游戏公告列表",
+    parentId: NumberLong("30500"),
+    orderNum: "1",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gamenoticeconfig:list",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30502"),
+    menuName: "编辑游戏公告",
+    parentId: NumberLong("30500"),
+    orderNum: "2",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gamenoticeconfig:edit",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30503"),
+    menuName: "添加游戏公告",
+    parentId: NumberLong("30500"),
+    orderNum: "3",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gamenoticeconfig:add",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30504"),
+    menuName: "删除游戏公告",
+    parentId: NumberLong("30500"),
+    orderNum: "4",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gamenoticeconfig:remove",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-03-15T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30107"),
+    menuName: "热更配置-查看游戏服务器配置",
+    parentId: NumberLong("30100"),
+    orderNum: "7",
+    url: "#",
+    target: "",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:upload:gameserverlist",
+    icon: "#",
+    children: [ ],
+    createTime: ISODate("2024-01-17T03:30:30.000Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30600"),
+    menuName: "活动配置",
+    parentId: NumberLong("30000"),
+    orderNum: "6",
+    url: "/system/gameconfig/gameactivityconfig",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameactivityconfig:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-10T11:37:05.235Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30601"),
+    menuName: "查看活动配置列表",
+    parentId: NumberLong("30600"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameactivityconfig:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-10T11:39:50.178Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30602"),
+    menuName: "添加活动配置",
+    parentId: NumberLong("30600"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameactivityconfig:add",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-10T11:44:45.582Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30603"),
+    menuName: "编辑活动配置",
+    parentId: NumberLong("30600"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameactivityconfig:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-10T11:45:30.871Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30604"),
+    menuName: "查看活动配置",
+    parentId: NumberLong("30600"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameactivityconfig:detail",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-10T11:46:28.911Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30605"),
+    menuName: "删除活动配置",
+    parentId: NumberLong("30600"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameactivityconfig:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-10T11:46:55.281Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30700"),
+    menuName: "服务器列表",
+    parentId: NumberLong("30000"),
+    orderNum: "7",
+    url: "/system/gameconfig/gameserverlist",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameserverlist:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:32:15.392Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30701"),
+    menuName: "查看服务器列表",
+    parentId: NumberLong("30700"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameserverlist:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:33:36.34Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("30702"),
+    menuName: "编辑服务器列表",
+    parentId: NumberLong("30700"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameconfig:gameserverlist:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-05-16T13:38:06.37Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40000"),
+    menuName: "生成代码",
+    parentId: NumberLong("0"),
+    orderNum: "7",
+    url: "#",
+    target: "menuItem",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-bug",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T13:55:01.951Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40100"),
+    menuName: "生成配置",
+    parentId: NumberLong("40000"),
+    orderNum: "1",
+    url: "/system/gamecode/genconfig",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genconfig:view",
+    icon: "fa fa-sticky-note",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T13:56:05.123Z"),
+    updateBy: "server",
+    updateTime: ISODate("2024-07-23T13:10:12.251Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40200"),
+    menuName: "生成消息",
+    parentId: NumberLong("40000"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T13:58:41.168Z"),
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-07-18T08:26:02.298Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40101"),
+    menuName: "查看生成配置表",
+    parentId: NumberLong("40100"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genconfig:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T14:04:17.182Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40102"),
+    menuName: "上传生成配置表",
+    parentId: NumberLong("40100"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genconfig:upload",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T14:06:14.144Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40103"),
+    menuName: "删除上传生成配置表",
+    parentId: NumberLong("40100"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genconfig:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T14:08:50.224Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40104"),
+    menuName: "生成上传配置表",
+    parentId: NumberLong("40100"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genconfig:genconfig",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T14:09:21.162Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20700"),
+    menuName: "玩家信息",
+    parentId: NumberLong("20000"),
+    orderNum: "7",
+    url: "/system/gamegm/playerinfo",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerinfo:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-20T05:50:28.722Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20701"),
+    menuName: "查询玩家信息",
+    parentId: NumberLong("20700"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerinfo:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-20T05:52:55.726Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("20702"),
+    menuName: "修改玩家信息",
+    parentId: NumberLong("20700"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamegm:playerinfo:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-20T05:53:22.881Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40300"),
+    menuName: "消息文件",
+    parentId: NumberLong("40200"),
+    orderNum: "1",
+    url: "/system/gamecode/genmsgtype",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsgtype:view",
+    icon: "fa fa-commenting",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:36:27.661Z"),
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-07-18T12:14:05.6Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40400"),
+    menuName: "消息协议",
+    parentId: NumberLong("40200"),
+    orderNum: "2",
+    url: "/system/gamecode/genmsg",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:view",
+    icon: "fa fa-commenting-o",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:38:39.628Z"),
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-07-18T12:14:38.798Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40301"),
+    menuName: "查看消息类型",
+    parentId: NumberLong("40300"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsgtype:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:42:58.217Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40302"),
+    menuName: "添加消息类型",
+    parentId: NumberLong("40300"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsgtype:add",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:45:58.146Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40303"),
+    menuName: "编辑消息类型",
+    parentId: NumberLong("40300"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsgtype:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:46:48.804Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40304"),
+    menuName: "删除消息类型",
+    parentId: NumberLong("40300"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsgtype:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:47:22.37Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40305"),
+    menuName: "查看消息类型详细信息",
+    parentId: NumberLong("40300"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsgtype:detail",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T08:53:00.345Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40401"),
+    menuName: "查看消息",
+    parentId: NumberLong("40400"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T14:31:46.516Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40402"),
+    menuName: "编辑消息",
+    parentId: NumberLong("40400"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T14:32:05.4Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40403"),
+    menuName: "删除消息",
+    parentId: NumberLong("40400"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T14:32:27.956Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40404"),
+    menuName: "消息详细信息",
+    parentId: NumberLong("40400"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:detail",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T14:33:33.389Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40405"),
+    menuName: "生成消息代码",
+    parentId: NumberLong("40400"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:generate",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T14:35:35.224Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40406"),
+    menuName: "新增消息",
+    parentId: NumberLong("40400"),
+    orderNum: "6",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:genmsg:add",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-18T14:37:40.906Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40500"),
+    menuName: "生成存储",
+    parentId: NumberLong("40000"),
+    orderNum: "3",
+    url: "/system/gamecode/gendb",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:gendb:view",
+    icon: "fa fa-suitcase",
+    createBy: "server",
+    createTime: ISODate("2024-07-23T13:08:12.035Z"),
+    updateBy: "server",
+    updateTime: ISODate("2024-07-23T13:09:08.668Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40501"),
+    menuName: "查看存储文件",
+    parentId: NumberLong("40500"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:gendb:list",
+    icon: "#",
+    createBy: "server",
+    createTime: ISODate("2024-07-23T13:11:59.273Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40502"),
+    menuName: "添加存储文件",
+    parentId: NumberLong("40500"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:gendb:add",
+    icon: "#",
+    createBy: "server",
+    createTime: ISODate("2024-07-23T13:12:16.918Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40503"),
+    menuName: "删除存储文件",
+    parentId: NumberLong("40500"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:gendb:remove",
+    icon: "#",
+    createBy: "server",
+    createTime: ISODate("2024-07-23T13:12:38.888Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("40504"),
+    menuName: "生成存储代码",
+    parentId: NumberLong("40500"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gamecode:gendb:generate",
+    icon: "#",
+    createBy: "server",
+    createTime: ISODate("2024-07-23T13:14:08.255Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50000"),
+    menuName: "运维管理",
+    parentId: NumberLong("0"),
+    orderNum: "8",
+    url: "#",
+    target: "menuItem",
+    menuType: "M",
+    visible: "0",
+    isRefresh: "1",
+    perms: "",
+    icon: "fa fa-globe",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T06:34:29.216Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50100"),
+    menuName: "云服务配置",
+    parentId: NumberLong("50000"),
+    orderNum: "1",
+    url: "/system/gameyw/cloudconfig",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:cloudconfig:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:08:25.671Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50200"),
+    menuName: "打包部署",
+    parentId: NumberLong("50000"),
+    orderNum: "2",
+    url: "/system/gameyw/packagedeploy",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:packagedeploy:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:19:03.134Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50300"),
+    menuName: "游戏服配置",
+    parentId: NumberLong("50000"),
+    orderNum: "3",
+    url: "/system/gameyw/gameserverconfig",
+    target: "menuItem",
+    menuType: "C",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:view",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:20:27.987Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50101"),
+    menuName: "查看云配置列表",
+    parentId: NumberLong("50100"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:cloudconfig:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:37:04.609Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50102"),
+    menuName: "添加云配置",
+    parentId: NumberLong("50100"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:cloudconfig:add",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:37:20.818Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50103"),
+    menuName: "编辑云配置",
+    parentId: NumberLong("50100"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:cloudconfig:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:37:34.329Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50104"),
+    menuName: "查看云配置",
+    parentId: NumberLong("50100"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:cloudconfig:detail",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:37:50.689Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50105"),
+    menuName: "删除云配置",
+    parentId: NumberLong("50100"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:cloudconfig:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:38:04.741Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50201"),
+    menuName: "查看打包部署项目列表",
+    parentId: NumberLong("50200"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:packagedeploy:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:40:36.421Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50202"),
+    menuName: "添加打包部署地址",
+    parentId: NumberLong("50200"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:packagedeploy:add",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:44:36.605Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50203"),
+    menuName: "删除打包部署地址",
+    parentId: NumberLong("50200"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:packagedeploy:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:45:27.268Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50204"),
+    menuName: "开始打包部署",
+    parentId: NumberLong("50200"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:packagedeploy:packagedeploy",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:48:59.924Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50301"),
+    menuName: "查看游戏服配置列表",
+    parentId: NumberLong("50300"),
+    orderNum: "1",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:list",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:51:16.484Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50302"),
+    menuName: "操作游戏服",
+    parentId: NumberLong("50300"),
+    orderNum: "2",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:operation",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:52:20.523Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50303"),
+    menuName: "添加游戏服配置",
+    parentId: NumberLong("50300"),
+    orderNum: "3",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:add",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:52:44.542Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50304"),
+    menuName: "编辑游戏服配置",
+    parentId: NumberLong("50300"),
+    orderNum: "4",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:edit",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:53:16.082Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50305"),
+    menuName: "查看游戏服配置",
+    parentId: NumberLong("50300"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:detail",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:53:48.392Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50306"),
+    menuName: "删除游戏服配置",
+    parentId: NumberLong("50300"),
+    orderNum: "6",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:remove",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:54:45.664Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50307"),
+    menuName: "查看操作游戏服日志",
+    parentId: NumberLong("50300"),
+    orderNum: "7",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:gameserverconfig:operationlogs",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-25T07:55:21.761Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+db.getCollection("z_web_sys_menu").insert([ {
+    _id: NumberLong("50205"),
+    menuName: "查看打包部署游戏服日志",
+    parentId: NumberLong("50200"),
+    orderNum: "5",
+    url: "#",
+    target: "menuItem",
+    menuType: "F",
+    visible: "0",
+    isRefresh: "1",
+    perms: "system:gameyw:packagedeploy:packagedeploylog",
+    icon: "#",
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-27T03:36:08.55Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysMenu"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_notice
+// ----------------------------
+db.getCollection("z_web_sys_notice").drop();
+db.createCollection("z_web_sys_notice");
+
+// ----------------------------
+// Documents of z_web_sys_notice
+// ----------------------------
+
+// ----------------------------
+// Collection structure for z_web_sys_post
+// ----------------------------
+db.getCollection("z_web_sys_post").drop();
+db.createCollection("z_web_sys_post");
+
+// ----------------------------
+// Documents of z_web_sys_post
+// ----------------------------
+db.getCollection("z_web_sys_post").insert([ {
+    _id: NumberLong("1"),
+    postCode: "ceo",
+    postName: "董事长",
+    postSort: "1",
+    status: "0",
+    flag: false,
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.system.domain.SysPost"
+} ]);
+db.getCollection("z_web_sys_post").insert([ {
+    _id: NumberLong("2"),
+    postCode: "se",
+    postName: "项目经理",
+    postSort: "2",
+    status: "0",
+    flag: false,
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.system.domain.SysPost"
+} ]);
+db.getCollection("z_web_sys_post").insert([ {
+    _id: NumberLong("3"),
+    postCode: "hr",
+    postName: "人力资源",
+    postSort: "3",
+    status: "0",
+    flag: false,
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.system.domain.SysPost"
+} ]);
+db.getCollection("z_web_sys_post").insert([ {
+    _id: NumberLong("4"),
+    postCode: "user",
+    postName: "普通员工",
+    postSort: "4",
+    status: "0",
+    flag: false,
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "",
+    _class: "com.ruoyi.system.domain.SysPost"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_role
+// ----------------------------
+db.getCollection("z_web_sys_role").drop();
+db.createCollection("z_web_sys_role");
+
+// ----------------------------
+// Documents of z_web_sys_role
+// ----------------------------
+db.getCollection("z_web_sys_role").insert([ {
+    _id: NumberLong("1"),
+    roleName: "超级管理员",
+    roleKey: "admin",
+    roleSort: "1",
+    dataScope: "1",
+    status: "0",
+    delFlag: "0",
+    flag: false,
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    remark: "超级管理员",
+    _class: "com.ruoyi.common.core.domain.entity.SysRole"
+} ]);
+db.getCollection("z_web_sys_role").insert([ {
+    _id: NumberLong("3"),
+    roleName: "管理员",
+    roleKey: "subAdmin",
+    roleSort: "3",
+    dataScope: "2",
+    status: "0",
+    flag: false,
+    menuIds: [
+        NumberLong("10000"),
+        NumberLong("10100"),
+        NumberLong("10101"),
+        NumberLong("10102"),
+        NumberLong("10200"),
+        NumberLong("10201"),
+        NumberLong("10202"),
+        NumberLong("10300"),
+        NumberLong("10301"),
+        NumberLong("10302"),
+        NumberLong("10400"),
+        NumberLong("10401"),
+        NumberLong("10402"),
+        NumberLong("10600"),
+        NumberLong("10601"),
+        NumberLong("10602"),
+        NumberLong("20000"),
+        NumberLong("20400"),
+        NumberLong("20401"),
+        NumberLong("20402"),
+        NumberLong("20403"),
+        NumberLong("20404")
+    ],
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-09-26T03:54:51.885Z"),
+    remark: "管理员",
+    _class: "com.ruoyi.common.core.domain.entity.SysRole"
+} ]);
+db.getCollection("z_web_sys_role").insert([ {
+    _id: NumberLong("2"),
+    roleName: "服务器管理员",
+    roleKey: "server",
+    roleSort: "2",
+    dataScope: "2",
+    status: "0",
+    flag: false,
+    menuIds: [
+        NumberLong("30000"),
+        NumberLong("30100"),
+        NumberLong("30101"),
+        NumberLong("30102"),
+        NumberLong("30103"),
+        NumberLong("30104"),
+        NumberLong("30105"),
+        NumberLong("30106"),
+        NumberLong("30107"),
+        NumberLong("40000"),
+        NumberLong("40100"),
+        NumberLong("40101"),
+        NumberLong("40102"),
+        NumberLong("40103"),
+        NumberLong("40104"),
+        NumberLong("40200"),
+        NumberLong("40300"),
+        NumberLong("40301"),
+        NumberLong("40302"),
+        NumberLong("40303"),
+        NumberLong("40304"),
+        NumberLong("40305"),
+        NumberLong("40400"),
+        NumberLong("40401"),
+        NumberLong("40402"),
+        NumberLong("40403"),
+        NumberLong("40404"),
+        NumberLong("40405"),
+        NumberLong("40406"),
+        NumberLong("40500"),
+        NumberLong("40501"),
+        NumberLong("40502"),
+        NumberLong("40503"),
+        NumberLong("40504")
+    ],
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-08-14T08:22:13.069Z"),
+    _class: "com.ruoyi.common.core.domain.entity.SysRole"
+} ]);
+db.getCollection("z_web_sys_role").insert([ {
+    _id: NumberLong("4"),
+    roleName: "可爱捏开发者",
+    roleKey: "coder",
+    roleSort: "4",
+    status: "0",
+    flag: false,
+    menuIds: [
+        NumberLong("50000"),
+        NumberLong("50200"),
+        NumberLong("50201"),
+        NumberLong("50202"),
+        NumberLong("50203"),
+        NumberLong("50204"),
+        NumberLong("50205"),
+        NumberLong("50300"),
+        NumberLong("50301"),
+        NumberLong("50302"),
+        NumberLong("50303"),
+        NumberLong("50304"),
+        NumberLong("50305"),
+        NumberLong("50306"),
+        NumberLong("50307")
+    ],
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-26T02:18:34.069Z"),
+    updateBy: "zhangzhen",
+    updateTime: ISODate("2024-07-27T03:36:24.895Z"),
+    remark: "",
+    _class: "com.ruoyi.common.core.domain.entity.SysRole"
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_user
+// ----------------------------
+db.getCollection("z_web_sys_user").drop();
+db.createCollection("z_web_sys_user");
+
+// ----------------------------
+// Documents of z_web_sys_user
+// ----------------------------
+db.getCollection("z_web_sys_user").insert([ {
+    _id: NumberLong("1"),
+    deptId: NumberLong("103"),
+    roleId: NumberLong("1"),
+    postId: NumberLong("1"),
+    loginName: "zhangzhen",
+    userName: "大橘子",
+    userType: "00",
+    email: "zhangaszhen@163.com",
+    phonenumber: "18608045508",
+    sex: "0",
+    avatar: "/profile/avatar/2024/08/17/blob_20240817135815A001.png",
+    password: "$2a$10$mvdi1aiya58tl3j1hcjshop5nly79zqcyqj6d3mpkbgyjvq2o9gro",
+    salt: "$2a$10$mvDI1aiYA58TL3J1hCJSHO",
+    status: "0",
+    delFlag: "0",
+    language: "zh_CN",
+    loginIp: "45.158.182.81",
+    loginDate: ISODate("2024-09-26T03:54:23.525Z"),
+    pwdUpdateDate: ISODate("2024-04-12T09:22:40.642Z"),
+    dept: { },
+    roles: [
+        {
+            _id: NumberLong("1"),
+            roleName: "超级管理员",
+            roleKey: "admin",
+            roleSort: "1",
+            dataScope: "1",
+            status: "0",
+            flag: false
+        }
+    ],
+    createBy: "admin",
+    createTime: ISODate("2023-10-27T02:47:01.000Z"),
+    updateBy: "",
+    updateTime: ISODate("2024-04-08T18:21:46.000Z"),
+    remark: "管理员",
+    _class: "com.ruoyi.common.core.domain.entity.SysUser"
+} ]);
+db.getCollection("z_web_sys_user").insert([ {
+    _id: NumberLong("2"),
+    deptId: NumberLong("101"),
+    roleId: NumberLong("3"),
+    postId: NumberLong("4"),
+    loginName: "admin",
+    userName: "big胆",
+    userType: "00",
+    email: "",
+    phonenumber: "18608045509",
+    sex: "0",
+    password: "$2a$10$x5q2q5nciv0advd5fpfimua7nlkjphoxl8o7ehcd0b3ugg6yk202o",
+    salt: "$2a$10$X5Q2q5Nciv0aDvd5FPFImu",
+    status: "0",
+    language: "zh_CN",
+    loginIp: "101.44.81.249",
+    loginDate: ISODate("2024-10-06T13:30:22.138Z"),
+    pwdUpdateDate: ISODate("2024-09-26T03:46:25.868Z"),
+    dept: {
+        deptName: "DZ"
+    },
+    roleIds: [
+        NumberLong("2")
+    ],
+    postIds: [
+        NumberLong("4")
+    ],
+    createBy: "admin",
+    createTime: ISODate("2024-04-10T07:18:19.478Z"),
+    updateBy: "admin",
+    updateTime: ISODate("2024-04-10T07:20:21.981Z"),
+    remark: "浑身是胆",
+    _class: "com.ruoyi.common.core.domain.entity.SysUser"
+} ]);
+db.getCollection("z_web_sys_user").insert([ {
+    _id: NumberLong("3"),
+    deptId: NumberLong("102"),
+    roleId: NumberLong("2"),
+    postId: NumberLong("4"),
+    loginName: "server",
+    userName: "服务器管理员",
+    userType: "00",
+    email: "",
+    phonenumber: "18888888888",
+    sex: "0",
+    password: "$2a$10$q5dhpqxxu.xu4b1ym2gue.dtqx/3l52tdm4ypjhwfkstwzi9u.vpu",
+    salt: "$2a$10$Q5DhpqXXU.Xu4b1YM2Gue.",
+    status: "0",
+    language: "zh_CN",
+    roleIds: [
+        NumberLong("2")
+    ],
+    postIds: [
+        NumberLong("4")
+    ],
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-06-02T13:50:40.123Z"),
+    remark: "",
+    _class: "com.ruoyi.common.core.domain.entity.SysUser",
+    loginDate: ISODate("2024-09-26T10:31:12.823Z"),
+    loginIp: "103.97.2.12",
+    pwdUpdateDate: ISODate("2024-09-07T07:09:08.788Z")
+} ]);
+db.getCollection("z_web_sys_user").insert([ {
+    _id: NumberLong("4"),
+    deptId: NumberLong("100"),
+    roleId: NumberLong("4"),
+    postId: NumberLong("1"),
+    loginName: "coder",
+    userName: "可爱捏",
+    userType: "00",
+    email: "",
+    phonenumber: "",
+    sex: "0",
+    password: "$2a$10$ub8mxmcsfdf0wjldb8kyw.60/p2hc8v7ywynpdxoacj6/6kgclnom",
+    salt: "$2a$10$uB8MXmCsFDf0WjLDb8KYw.",
+    status: "0",
+    language: "zh_CN",
+    roleIds: [
+        NumberLong("4")
+    ],
+    postIds: [
+        NumberLong("1")
+    ],
+    createBy: "zhangzhen",
+    createTime: ISODate("2024-07-26T02:37:42.809Z"),
+    remark: "",
+    _class: "com.ruoyi.common.core.domain.entity.SysUser",
+    loginDate: ISODate("2024-10-08T01:40:25.291Z"),
+    loginIp: "103.167.134.56",
+    pwdUpdateDate: ISODate("2024-09-07T07:11:10.264Z")
+} ]);
+
+// ----------------------------
+// Collection structure for z_web_sys_user_online
+// ----------------------------
+db.getCollection("z_web_sys_user_online").drop();
+db.createCollection("z_web_sys_user_online");
+
+// ----------------------------
+// Documents of z_web_sys_user_online
+// ----------------------------
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "1e6dba6d-3af5-4b38-bfae-c8c9b533382d",
+    deptName: "DZ",
+    loginName: "dz",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-12T08:57:21.966Z"),
+    lastAccessTime: ISODate("2024-04-12T08:57:23.973Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "667f843c-ab92-4108-a55b-d90fb7f26e16",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-12T09:25:28.282Z"),
+    lastAccessTime: ISODate("2024-04-12T09:25:42.754Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "c6d7abd1-21bd-45ec-be6c-a5c91e37af53",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-12T09:31:43.441Z"),
+    lastAccessTime: ISODate("2024-04-12T09:43:33.855Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d13d7ce7-1238-41b9-970f-a01aaa3d7cd0",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-15T07:07:22.352Z"),
+    lastAccessTime: ISODate("2024-04-15T07:09:35.668Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "c0aeb676-f416-4365-aafb-1a1258a5e535",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-15T07:10:07.694Z"),
+    lastAccessTime: ISODate("2024-04-15T07:10:09.627Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "a08b086f-421d-4ca7-bc65-2b567a7fcabf",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-15T09:56:27.915Z"),
+    lastAccessTime: ISODate("2024-04-15T09:56:30.216Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "5e38c2f2-089b-4de0-908e-a78ec4692d40",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-16T03:29:42.61Z"),
+    lastAccessTime: ISODate("2024-04-16T03:29:45.428Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "69f4ee5c-e5b8-41d7-ac6b-8f39c94163c4",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-16T08:29:09.711Z"),
+    lastAccessTime: ISODate("2024-04-16T09:48:03.633Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0e563137-e49c-4acb-a761-f0ed2a9f7f45",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-17T01:30:44.032Z"),
+    lastAccessTime: ISODate("2024-04-17T01:40:03.328Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ca41fcd2-1f2f-4b32-b23b-f712743576ef",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-17T08:28:24.293Z"),
+    lastAccessTime: ISODate("2024-04-17T09:28:51.149Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "a9c11301-551d-4922-8f82-1b0f92415759",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-18T07:10:44.487Z"),
+    lastAccessTime: ISODate("2024-04-18T07:10:48.312Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "a0e411c9-eb8f-4ab3-9877-b87d7504f665",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T08:46:48.293Z"),
+    lastAccessTime: ISODate("2024-04-19T09:04:19.882Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0da2eb76-e64a-417b-8963-43678fe29d39",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:04:39.525Z"),
+    lastAccessTime: ISODate("2024-04-19T09:04:45.509Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "824339c9-1650-4839-96ae-5d9854439c68",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:04:51.145Z"),
+    lastAccessTime: ISODate("2024-04-19T09:04:53.455Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8d30107b-f9fa-4174-a3f5-1e88f9b069cf",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:05:21.837Z"),
+    lastAccessTime: ISODate("2024-04-19T09:05:30.274Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8e7e1ca9-ea90-41b9-90bc-ce0863ac4425",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:07:14.115Z"),
+    lastAccessTime: ISODate("2024-04-19T09:07:16.569Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "13a75f7b-d9ac-4107-8c4f-bd2fa70b9311",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:21:16.809Z"),
+    lastAccessTime: ISODate("2024-04-19T09:27:33.615Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "fbf1e92d-e57b-445a-bbe2-03ba2df80eb8",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:23:11.182Z"),
+    lastAccessTime: ISODate("2024-04-19T09:23:15.159Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "5bcd0916-a214-4e9d-aa85-db08f0827f94",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:23:48.112Z"),
+    lastAccessTime: ISODate("2024-04-19T09:23:50.748Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "88d3110c-86bf-4867-a874-b0fd4cbbfd60",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.3",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:23:57.075Z"),
+    lastAccessTime: ISODate("2024-04-19T09:24:03.695Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9295991b-9f28-48b6-a477-7a55f0dee958",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:29:20.828Z"),
+    lastAccessTime: ISODate("2024-04-19T09:29:25.323Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "5f230025-acb8-4489-8259-d3fd61f43018",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-19T09:43:10.806Z"),
+    lastAccessTime: ISODate("2024-04-19T09:43:13.371Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f158e887-450f-4f04-aa95-077280cc1473",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-22T01:53:37.192Z"),
+    lastAccessTime: ISODate("2024-04-22T01:53:39.72Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "023bc08d-ccd2-4eb4-8268-d96a811768ca",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-22T02:00:32.722Z"),
+    lastAccessTime: ISODate("2024-04-22T02:00:35.043Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "80ae199e-ee0b-4088-ac03-7ff2c1994e6e",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-22T06:02:18.548Z"),
+    lastAccessTime: ISODate("2024-04-22T06:37:14.657Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e42ea4a1-b0af-4e2c-af7b-3a8231e16072",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-22T09:38:49.79Z"),
+    lastAccessTime: ISODate("2024-04-22T09:48:24.105Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3231c1e7-8709-4ce9-8b70-042e7432f296",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-23T03:36:55.578Z"),
+    lastAccessTime: ISODate("2024-04-23T03:37:01.24Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "76e2e8df-ea8f-40fb-87ca-777d72ce21d0",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-23T06:11:47.202Z"),
+    lastAccessTime: ISODate("2024-04-23T06:11:47.311Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d6a9bbff-c2ce-426f-8cb5-37d90059d4b6",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-23T06:26:41.036Z"),
+    lastAccessTime: ISODate("2024-04-23T06:49:51.972Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "dc2bb56c-4872-4407-88cd-4d7a88a4bb0f",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-23T09:56:05.778Z"),
+    lastAccessTime: ISODate("2024-04-23T09:57:15.127Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "89da04aa-7856-4638-91d2-a8753358c419",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-24T06:22:01.376Z"),
+    lastAccessTime: ISODate("2024-04-24T06:22:01.414Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "40c21925-802c-4570-bbd9-dd0fcba7c4d4",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T08:32:09.591Z"),
+    lastAccessTime: ISODate("2024-04-26T08:32:09.747Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "23dd3c67-4f88-4f24-83e9-2f313e921c73",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T08:32:55.43Z"),
+    lastAccessTime: ISODate("2024-04-26T08:34:25.7Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "46d73a24-33d0-430b-bed8-5f1ff0fb34b7",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T08:39:48.153Z"),
+    lastAccessTime: ISODate("2024-04-26T08:41:34.702Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "bc58d083-90c4-417e-9b6e-c63761031eb1",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T08:49:55.102Z"),
+    lastAccessTime: ISODate("2024-04-26T08:49:55.244Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2eb9f02c-d736-4a44-b640-5cbda967c955",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T08:50:25.987Z"),
+    lastAccessTime: ISODate("2024-04-26T08:50:26.01Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3c61c53d-4240-4ed4-9c47-0352dcb90471",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T09:00:47.067Z"),
+    lastAccessTime: ISODate("2024-04-26T09:00:47.089Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "67af4394-111d-4239-a995-9a3c33107198",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T09:05:44.148Z"),
+    lastAccessTime: ISODate("2024-04-26T09:05:44.285Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e4832580-db3d-4cc2-baa2-3a4dc573b742",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T09:30:11.918Z"),
+    lastAccessTime: ISODate("2024-04-26T09:34:44.95Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "48326051-d032-4138-bd46-7f9b34c47778",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T09:35:43.845Z"),
+    lastAccessTime: ISODate("2024-04-26T09:40:08.455Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "770179a7-36f8-4e2a-a1a7-2ddeda5c7f5e",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.48",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-04-26T09:56:44.709Z"),
+    lastAccessTime: ISODate("2024-04-26T10:14:40.097Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "16fd28bc-7b23-4922-9621-fe3fd5675f5e",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-26T10:05:12.49Z"),
+    lastAccessTime: ISODate("2024-04-26T10:05:12.669Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "18317e10-d3a6-4498-a814-b3b7fd67a5de",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.48",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-04-28T01:37:27.415Z"),
+    lastAccessTime: ISODate("2024-04-28T01:40:21.647Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4eb17587-a516-4060-a238-ecf1df61468b",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-28T08:20:54.762Z"),
+    lastAccessTime: ISODate("2024-04-28T08:20:56.938Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2fbb163e-10e3-448e-9ce6-7b14202ab0ba",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-30T08:38:18.671Z"),
+    lastAccessTime: ISODate("2024-04-30T09:42:39.739Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "fb3b7614-57d6-4136-b8ab-b6d79f4d7841",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-04-30T09:09:25.442Z"),
+    lastAccessTime: ISODate("2024-04-30T09:24:48.693Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "18041564-8775-4054-95b4-2560f81376ee",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-06T09:27:20.639Z"),
+    lastAccessTime: ISODate("2024-05-06T09:29:27.952Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8c1c7912-5a56-40a9-aaf3-de439aa662bd",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-06T09:30:53.466Z"),
+    lastAccessTime: ISODate("2024-05-06T09:34:16.029Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9148cc6e-eb1c-4233-9799-20f0a608d315",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T01:15:15.622Z"),
+    lastAccessTime: ISODate("2024-05-07T01:15:15.701Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ff723a07-bb7a-47ba-987b-ce81ac7d22d6",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T01:16:32.528Z"),
+    lastAccessTime: ISODate("2024-05-07T01:16:32.55Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0797c830-3aaf-4cae-a097-c433679d27c5",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.83",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T08:38:50.635Z"),
+    lastAccessTime: ISODate("2024-05-07T08:40:02.867Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2e64e1a5-6f76-4bcd-abba-576a9435b62f",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.63",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T08:55:35.793Z"),
+    lastAccessTime: ISODate("2024-05-07T08:56:54.516Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0d014d91-9771-468e-b26b-9e9310eac044",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.56",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T08:56:42.558Z"),
+    lastAccessTime: ISODate("2024-05-07T08:58:45.367Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "acb9dc1d-4557-4257-a113-e11c725a83b8",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T09:29:01.204Z"),
+    lastAccessTime: ISODate("2024-05-07T09:51:56.109Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "60f28a40-3ad4-4599-bfca-6a0943e2acec",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-07T09:36:23.937Z"),
+    lastAccessTime: ISODate("2024-05-07T09:40:46.177Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f4ce3407-8abe-4e7c-88d5-0ac4760b9a7b",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.56",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-08T01:12:40.439Z"),
+    lastAccessTime: ISODate("2024-05-08T01:12:40.7Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "5b890151-79ef-4d95-871f-824ee0a26def",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-08T01:51:29.378Z"),
+    lastAccessTime: ISODate("2024-05-08T01:51:29.461Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e839cd94-b152-462a-9e76-5690ee881249",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-08T03:05:26.923Z"),
+    lastAccessTime: ISODate("2024-05-08T03:06:35.976Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7adcc54a-0d35-4ed0-ac8a-5dbe81bbe354",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-08T07:47:48.74Z"),
+    lastAccessTime: ISODate("2024-05-08T08:09:24.779Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "c47b4419-4d55-4c83-9423-77af47af507f",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-08T08:06:16.238Z"),
+    lastAccessTime: ISODate("2024-05-08T08:42:42.759Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d881e0c5-5206-438f-bec4-9d6d479f790d",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.56",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-08T09:09:38.096Z"),
+    lastAccessTime: ISODate("2024-05-08T09:09:38.136Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "513c7217-03e8-41dd-884a-eeb74398bc30",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-09T12:10:57.933Z"),
+    lastAccessTime: ISODate("2024-05-09T12:16:02.368Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "98bfcc07-2471-43a5-9126-79915508ddfc",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-09T12:37:08.226Z"),
+    lastAccessTime: ISODate("2024-05-09T12:48:39.079Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d86fdf84-32ad-4747-a766-b98418630220",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-09T12:55:59.647Z"),
+    lastAccessTime: ISODate("2024-05-09T13:01:45.845Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7482840e-e72b-4321-b49f-e1048c762231",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-10T02:43:47.707Z"),
+    lastAccessTime: ISODate("2024-05-10T02:47:47.825Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d997a2a4-8454-43ad-831d-7dcab0667b2d",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-10T08:19:26.648Z"),
+    lastAccessTime: ISODate("2024-05-10T08:19:26.67Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9b7a7a40-1918-48fc-86cc-56a097626c5d",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-10T11:53:51.473Z"),
+    lastAccessTime: ISODate("2024-05-10T11:53:51.542Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d31e5abc-fb0f-4904-804a-d548678cf1e8",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.56",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-10T12:18:21.346Z"),
+    lastAccessTime: ISODate("2024-05-10T12:18:21.404Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "cfbcaad6-31c7-4698-95d9-15786f8cbe56",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-10T12:20:43.422Z"),
+    lastAccessTime: ISODate("2024-05-10T12:20:44.948Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f694b393-8602-4a1f-b640-939d0cff09f8",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-11T06:35:44.375Z"),
+    lastAccessTime: ISODate("2024-05-11T06:35:44.394Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9fd2aaec-92bf-435a-b12d-80dbfb44d9ab",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-11T08:37:16.887Z"),
+    lastAccessTime: ISODate("2024-05-11T10:07:21.757Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "67cf7bd8-36f4-4596-bb5e-27d4142fd230",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.13",
+    loginLocation: "内网IP",
+    browser: "Firefox 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-13T06:05:52.246Z"),
+    lastAccessTime: ISODate("2024-05-13T06:39:00.406Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "38978fa1-62db-4eb4-ada8-1194fcd46198",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-13T10:03:20.269Z"),
+    lastAccessTime: ISODate("2024-05-13T10:03:20.376Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "dec80e76-df85-4e9b-8ce5-e21072be6af8",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-13T10:03:31.645Z"),
+    lastAccessTime: ISODate("2024-05-13T10:21:38.165Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2943df5f-e1d0-4b34-8c92-683f50559656",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.56",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-14T06:54:16.705Z"),
+    lastAccessTime: ISODate("2024-05-14T07:09:59.282Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e4828816-97f4-4c58-8dfd-75c2e9093c8e",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-14T09:46:38.764Z"),
+    lastAccessTime: ISODate("2024-05-14T09:47:49.05Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "201c9047-bf7f-42f6-bfb7-fe3a79a523f0",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-16T09:48:05.451Z"),
+    lastAccessTime: ISODate("2024-05-16T09:59:17.182Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "940f1c71-1017-460a-95ab-05dc3b2aea9d",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "127.0.0.1",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-16T14:31:40.744Z"),
+    lastAccessTime: ISODate("2024-05-16T14:31:41.244Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f4d2159a-f87e-44ff-8394-68499cc862f9",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-17T01:54:58.504Z"),
+    lastAccessTime: ISODate("2024-05-17T02:12:08.113Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "afb5482e-30f0-4b7b-9258-65e42236da1a",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.110.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 11",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-05-17T03:49:20.057Z"),
+    lastAccessTime: ISODate("2024-05-17T03:49:20.202Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3b943efb-b624-4e96-8ba1-67fcb4c95c3d",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-02T10:41:16.644Z"),
+    lastAccessTime: ISODate("2024-06-02T10:41:16.719Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "b4f482d9-2874-4b2a-9357-1076dd3218cf",
+    loginName: "server",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-02T14:09:50.15Z"),
+    lastAccessTime: ISODate("2024-06-02T14:09:50.239Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f0215f08-0431-407e-ad1a-c95f1ef34a3e",
+    loginName: "server",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-03T01:57:51.378Z"),
+    lastAccessTime: ISODate("2024-06-03T02:06:08.901Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "626ccaaa-5b55-4155-a9ba-6b111ecbe849",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-14T10:23:27.129Z"),
+    lastAccessTime: ISODate("2024-06-14T10:24:30.771Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "870f3a7c-6131-452f-ab32-c4fe6cf81076",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-20T05:57:48.884Z"),
+    lastAccessTime: ISODate("2024-06-20T05:57:49.03Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "230b9ff8-eeef-4f2c-98a4-79b78e697d23",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-20T09:30:16.498Z"),
+    lastAccessTime: ISODate("2024-06-20T09:30:16.565Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "90c6b205-206b-4884-b82c-676d491465c0",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-20T09:35:53.395Z"),
+    lastAccessTime: ISODate("2024-06-20T10:14:50.176Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "080aab84-ab24-42b0-8e56-99bfb5e40f1e",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-21T05:42:46.46Z"),
+    lastAccessTime: ISODate("2024-06-21T06:10:01.696Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ff0d6f23-c9d9-4199-96a8-c335fde50ffc",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T01:45:41.449Z"),
+    lastAccessTime: ISODate("2024-06-25T01:45:41.603Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8faa6445-5cff-4877-baba-cf8420baa2ec",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T01:46:27.674Z"),
+    lastAccessTime: ISODate("2024-06-25T01:59:04.821Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "865bbdd6-b697-4a37-8d08-ce17093edac8",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.105",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-06-25T01:52:45.685Z"),
+    lastAccessTime: ISODate("2024-06-25T01:52:58.722Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "298a30e4-5586-45b8-b8f4-add3a336e645",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T02:00:09.401Z"),
+    lastAccessTime: ISODate("2024-06-25T02:00:09.443Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4136f914-5267-4897-845c-a187f0aa6cb2",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T03:35:53.272Z"),
+    lastAccessTime: ISODate("2024-06-25T03:35:53.509Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "11497a83-8716-46df-a9d5-b8fb58edacad",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.131",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T06:23:31.991Z"),
+    lastAccessTime: ISODate("2024-06-25T06:23:46.612Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3542e9c0-fbf2-4314-be45-c4bbc518f828",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.105",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-06-25T07:07:59.766Z"),
+    lastAccessTime: ISODate("2024-06-25T07:07:59.815Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "30059ef2-ad72-48f6-aa12-33b1d98d2bc9",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.131",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T08:58:17.577Z"),
+    lastAccessTime: ISODate("2024-06-25T08:58:17.577Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9ef13e86-546f-49e1-97e1-0faa13b4cd27",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.106",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-25T10:27:53.094Z"),
+    lastAccessTime: ISODate("2024-06-25T10:27:53.094Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0f617e21-4639-4dae-b47f-3092297f66a6",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-26T01:43:35.486Z"),
+    lastAccessTime: ISODate("2024-06-26T01:46:47.618Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "b6a04838-c054-4ae2-aada-84b26697bed9",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.118",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-27T02:20:08.375Z"),
+    lastAccessTime: ISODate("2024-06-27T02:28:22.188Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7086d367-6490-4d7e-bf27-08758b86ea9a",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-27T03:15:41.64Z"),
+    lastAccessTime: ISODate("2024-06-27T03:16:46.127Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4b091077-ddce-461e-9faa-8de1a446aa6e",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.101",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-06-27T09:39:20.441Z"),
+    lastAccessTime: ISODate("2024-06-27T09:39:20.442Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "dd42ad7c-c8ba-4121-9002-6be4e16443ef",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.131",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-27T10:35:18.369Z"),
+    lastAccessTime: ISODate("2024-06-27T10:35:18.369Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3d5a6cff-113c-418b-867f-9932fe10a73a",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.124",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-28T07:32:26.031Z"),
+    lastAccessTime: ISODate("2024-06-28T07:32:40.738Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7526d345-a98a-4dd6-ac5f-e42a3f98325b",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.106",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-28T09:46:30.541Z"),
+    lastAccessTime: ISODate("2024-06-28T09:46:30.541Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "874b2bf9-68b4-461c-b277-383f8bf8e488",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.114",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-06-28T10:57:43.14Z"),
+    lastAccessTime: ISODate("2024-06-28T10:57:43.14Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0ac421cc-41ad-4805-b347-49ea5738c520",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-01T10:25:33.743Z"),
+    lastAccessTime: ISODate("2024-07-01T10:25:38.074Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d63d3283-f32a-4545-9b8c-d5a4a1839af5",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.116",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-03T06:46:02.17Z"),
+    lastAccessTime: ISODate("2024-07-03T06:46:02.17Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9d71d7c8-8c91-4755-981a-4d1f7a5307a9",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.130",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-06T03:49:32.612Z"),
+    lastAccessTime: ISODate("2024-07-06T03:49:36.939Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "aa9e5f95-fb00-449b-a992-9ad2e65df59b",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.104",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-15T03:35:40.232Z"),
+    lastAccessTime: ISODate("2024-07-15T03:36:09.315Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "75ac800f-a211-4ccf-8487-cac3aaeca092",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.130",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-16T06:48:47.791Z"),
+    lastAccessTime: ISODate("2024-07-16T06:48:57.695Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "80bf0b91-875c-4ef3-8117-e1ce47f7e910",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-16T07:25:45.05Z"),
+    lastAccessTime: ISODate("2024-07-16T07:25:45.158Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3fb286ad-e3be-457a-8005-4e84e67e818b",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.2.110",
+    loginLocation: "内网IP",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-16T07:47:01.392Z"),
+    lastAccessTime: ISODate("2024-07-16T07:47:55.78Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "fcf9e129-37ec-4ec7-aa96-fb6fd6d9f78a",
+    loginName: "zhangzhen",
+    ipaddr: "171.216.76.140",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-16T09:44:13.544Z"),
+    lastAccessTime: ISODate("2024-07-16T09:45:18.182Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "dbf4d913-af4c-4c48-add4-a15ababd17f8",
+    loginName: "zhangzhen",
+    ipaddr: "171.216.76.140",
+    loginLocation: "XX XX",
+    browser: "CFNetwork",
+    os: "Mac OS X",
+    startTimestamp: ISODate("2024-07-16T09:44:20.813Z"),
+    lastAccessTime: ISODate("2024-07-16T09:44:20.814Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "6dda589f-b6bb-429c-911f-c57c77154670",
+    loginName: "zhangzhen",
+    ipaddr: "171.216.136.83",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-18T10:29:05.21Z"),
+    lastAccessTime: ISODate("2024-07-18T10:29:08.081Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7c2dd444-7259-4abe-bd13-44885920d045",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.93.174",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-18T12:09:23.348Z"),
+    lastAccessTime: ISODate("2024-07-18T12:14:57.017Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "9021005d-7464-48f3-834f-3c01a3243279",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.93.174",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-18T14:27:34.679Z"),
+    lastAccessTime: ISODate("2024-07-18T14:35:44.847Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ac1464b4-2f1f-4f85-aed4-4523f6ae87fc",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.93.174",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-18T14:37:15.796Z"),
+    lastAccessTime: ISODate("2024-07-18T14:37:15.797Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d95c8026-1083-4414-9282-1005326ca18a",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.0.105",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-19T13:15:21.656Z"),
+    lastAccessTime: ISODate("2024-07-19T14:02:22.759Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "a38f97b2-6010-471f-b7c8-e22b7303a13c",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.0.105",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-20T12:38:59.789Z"),
+    lastAccessTime: ISODate("2024-07-20T14:19:50.129Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "a9333f9a-3678-40a0-b0d2-1e487261b2c3",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.0.105",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-21T13:16:27.689Z"),
+    lastAccessTime: ISODate("2024-07-21T13:42:31.09Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "26595aef-d0fc-49c1-81f2-2bd92bd5cc25",
+    loginName: "server",
+    ipaddr: "118.114.94.70",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-22T08:24:14.129Z"),
+    lastAccessTime: ISODate("2024-07-22T08:24:19.07Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8fbc08ee-f25f-4c45-9eba-6203f4e36024",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.70",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-22T10:05:39.12Z"),
+    lastAccessTime: ISODate("2024-07-22T10:05:41.781Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8be3c02b-98be-498b-bd43-710d125cd063",
+    loginName: "server",
+    ipaddr: "118.114.94.150",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-23T09:12:47.912Z"),
+    lastAccessTime: ISODate("2024-07-23T09:44:08.883Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7fb28fad-6ac9-418a-bf2e-43bd9ca09be6",
+    loginName: "server",
+    ipaddr: "118.114.93.174",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-23T12:39:15.656Z"),
+    lastAccessTime: ISODate("2024-07-23T13:15:15.186Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "11bd32c2-4286-42f9-9e93-d329fdaac903",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.93.174",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-23T12:39:48.466Z"),
+    lastAccessTime: ISODate("2024-07-23T12:39:51.391Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "bb509a61-1c9b-4b2c-8e8d-eeb058f5b722",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.93.174",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-23T13:08:32.734Z"),
+    lastAccessTime: ISODate("2024-07-23T13:14:54.898Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e4c29690-2404-48fd-8892-b79d309d5179",
+    loginName: "server",
+    ipaddr: "171.216.76.249",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-24T06:51:12.92Z"),
+    lastAccessTime: ISODate("2024-07-24T06:51:15.987Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "246a7601-5f63-4cb3-bb37-6dcb2a3532ba",
+    loginName: "server",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-24T13:26:21.263Z"),
+    lastAccessTime: ISODate("2024-07-24T13:28:00.305Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d6fb24ee-3873-4355-a34c-91372c87957f",
+    loginName: "server",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-24T13:58:48.046Z"),
+    lastAccessTime: ISODate("2024-07-24T14:01:38.169Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "09fa081c-b1a2-4f56-bc7a-76e9b20e1ddc",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-24T14:09:32.697Z"),
+    lastAccessTime: ISODate("2024-07-24T14:09:35.436Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "fa54aae1-8851-45a6-8d68-8c5c56848be2",
+    loginName: "zhangzhen",
+    ipaddr: "171.216.76.249",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-25T10:29:50.071Z"),
+    lastAccessTime: ISODate("2024-07-25T10:29:52.451Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4a06864e-10f5-43c2-a07e-675acbf985f4",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-25T13:09:51.059Z"),
+    lastAccessTime: ISODate("2024-07-25T13:36:05.965Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "66e56a76-edb6-4c7a-a06a-63c48ea8617d",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.0.105",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-25T13:29:15.84Z"),
+    lastAccessTime: ISODate("2024-07-25T13:59:32.431Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2d4060f8-7922-4772-ac82-eba3b95463f9",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-25T14:30:32.961Z"),
+    lastAccessTime: ISODate("2024-07-25T14:58:38.995Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "be61059f-f5b6-410c-8cda-c0ecf91d3e8c",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.0.105",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-25T14:56:37.471Z"),
+    lastAccessTime: ISODate("2024-07-25T15:07:52.186Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "314d1bab-c90f-4354-b65c-4a0139555701",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-25T15:02:26.69Z"),
+    lastAccessTime: ISODate("2024-07-25T15:02:33.724Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "a5ec7f80-4003-4a09-81dd-7243729215c5",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-25T15:08:06.804Z"),
+    lastAccessTime: ISODate("2024-07-25T15:09:39.287Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0030e420-5fff-440d-94f4-a63d43e45be3",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-25T15:17:46.882Z"),
+    lastAccessTime: ISODate("2024-07-25T15:20:05.825Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "014dfc6f-18b5-4acc-9352-8e7bca1e94eb",
+    loginName: "zhangzhen",
+    ipaddr: "171.216.76.249",
+    loginLocation: "XX XX",
+    browser: "Mobile Safari",
+    os: "Mac OS X (iPhone)",
+    startTimestamp: ISODate("2024-07-26T02:11:51.995Z"),
+    lastAccessTime: ISODate("2024-07-26T02:37:59.619Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2f0ce24d-cff5-40a2-abb7-dc62b36ccd10",
+    loginName: "coder",
+    ipaddr: "171.216.76.249",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-26T09:43:02.233Z"),
+    lastAccessTime: ISODate("2024-07-26T09:57:48.322Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7a8c160d-b631-47db-8f92-6bb67b52d2ae",
+    loginName: "coder",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-26T09:58:04.848Z"),
+    lastAccessTime: ISODate("2024-07-26T10:22:18.917Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "2454d806-232e-4cbc-bee8-7dae23b19025",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-26T15:41:14.613Z"),
+    lastAccessTime: ISODate("2024-07-26T15:41:14.751Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8f510267-fbdc-44a7-8cbb-031a0d2bb829",
+    loginName: "coder",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-27T04:43:34.209Z"),
+    lastAccessTime: ISODate("2024-07-27T06:09:52.58Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e5b601b3-44b2-4e74-be65-d3a904ab7bee",
+    loginName: "coder",
+    ipaddr: "118.114.94.94",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-27T15:28:38.898Z"),
+    lastAccessTime: ISODate("2024-07-27T15:38:32.265Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "bf627155-03ec-4b77-bcc5-6faaa018300c",
+    loginName: "coder",
+    ipaddr: "118.114.94.179",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-28T09:53:55.741Z"),
+    lastAccessTime: ISODate("2024-07-28T10:10:30.88Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "0a171f61-c8a1-48b9-b780-e920fd323661",
+    loginName: "coder",
+    ipaddr: "118.114.94.179",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-28T10:12:27.947Z"),
+    lastAccessTime: ISODate("2024-07-28T10:12:30.731Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e61f50d7-7ddb-47cc-b2fc-5fd00fb507fb",
+    loginName: "coder",
+    ipaddr: "118.114.94.179",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-28T14:19:20.351Z"),
+    lastAccessTime: ISODate("2024-07-28T14:24:13.945Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "09f7f0af-af1c-4760-9c3b-ae62e358705f",
+    loginName: "coder",
+    ipaddr: "118.114.94.179",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-28T14:37:59.167Z"),
+    lastAccessTime: ISODate("2024-07-28T15:14:48.513Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "1708846b-7fc4-4d5d-9e46-e201f0ddbe6e",
+    loginName: "coder",
+    ipaddr: "118.114.60.177",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-29T10:27:17.283Z"),
+    lastAccessTime: ISODate("2024-07-29T10:27:17.444Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "616a4d1e-b257-4274-b6fb-4d3869171445",
+    loginName: "coder",
+    ipaddr: "118.114.94.179",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-29T13:20:07.308Z"),
+    lastAccessTime: ISODate("2024-07-29T13:20:15.217Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f187c69a-17ca-4eef-b2c1-da888bf2b4d5",
+    loginName: "zhangzhen",
+    ipaddr: "192.168.0.105",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-29T14:07:12.578Z"),
+    lastAccessTime: ISODate("2024-07-29T15:38:24.204Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "71bb7758-95c4-4247-8c0f-9f8635530852",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-30T04:11:03.96Z"),
+    lastAccessTime: ISODate("2024-07-30T04:12:07.819Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "97e5a784-6c01-4e2e-ad41-c6b35f67ee02",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-30T06:42:59.054Z"),
+    lastAccessTime: ISODate("2024-07-30T06:44:06.881Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "c80770f3-eedb-4042-9c79-e34047a7c965",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-30T06:53:10.659Z"),
+    lastAccessTime: ISODate("2024-07-30T06:53:13.423Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "fcf14966-4006-47f1-b025-61dd0cd9a83c",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-30T07:11:18.984Z"),
+    lastAccessTime: ISODate("2024-07-30T07:11:23.601Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f0579be6-2a70-45b8-9991-80966bf3eb32",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-30T10:20:31.271Z"),
+    lastAccessTime: ISODate("2024-07-30T10:28:29.102Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "76f3d486-9169-4dcf-9881-5b09273f2609",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-31T01:59:43.869Z"),
+    lastAccessTime: ISODate("2024-07-31T01:59:47.224Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "c25fbdc0-d549-4a87-949a-2ff7bc239a3d",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-31T08:28:40.043Z"),
+    lastAccessTime: ISODate("2024-07-31T08:28:42.835Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f9343cd1-8dca-4cd1-bcbb-9cd48ff75af9",
+    loginName: "server",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-07-31T10:13:03.381Z"),
+    lastAccessTime: ISODate("2024-07-31T10:13:05.699Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "b1a91ea6-6779-4c4d-aa9f-22e186adff91",
+    loginName: "coder",
+    ipaddr: "118.114.63.127",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-01T02:39:43.7Z"),
+    lastAccessTime: ISODate("2024-08-01T02:39:46.232Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e5b98c8a-4fe6-4690-a02a-6c6829599023",
+    loginName: "coder",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-01T05:35:02.831Z"),
+    lastAccessTime: ISODate("2024-08-01T07:40:52.491Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e34201f9-fa51-4d07-818e-10bba915808f",
+    loginName: "coder",
+    ipaddr: "118.114.60.79",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-01T07:52:45.539Z"),
+    lastAccessTime: ISODate("2024-08-01T07:55:14.963Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4eef5cd6-f175-42b0-bd0e-521860bc6892",
+    loginName: "coder",
+    ipaddr: "192.168.2.234",
+    loginLocation: "内网IP",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-01T08:02:12.028Z"),
+    lastAccessTime: ISODate("2024-08-01T09:35:23.132Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "cda4826e-db99-455d-9aa6-91b2daf5dcb7",
+    loginName: "coder",
+    ipaddr: "118.114.60.79",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-01T09:40:10.338Z"),
+    lastAccessTime: ISODate("2024-08-01T09:40:19.348Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "7aea3db7-1d8d-44a0-805c-bb28c2cfad6e",
+    loginName: "coder",
+    ipaddr: "118.114.60.79",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-02T02:39:49.907Z"),
+    lastAccessTime: ISODate("2024-08-02T02:42:14.442Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "212a165f-d84b-41ad-9fbc-98fda9f10d83",
+    loginName: "server",
+    ipaddr: "118.114.60.79",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-02T06:20:23.242Z"),
+    lastAccessTime: ISODate("2024-08-02T06:20:23.413Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e6d4d5f2-6fc4-4451-a8b4-b0010ee8e5db",
+    loginName: "coder",
+    ipaddr: "118.114.94.179",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-02T13:10:41.853Z"),
+    lastAccessTime: ISODate("2024-08-02T13:10:47.019Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "744d2ec7-317b-40f7-a63c-8d34c56fdec2",
+    loginName: "server",
+    ipaddr: "171.216.136.100",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-06T06:45:29.888Z"),
+    lastAccessTime: ISODate("2024-08-06T07:18:54.488Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3d9325df-7364-403e-94e9-a684ef5f7cda",
+    loginName: "server",
+    ipaddr: "171.216.136.100",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-06T09:56:47.519Z"),
+    lastAccessTime: ISODate("2024-08-06T09:56:50.175Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "1e9f5f18-4688-4ccc-964d-d9af60f7919b",
+    loginName: "server",
+    ipaddr: "118.114.60.117",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-13T10:15:33.308Z"),
+    lastAccessTime: ISODate("2024-08-13T10:15:33.514Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "91f74f1d-f328-4abc-958a-40afd820221a",
+    loginName: "server",
+    ipaddr: "118.114.60.117",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-13T10:20:05.014Z"),
+    lastAccessTime: ISODate("2024-08-13T10:20:08.046Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "3f845af5-a27d-45bd-b484-7b6fc884bb7c",
+    loginName: "server",
+    ipaddr: "118.114.94.21",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-14T08:22:17.943Z"),
+    lastAccessTime: ISODate("2024-08-14T08:22:18.241Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "b11016f9-f916-4edd-b7e1-0f60c9a547aa",
+    loginName: "server",
+    ipaddr: "118.114.94.21",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-14T09:49:12.501Z"),
+    lastAccessTime: ISODate("2024-08-14T09:50:53.283Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4ea2289d-d32b-4de2-86bc-502d5f922e24",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.60.28",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-15T16:29:34.365Z"),
+    lastAccessTime: ISODate("2024-08-15T18:04:12.42Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "fb45bb0f-6226-4d71-9779-31fc773f0272",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.60.28",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-16T14:38:39.498Z"),
+    lastAccessTime: ISODate("2024-08-16T15:01:06.115Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "f63a815c-fa16-4fd8-a789-9496b859303c",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.60.28",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-17T05:54:37.066Z"),
+    lastAccessTime: ISODate("2024-08-17T06:17:05.496Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "dc24384a-5f4e-4c88-a79e-5e10841cd793",
+    loginName: "zhangzhen",
+    ipaddr: "118.114.60.28",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-17T15:57:13.01Z"),
+    lastAccessTime: ISODate("2024-08-17T16:36:39.653Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d4d6e1c6-6fc9-4d11-a84c-adb3bc673a3e",
+    loginName: "coder",
+    ipaddr: "118.114.60.28",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-17T23:59:49.519Z"),
+    lastAccessTime: ISODate("2024-08-18T00:13:52.777Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "cff52a78-8bad-4aab-8dc0-212d7a64cade",
+    loginName: "server",
+    ipaddr: "125.71.94.214",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-19T10:03:26.087Z"),
+    lastAccessTime: ISODate("2024-08-19T10:04:32.277Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ae58b789-26ea-4895-a926-6689716dbc29",
+    loginName: "coder",
+    ipaddr: "171.216.136.39",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-19T16:36:49.001Z"),
+    lastAccessTime: ISODate("2024-08-19T16:39:50.455Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "750e407b-f2d9-4b22-8748-fdc9a414d4d4",
+    loginName: "coder",
+    ipaddr: "103.36.24.156",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-20T09:52:52.519Z"),
+    lastAccessTime: ISODate("2024-08-20T09:53:58.767Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ef9af668-b52c-43f7-b245-e3741190517e",
+    loginName: "server",
+    ipaddr: "103.36.24.156",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-21T09:16:06.247Z"),
+    lastAccessTime: ISODate("2024-08-21T09:16:09.568Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "81078954-a35e-4caf-b07e-19f79d23ae2f",
+    loginName: "coder",
+    ipaddr: "46.232.123.25",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-21T16:20:38.952Z"),
+    lastAccessTime: ISODate("2024-08-21T16:28:38.131Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "580af8cb-71db-4920-8c5a-0f9d655eca84",
+    loginName: "coder",
+    ipaddr: "171.216.136.39",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-22T00:03:49.848Z"),
+    lastAccessTime: ISODate("2024-08-22T00:04:51.775Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "d2fdb456-5ad5-480d-b948-8ad372649136",
+    loginName: "zhangzhen",
+    ipaddr: "46.232.123.27",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-22T13:28:44.351Z"),
+    lastAccessTime: ISODate("2024-08-22T13:41:48.827Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4e591950-0c85-4155-9f74-b35318964e7b",
+    loginName: "coder",
+    ipaddr: "103.172.183.18",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-23T02:58:01.804Z"),
+    lastAccessTime: ISODate("2024-08-23T03:01:12.125Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "4628ec0a-c480-403e-9e65-91589911d929",
+    loginName: "coder",
+    ipaddr: "103.172.183.18",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-23T03:08:10.436Z"),
+    lastAccessTime: ISODate("2024-08-23T03:08:18.412Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "b6172f21-0faf-4a9e-92bc-7ed47860fee9",
+    loginName: "coder",
+    ipaddr: "46.232.123.29",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-26T10:21:52.386Z"),
+    lastAccessTime: ISODate("2024-08-26T10:23:01.536Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e57e6bd4-0f3a-4a93-8d4e-ecddaa84c97b",
+    loginName: "coder",
+    ipaddr: "46.232.123.29",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-26T11:20:57.476Z"),
+    lastAccessTime: ISODate("2024-08-26T11:22:59.29Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "186308b2-ee3a-49c0-9383-ba455828d273",
+    loginName: "coder",
+    ipaddr: "46.232.123.29",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-27T04:59:02.287Z"),
+    lastAccessTime: ISODate("2024-08-27T05:00:02.703Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "6584aa49-ef1f-40d5-9ab5-d45cba153cb1",
+    loginName: "server",
+    ipaddr: "46.232.123.29",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-27T09:13:47.48Z"),
+    lastAccessTime: ISODate("2024-08-27T09:13:48.379Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "86335ced-de54-4018-b923-fae6d9027ba5",
+    loginName: "server",
+    ipaddr: "46.232.123.23",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-08-30T05:57:23.427Z"),
+    lastAccessTime: ISODate("2024-08-30T06:06:28.798Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "114b1f2e-7a0c-4f43-99e6-103765ab8e9f",
+    loginName: "server",
+    ipaddr: "46.232.123.36",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-01T12:57:42.905Z"),
+    lastAccessTime: ISODate("2024-09-01T12:57:43.21Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "afe8d7fd-ad47-4c0b-aad0-67fba3a11366",
+    loginName: "coder",
+    ipaddr: "103.231.84.120",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-03T11:24:12.306Z"),
+    lastAccessTime: ISODate("2024-09-03T11:57:37.947Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "35457ad3-d889-4d5f-861e-869dd217fef2",
+    loginName: "coder",
+    ipaddr: "101.44.81.117",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-04T02:55:21.589Z"),
+    lastAccessTime: ISODate("2024-09-04T02:56:25.801Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "1474f52d-c480-4772-839c-656331e516f1",
+    loginName: "server",
+    ipaddr: "171.214.182.8",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-07T07:20:53.04Z"),
+    lastAccessTime: ISODate("2024-09-07T07:21:03.558Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "39df8b6f-9848-4ace-9109-9ddbe3c6af97",
+    loginName: "coder",
+    ipaddr: "46.232.123.31",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-08T13:24:58.847Z"),
+    lastAccessTime: ISODate("2024-09-08T14:25:30.911Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "c1e3e6c9-b87f-4168-8fdb-7bdedd4c7c42",
+    loginName: "coder",
+    ipaddr: "103.231.84.181",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-10T09:47:38.724Z"),
+    lastAccessTime: ISODate("2024-09-10T10:32:56.873Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "55fe8ab4-0e2e-40d6-be60-f79b592c0c31",
+    loginName: "server",
+    ipaddr: "43.228.227.124",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-12T03:01:39.437Z"),
+    lastAccessTime: ISODate("2024-09-12T03:12:47.337Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "e8660bfa-3dc3-4185-9a5a-1ac8c9190f05",
+    loginName: "coder",
+    ipaddr: "101.44.82.217",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-12T12:11:05.192Z"),
+    lastAccessTime: ISODate("2024-09-12T12:29:57.766Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "56dc21af-77c0-4687-b6a3-b59bb03470e3",
+    loginName: "server",
+    ipaddr: "101.44.80.11",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-23T01:59:51.989Z"),
+    lastAccessTime: ISODate("2024-09-23T02:13:14.692Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "bc807890-c580-4d9d-82f5-54514211fb80",
+    loginName: "coder",
+    ipaddr: "101.44.80.66",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-27T08:51:29.442Z"),
+    lastAccessTime: ISODate("2024-09-27T08:53:15.637Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "933c838d-6016-4c08-ab8d-c189776a48a4",
+    loginName: "coder",
+    ipaddr: "101.44.81.149",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-09-29T07:02:43.815Z"),
+    lastAccessTime: ISODate("2024-09-29T07:06:35.195Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8405a6c1-5d0f-4e3d-a4b1-f69c72067a14",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "103.43.162.140",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-10-05T10:41:05.984Z"),
+    lastAccessTime: ISODate("2024-10-05T11:07:38.484Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "12d9c2b8-a2de-4e79-9ac1-17d60b23918b",
+    loginName: "coder",
+    ipaddr: "101.44.80.66",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-10-06T12:18:29.13Z"),
+    lastAccessTime: ISODate("2024-10-06T12:20:33.755Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "84174593-f023-418a-8a7d-94ee204be4eb",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "101.44.81.249",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-10-06T12:59:58.964Z"),
+    lastAccessTime: ISODate("2024-10-06T13:05:35.518Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "8399499a-0f9f-4597-8aaa-b2cefe3f8669",
+    deptName: "DZ",
+    loginName: "admin",
+    ipaddr: "101.44.81.249",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-10-06T13:30:22.008Z"),
+    lastAccessTime: ISODate("2024-10-06T13:30:22.297Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "b2e4c37e-a4f2-4fab-8c2c-843514b10689",
+    loginName: "coder",
+    ipaddr: "165.154.21.190",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-10-07T11:37:42.38Z"),
+    lastAccessTime: ISODate("2024-10-07T11:40:30.811Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+db.getCollection("z_web_sys_user_online").insert([ {
+    _id: "ea73a647-119a-4bf2-8195-9910bfa6fe24",
+    loginName: "coder",
+    ipaddr: "103.167.134.56",
+    loginLocation: "XX XX",
+    browser: "Chrome 12",
+    os: "Windows 10",
+    startTimestamp: ISODate("2024-10-08T01:40:25.176Z"),
+    lastAccessTime: ISODate("2024-10-08T01:46:38.302Z"),
+    expireTime: NumberLong("1800000"),
+    status: "on_line",
+    _class: "com.ruoyi.system.domain.SysUserOnline"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_cloud_server
+// ----------------------------
+db.getCollection("z_yw_cloud_server").drop();
+db.createCollection("z_yw_cloud_server");
+
+// ----------------------------
+// Documents of z_yw_cloud_server
+// ----------------------------
+db.getCollection("z_yw_cloud_server").insert([ {
+    _id: NumberInt("1"),
+    name: "东京傻瓜游戏正式服",
+    domain: "",
+    outIp: "18.178.115.102",
+    inIp: "172.31.38.87",
+    sshUser: "root",
+    sshPwd: "aszhangzhen.",
+    mongoUser: "orange",
+    mongoPwd: "Orange_qnmw2018_3",
+    mongoPort: NumberInt("27017"),
+    redisPwd: "Orange_qnmw2018_3",
+    redisPort: NumberInt("6379"),
+    mysqlUser: "root",
+    mysqlPwd: "Orange_qnmw2018_3",
+    mysqlPort: NumberInt("3306"),
+    _class: "com.game.config.YwCloudConfig"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_game_db
+// ----------------------------
+db.getCollection("z_yw_game_db").drop();
+db.createCollection("z_yw_game_db");
+
+// ----------------------------
+// Documents of z_yw_game_db
+// ----------------------------
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7405956256185188353",
+    className: "PlayerPay",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerPay.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7405956354969436162",
+    className: "PlayerPack",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerPack.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7405956389329174531",
+    className: "PlayerQuest",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerQuest.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097323448565762",
+    className: "Activity",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/activity/structs/Activity.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097572556668932",
+    className: "BackMail",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/mail/structs/BackMail.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097594031505413",
+    className: "Mail",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/mail/structs/Mail.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097619801309190",
+    className: "Player",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/Player.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097645571112967",
+    className: "PlayerActivity",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerActivity.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097662750982152",
+    className: "PlayerChat",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerChat.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097684225818633",
+    className: "PlayerFriend",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerFriend.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097705700655114",
+    className: "PlayerHero",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerHero.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097727175491595",
+    className: "PlayerMap",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerMap.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097795894968332",
+    className: "PlayerShop",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/PlayerShop.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097813074837517",
+    className: "SimplePlayer",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/player/structs/SimplePlayer.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097834549673998",
+    className: "Clans",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/clans/structs/Clans.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097856024510479",
+    className: "ClansSimple",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/clans/structs/ClansSimple.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097877499346960",
+    className: "PlayerClansData",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/clans/structs/PlayerClansData.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097894679216145",
+    className: "FriendPublicData",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/friend/structs/FriendPublicData.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097911859085330",
+    className: "ClansMap",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/clans/structs/ClansMap.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+db.getCollection("z_yw_game_db").insert([ {
+    _id: "7411097933333921811",
+    className: "ClansMapLog",
+    classPath: "/data/work_git/Ynd_WebGame_GameServer/GameApiServer/src/main/java/com/game/clans/structs/ClansMapLog.java",
+    _class: "com.game.code.db.structs.GameDb"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_game_file_md5
+// ----------------------------
+db.getCollection("z_yw_game_file_md5").drop();
+db.createCollection("z_yw_game_file_md5");
+
+// ----------------------------
+// Documents of z_yw_game_file_md5
+// ----------------------------
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/GameWebGameServer-1.jar",
+    md5: "ad3aa67ba05fd17c144c7e56dc1bf0c2",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/GameApiServer-1.jar",
+    md5: "11bc2d451d989afcf9e99e0e535f2bae",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-3.3.2.jar",
+    md5: "1a484a738acb71e500d57cdbccf94923",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-3.3.2.jar",
+    md5: "24ec79308b95ab30a2b08cbd1a0a075e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-autoconfigure-3.3.2.jar",
+    md5: "bb28d0585f0abcaf8e0e50a59d4ef6f2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jakarta.annotation-api-2.1.1.jar",
+    md5: "5dac2f68e8288d0add4dc92cb161711d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-core-6.1.11.jar",
+    md5: "cbb792e9142ca9c01007b9a34461e3fa",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-jcl-6.1.11.jar",
+    md5: "57f19f127742c25495098fcb032fc69c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/snakeyaml-2.2.jar",
+    md5: "d78aacf5f2de5b52f1a327470efd1ad7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-data-mongodb-3.3.2.jar",
+    md5: "d9c8d71a64224cd757c6a1b73bc3ad32",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/mongodb-driver-sync-5.0.1.jar",
+    md5: "62e2d9654959cd1ba805d7d254fd8410",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/bson-5.0.1.jar",
+    md5: "0f540f4d128cb2e6797a65dccc4e8f5c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/mongodb-driver-core-5.0.1.jar",
+    md5: "c2878e33422e5a8d49dfb024bb21bfa6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/bson-record-codec-5.0.1.jar",
+    md5: "5d809c6d3624059dc4e3b8353f5e8bac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-servlet-1.66.0.jar",
+    md5: "c65b1e421dfaa972ac1bbbfade894e21",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-data-mongodb-4.3.2.jar",
+    md5: "88cf39671b3ff0136c99340221b54a49",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-servlet-jakarta-1.66.0.jar",
+    md5: "78525aede548ca1a7fb0dffdd6617359",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-tx-6.1.9.jar",
+    md5: "46fcde41a076224532957ce2621036cc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-stub-1.66.0.jar",
+    md5: "b2f9bbac5e069391aea79367feb4a3ab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-testing-1.66.0.jar",
+    md5: "37f41798f8e922db39334aad641991b2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/junit-4.13.2.jar",
+    md5: "d98a9a02a99a9acd22d7653cbcc1f31f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/hamcrest-core-1.3.jar",
+    md5: "6393363b47ddcbba82321110c3e07519",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-util-1.66.0.jar",
+    md5: "640d58547c7ef67db1389b2af27ee7b7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-data-commons-3.3.2.jar",
+    md5: "235433d517cc15c7c32a74540333ccac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/lombok-1.18.32.jar",
+    md5: "56e9be7b9a26802ac0c784ad824f3a29",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/log4j-core-2.23.1.jar",
+    md5: "34fad2df975cf874a2fdf4b797122f16",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/log4j-api-2.23.1.jar",
+    md5: "bee2e2dcbeeb983bdb6b71c9c3476b6a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/slf4j-simple-2.0.16.jar",
+    md5: "58c531dfe60020700c53c45fdf6234bf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/slf4j-api-2.0.16.jar",
+    md5: "c8de8f5d740584cb24b5652cfba8b3c4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-all-4.1.112.Final.jar",
+    md5: "d706c14d753c010f7808e7dabf2a0ce1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-buffer-4.1.112.Final.jar",
+    md5: "58aea7c4ed4cd55a64c5e2c2cbdb090f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-xds-1.66.0.jar",
+    md5: "9efc099a9aeec73ad9d3194db8d001c3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-4.1.112.Final.jar",
+    md5: "5a9f3285ddcbbf7fefa9333a57f9f46d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-alts-1.66.0.jar",
+    md5: "f88fddc2082d329cf9000509f02ab57d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-dns-4.1.112.Final.jar",
+    md5: "c7634ccdc99763099995132e2500e5b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-haproxy-4.1.112.Final.jar",
+    md5: "19c9211861a92018ac52baf1ef68bf5a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-http-4.1.112.Final.jar",
+    md5: "ac138ddb64f1c09f63ce03738dfcfa51",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-http2-4.1.112.Final.jar",
+    md5: "1a2969d32a978ae4a5b58baf780067d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-memcache-4.1.112.Final.jar",
+    md5: "bef6e34c47a3bbc31d91fc877c2bb1d2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-mqtt-4.1.112.Final.jar",
+    md5: "e3a7be36ea01dad5eb73ab65ef5fa901",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/conscrypt-openjdk-uber-2.5.2.jar",
+    md5: "34c8ec40831d77372b2bea95139783b0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-redis-4.1.112.Final.jar",
+    md5: "b51bf2f9b9f5e1a897b5fe66ec3ed2d0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-smtp-4.1.112.Final.jar",
+    md5: "42997507b4275a1fc466c0397c265724",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-auth-library-oauth2-http-1.23.0.jar",
+    md5: "35deb5dba280426cf64f73ee72699cf3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-socks-4.1.112.Final.jar",
+    md5: "4b70c8269ea7dc6a3393c2ca8b16e213",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-1.43.3.jar",
+    md5: "806427c3d16ae724be920277ef45ee39",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-stomp-4.1.112.Final.jar",
+    md5: "101f2ada5655e4e0dbb4cbd04fa08622",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpclient-4.5.14.jar",
+    md5: "2cb357c4b763f47e58af6cad47df6ba3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-codec-xml-4.1.112.Final.jar",
+    md5: "1b3d21449ae309d675f58bfec28cb486",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-codec-1.11.jar",
+    md5: "567159b1ae257a43e1391a8f59d24cfe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpcore-4.4.16.jar",
+    md5: "28d2cd9bf8789fd2ec774fb88436ebd1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-common-4.1.112.Final.jar",
+    md5: "768d09de5d2736819e0bf4d9b20acc2d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opencensus-api-0.31.1.jar",
+    md5: "a5e7092bb89baaaee424f5a7b20d1bad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opencensus-contrib-http-util-0.31.1.jar",
+    md5: "9ecc9c428eb87dc734ae8d07b820ce26",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-gson-1.43.3.jar",
+    md5: "472f29d64b61f652b3ce977772e28393",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/re2j-1.7.jar",
+    md5: "deb6ffa7ed6d2cc06e6ac1182755c735",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-handler-4.1.112.Final.jar",
+    md5: "48e6897165f934821ec327c7be732008",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-native-unix-common-4.1.112.Final.jar",
+    md5: "b002eb68abd75113421e024a46532591",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-handler-proxy-4.1.112.Final.jar",
+    md5: "6c39481ec5f8d98b50c89a4401f25776",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-handler-ssl-ocsp-4.1.112.Final.jar",
+    md5: "7df7d310555e28aa52d3d76f9119ea85",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-resolver-4.1.112.Final.jar",
+    md5: "cddf7d313c3a32d807d9b001ae60a5cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-resolver-dns-4.1.112.Final.jar",
+    md5: "e14533d528a8aa805f5d7a62e300358a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-4.1.112.Final.jar",
+    md5: "e37825cc517e682da37e05c181e1a487",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-rxtx-4.1.112.Final.jar",
+    md5: "19eb7cef59d397a30853425447cc930d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-sctp-4.1.112.Final.jar",
+    md5: "8f4ebb3777f5a1e419100291d56bbc90",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-udt-4.1.112.Final.jar",
+    md5: "24479cf8499c8cf47838e07f0fbb166b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-classes-epoll-4.1.112.Final.jar",
+    md5: "7e9e19792fb995bae557c96328cacdd5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-classes-kqueue-4.1.112.Final.jar",
+    md5: "442aa9704a151be3c24556deaee4f1b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-resolver-dns-classes-macos-4.1.112.Final.jar",
+    md5: "f63bd2235ad7bc69358033d619241f7e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar",
+    md5: "1ceffee2a610d52d4c7b77b9de584166",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-aarch_64.jar",
+    md5: "7d60fce221b2bcdbcfb5d163b1858242",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-riscv64.jar",
+    md5: "80948b9d4b7a7c549e73e98632637cf5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-x86_64.jar",
+    md5: "dcb4b9ab43ac4bb527dc9967925c93dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-aarch_64.jar",
+    md5: "02ab7f7cbdc2c8bd30f1121d983112b8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar",
+    md5: "7e3e9dc320cfe4fed3694c5d14e1cf65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-aarch_64.jar",
+    md5: "ed7dc10a3c4fb8a2b5a8114896818eda",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/protobuf-java-4.27.3.jar",
+    md5: "69902ea125e74079eb430f4e342e5d63",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-all-1.66.0.jar",
+    md5: "778938c6578ec7cfc57050aac63f1d46",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-api-1.66.0.jar",
+    md5: "e2d44a1075af4019389547bb2274ded1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jsr305-3.0.2.jar",
+    md5: "dd83accb899363c32b07d7a1b2e4ce40",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/error_prone_annotations-2.28.0.jar",
+    md5: "9e5d2181ddb6acb58fe08e86198c4232",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-auth-1.66.0.jar",
+    md5: "590a544338bb2152e4033f85f26c169e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-netty-shaded-1.66.0.jar",
+    md5: "efcf8bd3860282c929e748d40b543112",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-auth-library-credentials-1.23.0.jar",
+    md5: "d83b994e3e0e03d92f087a054df03ea6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-core-1.66.0.jar",
+    md5: "8ef28bd667824e3da2e913af02ee3026",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/annotations-4.1.1.4.jar",
+    md5: "c2cdd26a6ae577f24775e8ce75da1fdc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/animal-sniffer-annotations-1.24.jar",
+    md5: "508b8c41cb5b48cdd2d9db436c367bb0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/perfmark-api-0.27.0.jar",
+    md5: "73bcc9c91e5b65c4f75b0567e7a5590f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-context-1.66.0.jar",
+    md5: "33950e448c4eef283ce747891f51ec65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-grpclb-1.66.0.jar",
+    md5: "ddfa5afe7202ee9c958974a2f46c95e0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/protobuf-java-util-3.25.3.jar",
+    md5: "a348527264875a668acaebff2476a481",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/guava-33.2.1-jre.jar",
+    md5: "872309e5982530bdc7e68096c0d53cd2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-gcp-csm-observability-1.66.0.jar",
+    md5: "ce8223c7dcf32beccc9e869e88e2cf87",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-gcp-resources-1.36.0-alpha.jar",
+    md5: "5b36b08db502b8012a86ae9dd9f0c773",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/failureaccess-1.0.2.jar",
+    md5: "3f75955b49b6758fd6d1e1bd9bf777b3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    md5: "d094c22570d65e132c19cea5d352e381",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/checker-qual-3.42.0.jar",
+    md5: "4c55448dcbfe9c3702f7758fc8fe0086",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-1.38.0.jar",
+    md5: "23f92da8783f0c9eb7dbd3b9b578959d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kcp-netty-1.5.2.jar",
+    md5: "0b6b24e3cbf770b3f1587b3eaeda62ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jedis-5.1.4.jar",
+    md5: "cf5f4212b542e6219fb22c49f8e6af71",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/json-20231013.jar",
+    md5: "1a0702c57783ce9e948252c34644f328",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/gson-2.10.1.jar",
+    md5: "df6097815738cb31fc56391553210843",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-common-1.38.0.jar",
+    md5: "700256cea41f2b329ec77ee3e8a5a2ba",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/fastjson2-2.0.52.jar",
+    md5: "284bc3ef3c9e14a457bd02d1adc934df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-trace-1.38.0.jar",
+    md5: "641a97ede16ef5ec62c521698d6fac9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/quartz-2.3.2.jar",
+    md5: "d7299dbaec0e0ed7af281b07cc40c8c1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-metrics-1.38.0.jar",
+    md5: "2f5d49274b1897b8bd64a2a90640c2cf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-logs-1.38.0.jar",
+    md5: "59525384de6a701746edab9daff058dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/c3p0-0.9.5.4.jar",
+    md5: "45fd4a89c9fd671a0d1dc97c0ec77abe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/detector-resources-support-0.29.0.jar",
+    md5: "4b543117ed73c7bbf37ba5cb9736efc3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-semconv-1.25.0-alpha.jar",
+    md5: "44b727a6673a05783c19aa47f540823a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/mchange-commons-java-0.2.15.jar",
+    md5: "97c4575d9d49d9afb71492e6bb4417da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar",
+    md5: "616cced59aa3dd913191fd5f0ab148c6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar",
+    md5: "e785ce72548fdcbcd50d60c056784929",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/HikariCP-java7-2.4.13.jar",
+    md5: "b1f2b595c174b2e399416a9f26f6dbad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-api-incubator-1.40.0-alpha.jar",
+    md5: "4448f8edcb1655877522a1dce32ea784",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/quartz-jobs-2.3.2.jar",
+    md5: "bc62af72677d2c4fa66fa7b820d3ca06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-inprocess-1.66.0.jar",
+    md5: "59cef474a2ec09eea73bf59acdde3fe3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jta-1.1.jar",
+    md5: "82a10ce714f411b28f13850059de09ee",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-netty-1.66.0.jar",
+    md5: "591c2ffb064de1b862fc8abdaed2d767",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpcore5-5.2.4.jar",
+    md5: "5a3d417ea4e65e0f74194263dc5c6c43",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-okhttp-1.66.0.jar",
+    md5: "d76fa4fcca9005c1a386426328f507a0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpclient5-5.3.1.jar",
+    md5: "de1810a606b27192cbf5bbad9c25a648",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/okio-3.4.0.jar",
+    md5: "91cf6017cc6c20c963eff46b7fc60de5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpcore5-h2-5.2.4.jar",
+    md5: "d407b8144029db656ac5ba3d54ef801f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-logging-1.3.3.jar",
+    md5: "62de1aea096b3ac52e46b908dac4ac97",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/okio-jvm-3.4.0.jar",
+    md5: "8183b7d607ffbce7bb16d8c534de0b94",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlin-stdlib-jdk8-1.8.0.jar",
+    md5: "34246294df796300616b9b6352ffcece",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-io-2.16.1.jar",
+    md5: "ed8191a5a217940140001b0acfed18d9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-pool2-2.12.0.jar",
+    md5: "0516bf5ac1549e8ba78f6b7c49d09ed2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlin-stdlib-jdk7-1.8.0.jar",
+    md5: "e881855ce1f9d9790c8fae52accc231d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-lang3-3.16.0.jar",
+    md5: "67bc6dbd753fc276d69aeb4cfa205e15",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-opentelemetry-1.66.0.jar",
+    md5: "373acd9e99977b763a3b56de652ba217",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/javax.annotation-api-1.3.2.jar",
+    md5: "2ab1973eefffaa2aeec47d50b9e40b9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-api-1.40.0.jar",
+    md5: "27db699d83d284db1aa48952a0131a0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opentelemetry-context-1.40.0.jar",
+    md5: "5f822f7270ad2a3663cfe433291ae9f1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/auto-value-annotations-1.11.0.jar",
+    md5: "8fc3c2d0bbdef8927f08a5c7c829a768",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-protobuf-1.66.0.jar",
+    md5: "676d46f636ab4b8b8263a3fe5399a8de",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/redisson-3.34.1.jar",
+    md5: "2893189be47d64c5a3213ef18ba3743c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/cache-api-1.1.1.jar",
+    md5: "dfdac9358e140e61c574abb1ada84dc9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/proto-google-common-protos-2.41.0.jar",
+    md5: "34f905dc1d9cf3280b12a64f03c6bfd8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/reactor-core-3.6.2.jar",
+    md5: "c7553524c90891b9adf11dda72356a96",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-protobuf-lite-1.66.0.jar",
+    md5: "2dc8da97960356b2af4c9a65a85681d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/reactive-streams-1.0.4.jar",
+    md5: "eda7978509c32d99166745cc144c99cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-rls-1.66.0.jar",
+    md5: "c3b7d48fb81e43c4d1df94ab573ff451",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-services-1.66.0.jar",
+    md5: "a76c47e95615a242bf5388345b2ca5da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/j2objc-annotations-3.0.0.jar",
+    md5: "f59529b29202a5baf37f491ea5ec8627",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/rxjava-3.1.8.jar",
+    md5: "a7ae568329e957b7b1b522c261a1ddb2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kryo-5.6.0.jar",
+    md5: "92eab6b5f4c33d6406896850fdd0e959",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/reflectasm-1.11.9.jar",
+    md5: "602377b51e9843ef87ed48b790945c3e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/objenesis-3.3.jar",
+    md5: "ab0e0b2ab81affdd7f38bcc60fd85571",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/minlog-1.3.1.jar",
+    md5: "46908e11b408080d53246e4be44e66db",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-annotations-2.17.1.jar",
+    md5: "dbeffa5994a6234489a205fd7f33d9b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-dataformat-yaml-2.17.1.jar",
+    md5: "3257d599754342666ba50b7eaed555b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-core-2.17.1.jar",
+    md5: "9363584821290882417f1c3ceab784df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-databind-2.17.1.jar",
+    md5: "f0a1c37dc7d937f14e183d84f15c0f83",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/byte-buddy-1.14.17.jar",
+    md5: "9236614cb260676d7b7489ca96da4af4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jodd-util-6.2.2.jar",
+    md5: "81b19295e0e2d5d858137e4529204212",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-web-3.3.2.jar",
+    md5: "995ad2c4733d9dd2a1334f8e652d8d86",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-json-3.3.2.jar",
+    md5: "ea08052d26549310c740e6bfd8f8eab2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-datatype-jdk8-2.17.2.jar",
+    md5: "91bac611e3aa2883dc0e8850d7790f04",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-datatype-jsr310-2.17.2.jar",
+    md5: "6b3cd2fed41104d9ee9d8695547672af",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-module-parameter-names-2.17.2.jar",
+    md5: "897853481f7a59b2e9d0566d8f7aacab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-tomcat-3.3.2.jar",
+    md5: "069f3c09e7fd4012ad3c3523b2a141f0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/tomcat-embed-core-10.1.26.jar",
+    md5: "5b2f76a6e7d1b674e144f0ee916f2a3d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/tomcat-embed-websocket-10.1.26.jar",
+    md5: "f38e269822f165552599c3c49c6ed1a1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-web-6.1.11.jar",
+    md5: "25642932a93a9973aa42d89d79b0bff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-beans-6.1.11.jar",
+    md5: "740043976560fd2dcb9ba6a58dc75b34",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/micrometer-observation-1.12.8.jar",
+    md5: "c066b3fca59fae9a8473d276c685a2e7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/micrometer-commons-1.12.8.jar",
+    md5: "2ad121ad7c10c6d258b52295402e0320",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-webmvc-6.1.11.jar",
+    md5: "56071c2648d5e1da2796d84f30326a48",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-aop-6.1.11.jar",
+    md5: "209d4c6d658a566b2945a8b2bec9a39d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-context-6.1.11.jar",
+    md5: "c8bf0c5b5ad065e15b64948a57ae3ff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-expression-6.1.11.jar",
+    md5: "cb8e127e042c691b3f8408272d3d1e06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-validation-3.3.2.jar",
+    md5: "30c24f8e7af625821a353d71f0c4211f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/tomcat-embed-el-10.1.26.jar",
+    md5: "2e7509dee451cb074fc1422a95369205",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/hibernate-validator-8.0.1.Final.jar",
+    md5: "66985b6bf8da17611031e2421c235241",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jakarta.validation-api-3.0.2.jar",
+    md5: "3a1ee6efca3e41e3320599790f54c5eb",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jboss-logging-3.4.3.Final.jar",
+    md5: "b298d4b79e591843c1eb1458ea79f070",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/classmate-1.5.1.jar",
+    md5: "e91fcd30ba329fd1b0b6dc5321fd067c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jjwt-0.12.6.jar",
+    md5: "c8be21584cff8800568ad7a5a807514b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jjwt-api-0.12.6.jar",
+    md5: "995d2066feaa206de5e880045c9407d4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jjwt-impl-0.12.6.jar",
+    md5: "e96f699bad6353508953424e82e5de45",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jjwt-jackson-0.12.6.jar",
+    md5: "a6f99a3cc5d2c7fd820f2aad638ca401",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/sol4k-0.4.2.jar",
+    md5: "1123fe4fdbaacca929b27abebc565191",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlin-stdlib-1.9.24.jar",
+    md5: "bfbb362013fc67d71fb0c9655c7cc308",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/annotations-13.0.jar",
+    md5: "f4fb462172517b46b6cd90003508515a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlinx-serialization-json-jvm-1.6.3.jar",
+    md5: "f7480e5e9c7239a8197747ced7208c13",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlin-stdlib-common-1.9.22.jar",
+    md5: "aaf27621ea0825a063c09f58fa0fdb2d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlinx-serialization-core-jvm-1.6.3.jar",
+    md5: "a53de86f751fdde057be40958fad42ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/tweetnacl-0.1.6.jar",
+    md5: "bc806c4f0ce786d8eed8e79e9fa57702",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/utilities-0.1.0.jar",
+    md5: "3b71fe83ccf0d464f5e4155ad2eb5e52",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/application.yml",
+    md5: "8533760f8dd1fef7d8c0f68f6438a1d6",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/banner.txt",
+    md5: "eef20fbb649aa7d5a33b95b482a6c350",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/log4j2.xml",
+    md5: "a1b5c0579da07503d57ab091fb0d0e3a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/logs/webgame.log",
+    md5: "d41d8cd98f00b204e9800998ecf8427e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/quartz.properties",
+    md5: "8812ea73d853f6c8f32b34525b69a7ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/redis.xml",
+    md5: "e1712800bc7dc2a2705a01ec11592e90",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/start.sh",
+    md5: "9015f72335e6e484743b304cb512226e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/stop.sh",
+    md5: "ec8a99a0f8aaf3feae2078a8ffb3a66e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/GameCenterServer-1.jar",
+    md5: "0773059e38e4a4b7fb4c784f671d59e9",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/GameApiServer-1.jar",
+    md5: "81a7393b7902c2b7cfed482364ee0e6f",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-boot-starter-3.3.2.jar",
+    md5: "1a484a738acb71e500d57cdbccf94923",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-boot-3.3.2.jar",
+    md5: "24ec79308b95ab30a2b08cbd1a0a075e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-context-6.1.11.jar",
+    md5: "c8bf0c5b5ad065e15b64948a57ae3ff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-aop-6.1.11.jar",
+    md5: "209d4c6d658a566b2945a8b2bec9a39d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/micrometer-observation-1.12.8.jar",
+    md5: "c066b3fca59fae9a8473d276c685a2e7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/micrometer-commons-1.12.8.jar",
+    md5: "2ad121ad7c10c6d258b52295402e0320",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-boot-autoconfigure-3.3.2.jar",
+    md5: "bb28d0585f0abcaf8e0e50a59d4ef6f2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jakarta.annotation-api-2.1.1.jar",
+    md5: "5dac2f68e8288d0add4dc92cb161711d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-core-6.1.11.jar",
+    md5: "cbb792e9142ca9c01007b9a34461e3fa",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-jcl-6.1.11.jar",
+    md5: "57f19f127742c25495098fcb032fc69c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/snakeyaml-2.2.jar",
+    md5: "d78aacf5f2de5b52f1a327470efd1ad7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-boot-starter-data-mongodb-3.3.2.jar",
+    md5: "d9c8d71a64224cd757c6a1b73bc3ad32",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/mongodb-driver-sync-5.0.1.jar",
+    md5: "62e2d9654959cd1ba805d7d254fd8410",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/bson-5.0.1.jar",
+    md5: "0f540f4d128cb2e6797a65dccc4e8f5c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/mongodb-driver-core-5.0.1.jar",
+    md5: "c2878e33422e5a8d49dfb024bb21bfa6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/bson-record-codec-5.0.1.jar",
+    md5: "5d809c6d3624059dc4e3b8353f5e8bac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-data-mongodb-4.3.2.jar",
+    md5: "88cf39671b3ff0136c99340221b54a49",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-tx-6.1.9.jar",
+    md5: "46fcde41a076224532957ce2621036cc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-beans-6.1.9.jar",
+    md5: "0819ddf5698da8107e97932a19d57481",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-expression-6.1.9.jar",
+    md5: "c430d5cf5c8bb6eed7f0e1143128d92d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/spring-data-commons-3.3.2.jar",
+    md5: "235433d517cc15c7c32a74540333ccac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/lombok-1.18.32.jar",
+    md5: "56e9be7b9a26802ac0c784ad824f3a29",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/log4j-core-2.23.1.jar",
+    md5: "34fad2df975cf874a2fdf4b797122f16",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/log4j-api-2.23.1.jar",
+    md5: "bee2e2dcbeeb983bdb6b71c9c3476b6a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/slf4j-simple-2.0.16.jar",
+    md5: "58c531dfe60020700c53c45fdf6234bf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/slf4j-api-2.0.16.jar",
+    md5: "c8de8f5d740584cb24b5652cfba8b3c4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-all-4.1.112.Final.jar",
+    md5: "d706c14d753c010f7808e7dabf2a0ce1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-buffer-4.1.112.Final.jar",
+    md5: "58aea7c4ed4cd55a64c5e2c2cbdb090f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-4.1.112.Final.jar",
+    md5: "5a9f3285ddcbbf7fefa9333a57f9f46d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-dns-4.1.112.Final.jar",
+    md5: "c7634ccdc99763099995132e2500e5b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-haproxy-4.1.112.Final.jar",
+    md5: "19c9211861a92018ac52baf1ef68bf5a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-http-4.1.112.Final.jar",
+    md5: "ac138ddb64f1c09f63ce03738dfcfa51",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-http2-4.1.112.Final.jar",
+    md5: "1a2969d32a978ae4a5b58baf780067d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-memcache-4.1.112.Final.jar",
+    md5: "bef6e34c47a3bbc31d91fc877c2bb1d2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-mqtt-4.1.112.Final.jar",
+    md5: "e3a7be36ea01dad5eb73ab65ef5fa901",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-redis-4.1.112.Final.jar",
+    md5: "b51bf2f9b9f5e1a897b5fe66ec3ed2d0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-smtp-4.1.112.Final.jar",
+    md5: "42997507b4275a1fc466c0397c265724",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-socks-4.1.112.Final.jar",
+    md5: "4b70c8269ea7dc6a3393c2ca8b16e213",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-stomp-4.1.112.Final.jar",
+    md5: "101f2ada5655e4e0dbb4cbd04fa08622",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-codec-xml-4.1.112.Final.jar",
+    md5: "1b3d21449ae309d675f58bfec28cb486",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-common-4.1.112.Final.jar",
+    md5: "768d09de5d2736819e0bf4d9b20acc2d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-handler-4.1.112.Final.jar",
+    md5: "48e6897165f934821ec327c7be732008",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-native-unix-common-4.1.112.Final.jar",
+    md5: "b002eb68abd75113421e024a46532591",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-handler-proxy-4.1.112.Final.jar",
+    md5: "6c39481ec5f8d98b50c89a4401f25776",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-handler-ssl-ocsp-4.1.112.Final.jar",
+    md5: "7df7d310555e28aa52d3d76f9119ea85",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-resolver-4.1.112.Final.jar",
+    md5: "cddf7d313c3a32d807d9b001ae60a5cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-resolver-dns-4.1.112.Final.jar",
+    md5: "e14533d528a8aa805f5d7a62e300358a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-4.1.112.Final.jar",
+    md5: "e37825cc517e682da37e05c181e1a487",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-rxtx-4.1.112.Final.jar",
+    md5: "19eb7cef59d397a30853425447cc930d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-sctp-4.1.112.Final.jar",
+    md5: "8f4ebb3777f5a1e419100291d56bbc90",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-udt-4.1.112.Final.jar",
+    md5: "24479cf8499c8cf47838e07f0fbb166b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-classes-epoll-4.1.112.Final.jar",
+    md5: "7e9e19792fb995bae557c96328cacdd5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-classes-kqueue-4.1.112.Final.jar",
+    md5: "442aa9704a151be3c24556deaee4f1b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-resolver-dns-classes-macos-4.1.112.Final.jar",
+    md5: "f63bd2235ad7bc69358033d619241f7e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar",
+    md5: "1ceffee2a610d52d4c7b77b9de584166",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-aarch_64.jar",
+    md5: "7d60fce221b2bcdbcfb5d163b1858242",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-riscv64.jar",
+    md5: "80948b9d4b7a7c549e73e98632637cf5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-x86_64.jar",
+    md5: "dcb4b9ab43ac4bb527dc9967925c93dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-aarch_64.jar",
+    md5: "02ab7f7cbdc2c8bd30f1121d983112b8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar",
+    md5: "7e3e9dc320cfe4fed3694c5d14e1cf65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-aarch_64.jar",
+    md5: "ed7dc10a3c4fb8a2b5a8114896818eda",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/protobuf-java-4.27.3.jar",
+    md5: "69902ea125e74079eb430f4e342e5d63",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-all-1.66.0.jar",
+    md5: "778938c6578ec7cfc57050aac63f1d46",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-api-1.66.0.jar",
+    md5: "e2d44a1075af4019389547bb2274ded1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jsr305-3.0.2.jar",
+    md5: "dd83accb899363c32b07d7a1b2e4ce40",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/error_prone_annotations-2.28.0.jar",
+    md5: "9e5d2181ddb6acb58fe08e86198c4232",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-auth-1.66.0.jar",
+    md5: "590a544338bb2152e4033f85f26c169e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/google-auth-library-credentials-1.23.0.jar",
+    md5: "d83b994e3e0e03d92f087a054df03ea6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-core-1.66.0.jar",
+    md5: "8ef28bd667824e3da2e913af02ee3026",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/annotations-4.1.1.4.jar",
+    md5: "c2cdd26a6ae577f24775e8ce75da1fdc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/animal-sniffer-annotations-1.24.jar",
+    md5: "508b8c41cb5b48cdd2d9db436c367bb0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/perfmark-api-0.27.0.jar",
+    md5: "73bcc9c91e5b65c4f75b0567e7a5590f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-context-1.66.0.jar",
+    md5: "33950e448c4eef283ce747891f51ec65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-grpclb-1.66.0.jar",
+    md5: "ddfa5afe7202ee9c958974a2f46c95e0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/protobuf-java-util-3.25.3.jar",
+    md5: "a348527264875a668acaebff2476a481",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-gcp-csm-observability-1.66.0.jar",
+    md5: "ce8223c7dcf32beccc9e869e88e2cf87",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-gcp-resources-1.36.0-alpha.jar",
+    md5: "5b36b08db502b8012a86ae9dd9f0c773",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-1.38.0.jar",
+    md5: "23f92da8783f0c9eb7dbd3b9b578959d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-common-1.38.0.jar",
+    md5: "700256cea41f2b329ec77ee3e8a5a2ba",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-trace-1.38.0.jar",
+    md5: "641a97ede16ef5ec62c521698d6fac9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-metrics-1.38.0.jar",
+    md5: "2f5d49274b1897b8bd64a2a90640c2cf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-logs-1.38.0.jar",
+    md5: "59525384de6a701746edab9daff058dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/detector-resources-support-0.29.0.jar",
+    md5: "4b543117ed73c7bbf37ba5cb9736efc3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-semconv-1.25.0-alpha.jar",
+    md5: "44b727a6673a05783c19aa47f540823a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar",
+    md5: "616cced59aa3dd913191fd5f0ab148c6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar",
+    md5: "e785ce72548fdcbcd50d60c056784929",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-api-incubator-1.40.0-alpha.jar",
+    md5: "4448f8edcb1655877522a1dce32ea784",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-inprocess-1.66.0.jar",
+    md5: "59cef474a2ec09eea73bf59acdde3fe3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-netty-1.66.0.jar",
+    md5: "591c2ffb064de1b862fc8abdaed2d767",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-okhttp-1.66.0.jar",
+    md5: "d76fa4fcca9005c1a386426328f507a0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/okio-3.4.0.jar",
+    md5: "91cf6017cc6c20c963eff46b7fc60de5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/okio-jvm-3.4.0.jar",
+    md5: "8183b7d607ffbce7bb16d8c534de0b94",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/kotlin-stdlib-jdk8-1.8.0.jar",
+    md5: "34246294df796300616b9b6352ffcece",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/kotlin-stdlib-1.8.0.jar",
+    md5: "952dbd9391b7c09ee33321da0ff5d583",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/annotations-13.0.jar",
+    md5: "f4fb462172517b46b6cd90003508515a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/kotlin-stdlib-jdk7-1.8.0.jar",
+    md5: "e881855ce1f9d9790c8fae52accc231d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/kotlin-stdlib-common-1.8.0.jar",
+    md5: "f11c871eefc3262541c5a3c8d7555e5e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-opentelemetry-1.66.0.jar",
+    md5: "373acd9e99977b763a3b56de652ba217",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-api-1.40.0.jar",
+    md5: "27db699d83d284db1aa48952a0131a0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opentelemetry-context-1.40.0.jar",
+    md5: "5f822f7270ad2a3663cfe433291ae9f1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/auto-value-annotations-1.11.0.jar",
+    md5: "8fc3c2d0bbdef8927f08a5c7c829a768",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-protobuf-1.66.0.jar",
+    md5: "676d46f636ab4b8b8263a3fe5399a8de",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/proto-google-common-protos-2.41.0.jar",
+    md5: "34f905dc1d9cf3280b12a64f03c6bfd8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-protobuf-lite-1.66.0.jar",
+    md5: "2dc8da97960356b2af4c9a65a85681d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-rls-1.66.0.jar",
+    md5: "c3b7d48fb81e43c4d1df94ab573ff451",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-services-1.66.0.jar",
+    md5: "a76c47e95615a242bf5388345b2ca5da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/j2objc-annotations-3.0.0.jar",
+    md5: "f59529b29202a5baf37f491ea5ec8627",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-servlet-1.66.0.jar",
+    md5: "c65b1e421dfaa972ac1bbbfade894e21",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-servlet-jakarta-1.66.0.jar",
+    md5: "78525aede548ca1a7fb0dffdd6617359",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-stub-1.66.0.jar",
+    md5: "b2f9bbac5e069391aea79367feb4a3ab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-testing-1.66.0.jar",
+    md5: "37f41798f8e922db39334aad641991b2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/junit-4.13.2.jar",
+    md5: "d98a9a02a99a9acd22d7653cbcc1f31f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/hamcrest-core-1.3.jar",
+    md5: "6393363b47ddcbba82321110c3e07519",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-util-1.66.0.jar",
+    md5: "640d58547c7ef67db1389b2af27ee7b7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-xds-1.66.0.jar",
+    md5: "9efc099a9aeec73ad9d3194db8d001c3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-alts-1.66.0.jar",
+    md5: "f88fddc2082d329cf9000509f02ab57d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/conscrypt-openjdk-uber-2.5.2.jar",
+    md5: "34c8ec40831d77372b2bea95139783b0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/google-auth-library-oauth2-http-1.23.0.jar",
+    md5: "35deb5dba280426cf64f73ee72699cf3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/google-http-client-1.43.3.jar",
+    md5: "806427c3d16ae724be920277ef45ee39",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/httpclient-4.5.14.jar",
+    md5: "2cb357c4b763f47e58af6cad47df6ba3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/commons-codec-1.11.jar",
+    md5: "567159b1ae257a43e1391a8f59d24cfe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/httpcore-4.4.16.jar",
+    md5: "28d2cd9bf8789fd2ec774fb88436ebd1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opencensus-api-0.31.1.jar",
+    md5: "a5e7092bb89baaaee424f5a7b20d1bad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/opencensus-contrib-http-util-0.31.1.jar",
+    md5: "9ecc9c428eb87dc734ae8d07b820ce26",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/google-http-client-gson-1.43.3.jar",
+    md5: "472f29d64b61f652b3ce977772e28393",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/re2j-1.7.jar",
+    md5: "deb6ffa7ed6d2cc06e6ac1182755c735",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/grpc-netty-shaded-1.66.0.jar",
+    md5: "efcf8bd3860282c929e748d40b543112",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/guava-33.2.1-jre.jar",
+    md5: "872309e5982530bdc7e68096c0d53cd2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/failureaccess-1.0.2.jar",
+    md5: "3f75955b49b6758fd6d1e1bd9bf777b3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    md5: "d094c22570d65e132c19cea5d352e381",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/checker-qual-3.42.0.jar",
+    md5: "4c55448dcbfe9c3702f7758fc8fe0086",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/kcp-netty-1.5.2.jar",
+    md5: "0b6b24e3cbf770b3f1587b3eaeda62ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jedis-5.1.4.jar",
+    md5: "cf5f4212b542e6219fb22c49f8e6af71",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/json-20231013.jar",
+    md5: "1a0702c57783ce9e948252c34644f328",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/gson-2.10.1.jar",
+    md5: "df6097815738cb31fc56391553210843",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/redisson-3.34.1.jar",
+    md5: "2893189be47d64c5a3213ef18ba3743c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/cache-api-1.1.1.jar",
+    md5: "dfdac9358e140e61c574abb1ada84dc9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/reactor-core-3.6.2.jar",
+    md5: "c7553524c90891b9adf11dda72356a96",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/reactive-streams-1.0.4.jar",
+    md5: "eda7978509c32d99166745cc144c99cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/rxjava-3.1.8.jar",
+    md5: "a7ae568329e957b7b1b522c261a1ddb2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/kryo-5.6.0.jar",
+    md5: "92eab6b5f4c33d6406896850fdd0e959",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/reflectasm-1.11.9.jar",
+    md5: "602377b51e9843ef87ed48b790945c3e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/objenesis-3.3.jar",
+    md5: "ab0e0b2ab81affdd7f38bcc60fd85571",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/minlog-1.3.1.jar",
+    md5: "46908e11b408080d53246e4be44e66db",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jackson-annotations-2.17.1.jar",
+    md5: "dbeffa5994a6234489a205fd7f33d9b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jackson-dataformat-yaml-2.17.1.jar",
+    md5: "3257d599754342666ba50b7eaed555b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jackson-core-2.17.1.jar",
+    md5: "9363584821290882417f1c3ceab784df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jackson-databind-2.17.1.jar",
+    md5: "f0a1c37dc7d937f14e183d84f15c0f83",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/byte-buddy-1.14.17.jar",
+    md5: "9236614cb260676d7b7489ca96da4af4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jodd-util-6.2.2.jar",
+    md5: "81b19295e0e2d5d858137e4529204212",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/fastjson2-2.0.52.jar",
+    md5: "284bc3ef3c9e14a457bd02d1adc934df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/quartz-2.3.2.jar",
+    md5: "d7299dbaec0e0ed7af281b07cc40c8c1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/c3p0-0.9.5.4.jar",
+    md5: "45fd4a89c9fd671a0d1dc97c0ec77abe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/mchange-commons-java-0.2.15.jar",
+    md5: "97c4575d9d49d9afb71492e6bb4417da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/HikariCP-java7-2.4.13.jar",
+    md5: "b1f2b595c174b2e399416a9f26f6dbad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/quartz-jobs-2.3.2.jar",
+    md5: "bc62af72677d2c4fa66fa7b820d3ca06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/jta-1.1.jar",
+    md5: "82a10ce714f411b28f13850059de09ee",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/httpcore5-5.2.4.jar",
+    md5: "5a3d417ea4e65e0f74194263dc5c6c43",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/httpclient5-5.3.1.jar",
+    md5: "de1810a606b27192cbf5bbad9c25a648",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/httpcore5-h2-5.2.4.jar",
+    md5: "d407b8144029db656ac5ba3d54ef801f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/commons-logging-1.3.3.jar",
+    md5: "62de1aea096b3ac52e46b908dac4ac97",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/commons-io-2.16.1.jar",
+    md5: "ed8191a5a217940140001b0acfed18d9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/commons-pool2-2.12.0.jar",
+    md5: "0516bf5ac1549e8ba78f6b7c49d09ed2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/commons-lang3-3.16.0.jar",
+    md5: "67bc6dbd753fc276d69aeb4cfa205e15",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/lib/javax.annotation-api-1.3.2.jar",
+    md5: "2ab1973eefffaa2aeec47d50b9e40b9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/application.yml",
+    md5: "2f30fe73ae826c9f0568d13aa2a33215",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/banner.txt",
+    md5: "eef20fbb649aa7d5a33b95b482a6c350",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxbanshu/application.yml",
+    md5: "ca48e70389db5e96952a469b82aa05be",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxbanshu/log4j2.xml",
+    md5: "4a62f8398424cb59f8144b81b1327ab0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxbanshu/redis.xml",
+    md5: "cc3567c57f4730170735a69aaa8b4b3a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxbanshu/start.sh",
+    md5: "d9fc93cd6626dcb7485ed02ca0e5ec0d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxbanshu/stop.sh",
+    md5: "41a8e6aadc7bb8fe4b7ad3488bb26583",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxtest/application.yml",
+    md5: "54a2337e59c07c648316d8e25375c5bf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxtest/log4j2.xml",
+    md5: "4a62f8398424cb59f8144b81b1327ab0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxtest/redis.xml",
+    md5: "ceaa943f795dae3601b065bca14344e5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxtest/start.sh",
+    md5: "d9fc93cd6626dcb7485ed02ca0e5ec0d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/docker/bxtest/stop.sh",
+    md5: "41a8e6aadc7bb8fe4b7ad3488bb26583",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/jobs.xml",
+    md5: "33a89162bf4ebbb4dbd616ae79df3e54",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/log4j2.xml",
+    md5: "5504ff24d0e78c318660b6067ae8e046",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/logs/center.log",
+    md5: "d41d8cd98f00b204e9800998ecf8427e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/quartz.properties",
+    md5: "4116ebec24bd83398e07000f1a408f1e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/redis.xml",
+    md5: "626c776c4055df6898da8bc2b3d4b3ed",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/start.sh",
+    md5: "74506f5e36c510680b84edc6a25a0ac5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/center_orange/stop.sh",
+    md5: "7c42e5d30ded256110b4646e7517e95a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jna-4.4.0.jar",
+    md5: "34d3537524a6c8c134e840e7be601569",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opus-java-natives-1.1.1.jar",
+    md5: "c12a536be2288d2b11b880fd0c56ac02",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-collections4-4.4.jar",
+    md5: "4a37023740719b391f10030362c86be6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/core-3.1.0.jar",
+    md5: "db61170eb992d933f4119172326df9b6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-core-2.17.2.jar",
+    md5: "50c2dab1f29136714d5ef5c6c640336c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-databind-2.17.2.jar",
+    md5: "3e1ff7c1f0fda885946619a47ef9d5de",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/JDA-5.0.2.jar",
+    md5: "8ac546bebbe95ae452308a6a2fbbf211",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/nv-websocket-client-2.14.jar",
+    md5: "27cf8d475bf9dcf035e0966810bdded2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/okhttp-4.12.0.jar",
+    md5: "6acba053af88fed87e710c6c29911d7c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/okio-3.6.0.jar",
+    md5: "990f7b25bbd4fee8787ffabf89aa229f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/okio-jvm-3.6.0.jar",
+    md5: "26370180ff99a7e8a12dcaac2a70cc6e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlin-stdlib-jdk8-1.8.21.jar",
+    md5: "59e5a79996f1d856ddea6533a1080f86",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/kotlin-stdlib-jdk7-1.8.21.jar",
+    md5: "0735e3e69d099e8cc8fc03e45be84c46",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opus-java-1.1.1.jar",
+    md5: "86e5d32e96eb516138cbc95ccb6d9c18",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/opus-java-api-1.1.1.jar",
+    md5: "ea6c7917563db24e91b4358afb20ee0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-config-6.3.1.jar",
+    md5: "b018c1ce6392422345ae424d3f2eb1cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-core-6.3.1.jar",
+    md5: "95ec65cde862351aadfd3675422cc2ad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-crypto-6.3.1.jar",
+    md5: "bb3ef3d1ad264c3492bb486c6236e9f0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-oauth2-client-6.3.1.jar",
+    md5: "eaf8ba92cb2ed823b690673e8107e2dd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-oauth2-core-6.3.1.jar",
+    md5: "9845d69ffa979a4c31eafda2b823f7d2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/oauth2-oidc-sdk-9.43.4.jar",
+    md5: "41164df27a1323044bbfc3c8053829b8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jcip-annotations-1.0-1.jar",
+    md5: "d62dbfa8789378457ada685e2f614846",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/content-type-2.2.jar",
+    md5: "135aaa5ebcc12a45f4b3ff08cb6fa46a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/json-smart-2.4.10.jar",
+    md5: "36e22527b5f44ea6f0ff3086608cbf38",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/accessors-smart-2.4.9.jar",
+    md5: "339685c20dcac95c4f5b59e70daadc0e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/lang-tag-1.7.jar",
+    md5: "31b8a4f76fdbf21f1d667f9d6618e0b2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-oauth2-jose-6.3.1.jar",
+    md5: "97291cdb8df0786b19c3218433485574",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/nimbus-jose-jwt-9.37.3.jar",
+    md5: "a2ecba11e197522b7f963cbcf0b59715",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-security-3.3.2.jar",
+    md5: "6a078606cbefbd50543d291f434de64d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-security-web-6.3.1.jar",
+    md5: "6eb8c207f55dbd25496c349895e2888c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/asm-9.3.jar",
+    md5: "e1c3b96035117ab516ffe0de9bd696e0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/spring-boot-starter-oauth2-client-3.3.2.jar",
+    md5: "828818619d0fc8df6a6f12101ef2ea19",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/twitter4j-core-4.0.7.jar",
+    md5: "0b29f294502332836ec6a8077ceb678d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/telegrambots-6.7.0.jar",
+    md5: "a5f17b45e2e7d07e9954770213c7ef5c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/telegrambots-meta-6.7.0.jar",
+    md5: "e87459ee074bdf2c8843c0037202ebcf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-annotations-2.14.2.jar",
+    md5: "10d19982a8890f6eb37557af2f58e272",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-jaxrs-json-provider-2.14.2.jar",
+    md5: "4c435f3fc9dbb44d75151d6264d1917b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-jaxrs-base-2.14.2.jar",
+    md5: "b89c32604e673885c3e8eb46b24262b1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-module-jaxb-annotations-2.14.2.jar",
+    md5: "9558568d00a9abb34728e05d9ebc4e0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jakarta.xml.bind-api-2.3.3.jar",
+    md5: "61286918ca0192e9f87d1358aef718dd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-hk2-2.35.jar",
+    md5: "3b6630c199f38793d8c654c09f4a3e09",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-common-2.35.jar",
+    md5: "a0b9a2cea9ecbaf2170ed0757020ed05",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/osgi-resource-locator-1.0.3.jar",
+    md5: "e7e82b82118c5387ae45f7bf3892909b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/hk2-locator-2.6.1.jar",
+    md5: "dfd358720393d83b01747928db6e3912",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/aopalliance-repackaged-2.6.1.jar",
+    md5: "0237846ebdaa7db36b356044a373ffba",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/hk2-api-2.6.1.jar",
+    md5: "23e8c18dae0c7b776bed756763d5153f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/hk2-utils-2.6.1.jar",
+    md5: "75ccb55538a77bf878996497ffeb86f3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/javassist-3.25.0-GA.jar",
+    md5: "3a4267e01989478be188d127b7a39425",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-media-json-jackson-2.35.jar",
+    md5: "358d8222ad61a17e21315ffe9215fd1d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-entity-filtering-2.35.jar",
+    md5: "57c92e30f2c77fea91fa843ec35b7441",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-container-grizzly2-http-2.35.jar",
+    md5: "4d13296e715847b5c819bb264649bef9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jakarta.inject-2.6.1.jar",
+    md5: "4d7c80a1e3cd54531af03bef4537f7af",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grizzly-http-server-2.4.4.jar",
+    md5: "cda181b8990fbd82851f1e3a09c2cb4b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grizzly-http-2.4.4.jar",
+    md5: "306f3d1e0509909679b7ddeea0fbc1e2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grizzly-framework-2.4.4.jar",
+    md5: "1bf52be5e755156d33b3839a4f9ecccb",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jakarta.ws.rs-api-2.1.6.jar",
+    md5: "c3892382aeb5c54085b22b1890511d29",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-server-2.35.jar",
+    md5: "35b97c2f6cf76195628135cb9300d41e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jersey-client-2.35.jar",
+    md5: "690961343e41659f42bb0190e65cb5ef",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpclient-4.5.13.jar",
+    md5: "40d6b9075fbd28fa10292a45a0db9457",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpcore-4.4.13.jar",
+    md5: "e07a248f61c52776a2366c075dcd4963",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/httpmime-4.5.13.jar",
+    md5: "3f0c1ef2c9dc47b62b780192f54b0c18",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/GamePayServer-1.jar",
+    md5: "7e4311ab3572732a4a077ebff27b672c",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/GameApiServer-1.jar",
+    md5: "656d965e1ea83da4989c75abc63c76d4",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-starter-3.3.2.jar",
+    md5: "1a484a738acb71e500d57cdbccf94923",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-3.3.2.jar",
+    md5: "24ec79308b95ab30a2b08cbd1a0a075e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-context-6.1.11.jar",
+    md5: "c8bf0c5b5ad065e15b64948a57ae3ff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-aop-6.1.11.jar",
+    md5: "209d4c6d658a566b2945a8b2bec9a39d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/micrometer-observation-1.12.8.jar",
+    md5: "c066b3fca59fae9a8473d276c685a2e7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/micrometer-commons-1.12.8.jar",
+    md5: "2ad121ad7c10c6d258b52295402e0320",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-autoconfigure-3.3.2.jar",
+    md5: "bb28d0585f0abcaf8e0e50a59d4ef6f2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jakarta.annotation-api-2.1.1.jar",
+    md5: "5dac2f68e8288d0add4dc92cb161711d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-core-6.1.11.jar",
+    md5: "cbb792e9142ca9c01007b9a34461e3fa",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-jcl-6.1.11.jar",
+    md5: "57f19f127742c25495098fcb032fc69c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/snakeyaml-2.2.jar",
+    md5: "d78aacf5f2de5b52f1a327470efd1ad7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-starter-data-mongodb-3.3.2.jar",
+    md5: "d9c8d71a64224cd757c6a1b73bc3ad32",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/mongodb-driver-sync-5.0.1.jar",
+    md5: "62e2d9654959cd1ba805d7d254fd8410",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/bson-5.0.1.jar",
+    md5: "0f540f4d128cb2e6797a65dccc4e8f5c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/mongodb-driver-core-5.0.1.jar",
+    md5: "c2878e33422e5a8d49dfb024bb21bfa6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/bson-record-codec-5.0.1.jar",
+    md5: "5d809c6d3624059dc4e3b8353f5e8bac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-data-mongodb-4.3.2.jar",
+    md5: "88cf39671b3ff0136c99340221b54a49",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-tx-6.1.9.jar",
+    md5: "46fcde41a076224532957ce2621036cc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-beans-6.1.9.jar",
+    md5: "0819ddf5698da8107e97932a19d57481",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-expression-6.1.9.jar",
+    md5: "c430d5cf5c8bb6eed7f0e1143128d92d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-data-commons-3.3.2.jar",
+    md5: "235433d517cc15c7c32a74540333ccac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/lombok-1.18.32.jar",
+    md5: "56e9be7b9a26802ac0c784ad824f3a29",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/log4j-core-2.23.1.jar",
+    md5: "34fad2df975cf874a2fdf4b797122f16",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/log4j-api-2.23.1.jar",
+    md5: "bee2e2dcbeeb983bdb6b71c9c3476b6a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/slf4j-simple-2.0.16.jar",
+    md5: "58c531dfe60020700c53c45fdf6234bf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/slf4j-api-2.0.16.jar",
+    md5: "c8de8f5d740584cb24b5652cfba8b3c4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-all-4.1.112.Final.jar",
+    md5: "d706c14d753c010f7808e7dabf2a0ce1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-buffer-4.1.112.Final.jar",
+    md5: "58aea7c4ed4cd55a64c5e2c2cbdb090f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-4.1.112.Final.jar",
+    md5: "5a9f3285ddcbbf7fefa9333a57f9f46d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-dns-4.1.112.Final.jar",
+    md5: "c7634ccdc99763099995132e2500e5b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-haproxy-4.1.112.Final.jar",
+    md5: "19c9211861a92018ac52baf1ef68bf5a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-http-4.1.112.Final.jar",
+    md5: "ac138ddb64f1c09f63ce03738dfcfa51",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-http2-4.1.112.Final.jar",
+    md5: "1a2969d32a978ae4a5b58baf780067d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-memcache-4.1.112.Final.jar",
+    md5: "bef6e34c47a3bbc31d91fc877c2bb1d2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-mqtt-4.1.112.Final.jar",
+    md5: "e3a7be36ea01dad5eb73ab65ef5fa901",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-redis-4.1.112.Final.jar",
+    md5: "b51bf2f9b9f5e1a897b5fe66ec3ed2d0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-smtp-4.1.112.Final.jar",
+    md5: "42997507b4275a1fc466c0397c265724",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-socks-4.1.112.Final.jar",
+    md5: "4b70c8269ea7dc6a3393c2ca8b16e213",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-stomp-4.1.112.Final.jar",
+    md5: "101f2ada5655e4e0dbb4cbd04fa08622",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-codec-xml-4.1.112.Final.jar",
+    md5: "1b3d21449ae309d675f58bfec28cb486",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-common-4.1.112.Final.jar",
+    md5: "768d09de5d2736819e0bf4d9b20acc2d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-handler-4.1.112.Final.jar",
+    md5: "48e6897165f934821ec327c7be732008",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-native-unix-common-4.1.112.Final.jar",
+    md5: "b002eb68abd75113421e024a46532591",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-handler-proxy-4.1.112.Final.jar",
+    md5: "6c39481ec5f8d98b50c89a4401f25776",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-handler-ssl-ocsp-4.1.112.Final.jar",
+    md5: "7df7d310555e28aa52d3d76f9119ea85",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-resolver-4.1.112.Final.jar",
+    md5: "cddf7d313c3a32d807d9b001ae60a5cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-resolver-dns-4.1.112.Final.jar",
+    md5: "e14533d528a8aa805f5d7a62e300358a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-4.1.112.Final.jar",
+    md5: "e37825cc517e682da37e05c181e1a487",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-rxtx-4.1.112.Final.jar",
+    md5: "19eb7cef59d397a30853425447cc930d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-sctp-4.1.112.Final.jar",
+    md5: "8f4ebb3777f5a1e419100291d56bbc90",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-udt-4.1.112.Final.jar",
+    md5: "24479cf8499c8cf47838e07f0fbb166b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-classes-epoll-4.1.112.Final.jar",
+    md5: "7e9e19792fb995bae557c96328cacdd5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-classes-kqueue-4.1.112.Final.jar",
+    md5: "442aa9704a151be3c24556deaee4f1b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-resolver-dns-classes-macos-4.1.112.Final.jar",
+    md5: "f63bd2235ad7bc69358033d619241f7e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar",
+    md5: "1ceffee2a610d52d4c7b77b9de584166",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-aarch_64.jar",
+    md5: "7d60fce221b2bcdbcfb5d163b1858242",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-riscv64.jar",
+    md5: "80948b9d4b7a7c549e73e98632637cf5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-x86_64.jar",
+    md5: "dcb4b9ab43ac4bb527dc9967925c93dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-aarch_64.jar",
+    md5: "02ab7f7cbdc2c8bd30f1121d983112b8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar",
+    md5: "7e3e9dc320cfe4fed3694c5d14e1cf65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-aarch_64.jar",
+    md5: "ed7dc10a3c4fb8a2b5a8114896818eda",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/protobuf-java-4.27.3.jar",
+    md5: "69902ea125e74079eb430f4e342e5d63",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-all-1.66.0.jar",
+    md5: "778938c6578ec7cfc57050aac63f1d46",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-api-1.66.0.jar",
+    md5: "e2d44a1075af4019389547bb2274ded1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jsr305-3.0.2.jar",
+    md5: "dd83accb899363c32b07d7a1b2e4ce40",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/error_prone_annotations-2.28.0.jar",
+    md5: "9e5d2181ddb6acb58fe08e86198c4232",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-auth-1.66.0.jar",
+    md5: "590a544338bb2152e4033f85f26c169e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-auth-library-credentials-1.23.0.jar",
+    md5: "d83b994e3e0e03d92f087a054df03ea6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-core-1.66.0.jar",
+    md5: "8ef28bd667824e3da2e913af02ee3026",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/annotations-4.1.1.4.jar",
+    md5: "c2cdd26a6ae577f24775e8ce75da1fdc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/animal-sniffer-annotations-1.24.jar",
+    md5: "508b8c41cb5b48cdd2d9db436c367bb0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/perfmark-api-0.27.0.jar",
+    md5: "73bcc9c91e5b65c4f75b0567e7a5590f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-context-1.66.0.jar",
+    md5: "33950e448c4eef283ce747891f51ec65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-grpclb-1.66.0.jar",
+    md5: "ddfa5afe7202ee9c958974a2f46c95e0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/protobuf-java-util-3.25.3.jar",
+    md5: "a348527264875a668acaebff2476a481",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-gcp-csm-observability-1.66.0.jar",
+    md5: "ce8223c7dcf32beccc9e869e88e2cf87",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-gcp-resources-1.36.0-alpha.jar",
+    md5: "5b36b08db502b8012a86ae9dd9f0c773",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-1.38.0.jar",
+    md5: "23f92da8783f0c9eb7dbd3b9b578959d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-common-1.38.0.jar",
+    md5: "700256cea41f2b329ec77ee3e8a5a2ba",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-trace-1.38.0.jar",
+    md5: "641a97ede16ef5ec62c521698d6fac9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-metrics-1.38.0.jar",
+    md5: "2f5d49274b1897b8bd64a2a90640c2cf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-logs-1.38.0.jar",
+    md5: "59525384de6a701746edab9daff058dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/detector-resources-support-0.29.0.jar",
+    md5: "4b543117ed73c7bbf37ba5cb9736efc3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-semconv-1.25.0-alpha.jar",
+    md5: "44b727a6673a05783c19aa47f540823a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar",
+    md5: "616cced59aa3dd913191fd5f0ab148c6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar",
+    md5: "e785ce72548fdcbcd50d60c056784929",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-api-incubator-1.40.0-alpha.jar",
+    md5: "4448f8edcb1655877522a1dce32ea784",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-inprocess-1.66.0.jar",
+    md5: "59cef474a2ec09eea73bf59acdde3fe3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-netty-1.66.0.jar",
+    md5: "591c2ffb064de1b862fc8abdaed2d767",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-okhttp-1.66.0.jar",
+    md5: "d76fa4fcca9005c1a386426328f507a0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/okio-3.4.0.jar",
+    md5: "91cf6017cc6c20c963eff46b7fc60de5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/okio-jvm-3.4.0.jar",
+    md5: "8183b7d607ffbce7bb16d8c534de0b94",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/kotlin-stdlib-jdk8-1.8.0.jar",
+    md5: "34246294df796300616b9b6352ffcece",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/kotlin-stdlib-1.8.0.jar",
+    md5: "952dbd9391b7c09ee33321da0ff5d583",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/annotations-13.0.jar",
+    md5: "f4fb462172517b46b6cd90003508515a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/kotlin-stdlib-jdk7-1.8.0.jar",
+    md5: "e881855ce1f9d9790c8fae52accc231d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/kotlin-stdlib-common-1.8.0.jar",
+    md5: "f11c871eefc3262541c5a3c8d7555e5e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-opentelemetry-1.66.0.jar",
+    md5: "373acd9e99977b763a3b56de652ba217",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-api-1.40.0.jar",
+    md5: "27db699d83d284db1aa48952a0131a0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/opentelemetry-context-1.40.0.jar",
+    md5: "5f822f7270ad2a3663cfe433291ae9f1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/auto-value-annotations-1.11.0.jar",
+    md5: "8fc3c2d0bbdef8927f08a5c7c829a768",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-protobuf-1.66.0.jar",
+    md5: "676d46f636ab4b8b8263a3fe5399a8de",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/proto-google-common-protos-2.41.0.jar",
+    md5: "34f905dc1d9cf3280b12a64f03c6bfd8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-protobuf-lite-1.66.0.jar",
+    md5: "2dc8da97960356b2af4c9a65a85681d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-rls-1.66.0.jar",
+    md5: "c3b7d48fb81e43c4d1df94ab573ff451",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-services-1.66.0.jar",
+    md5: "a76c47e95615a242bf5388345b2ca5da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/j2objc-annotations-3.0.0.jar",
+    md5: "f59529b29202a5baf37f491ea5ec8627",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-servlet-1.66.0.jar",
+    md5: "c65b1e421dfaa972ac1bbbfade894e21",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-servlet-jakarta-1.66.0.jar",
+    md5: "78525aede548ca1a7fb0dffdd6617359",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-stub-1.66.0.jar",
+    md5: "b2f9bbac5e069391aea79367feb4a3ab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-testing-1.66.0.jar",
+    md5: "37f41798f8e922db39334aad641991b2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/junit-4.13.2.jar",
+    md5: "d98a9a02a99a9acd22d7653cbcc1f31f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/hamcrest-core-1.3.jar",
+    md5: "6393363b47ddcbba82321110c3e07519",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-util-1.66.0.jar",
+    md5: "640d58547c7ef67db1389b2af27ee7b7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-xds-1.66.0.jar",
+    md5: "9efc099a9aeec73ad9d3194db8d001c3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-alts-1.66.0.jar",
+    md5: "f88fddc2082d329cf9000509f02ab57d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/conscrypt-openjdk-uber-2.5.2.jar",
+    md5: "34c8ec40831d77372b2bea95139783b0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-auth-library-oauth2-http-1.23.0.jar",
+    md5: "35deb5dba280426cf64f73ee72699cf3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-http-client-gson-1.43.3.jar",
+    md5: "472f29d64b61f652b3ce977772e28393",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/re2j-1.7.jar",
+    md5: "deb6ffa7ed6d2cc06e6ac1182755c735",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/grpc-netty-shaded-1.66.0.jar",
+    md5: "efcf8bd3860282c929e748d40b543112",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/guava-33.2.1-jre.jar",
+    md5: "872309e5982530bdc7e68096c0d53cd2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/failureaccess-1.0.2.jar",
+    md5: "3f75955b49b6758fd6d1e1bd9bf777b3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    md5: "d094c22570d65e132c19cea5d352e381",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/checker-qual-3.42.0.jar",
+    md5: "4c55448dcbfe9c3702f7758fc8fe0086",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/kcp-netty-1.5.2.jar",
+    md5: "0b6b24e3cbf770b3f1587b3eaeda62ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jedis-5.1.4.jar",
+    md5: "cf5f4212b542e6219fb22c49f8e6af71",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/json-20231013.jar",
+    md5: "1a0702c57783ce9e948252c34644f328",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/gson-2.10.1.jar",
+    md5: "df6097815738cb31fc56391553210843",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/redisson-3.34.1.jar",
+    md5: "2893189be47d64c5a3213ef18ba3743c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/cache-api-1.1.1.jar",
+    md5: "dfdac9358e140e61c574abb1ada84dc9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/reactor-core-3.6.2.jar",
+    md5: "c7553524c90891b9adf11dda72356a96",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/reactive-streams-1.0.4.jar",
+    md5: "eda7978509c32d99166745cc144c99cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/rxjava-3.1.8.jar",
+    md5: "a7ae568329e957b7b1b522c261a1ddb2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/kryo-5.6.0.jar",
+    md5: "92eab6b5f4c33d6406896850fdd0e959",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/reflectasm-1.11.9.jar",
+    md5: "602377b51e9843ef87ed48b790945c3e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/objenesis-3.3.jar",
+    md5: "ab0e0b2ab81affdd7f38bcc60fd85571",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/minlog-1.3.1.jar",
+    md5: "46908e11b408080d53246e4be44e66db",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-annotations-2.17.1.jar",
+    md5: "dbeffa5994a6234489a205fd7f33d9b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-dataformat-yaml-2.17.1.jar",
+    md5: "3257d599754342666ba50b7eaed555b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-core-2.17.1.jar",
+    md5: "9363584821290882417f1c3ceab784df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-databind-2.17.1.jar",
+    md5: "f0a1c37dc7d937f14e183d84f15c0f83",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/byte-buddy-1.14.17.jar",
+    md5: "9236614cb260676d7b7489ca96da4af4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jodd-util-6.2.2.jar",
+    md5: "81b19295e0e2d5d858137e4529204212",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/fastjson2-2.0.52.jar",
+    md5: "284bc3ef3c9e14a457bd02d1adc934df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/quartz-2.3.2.jar",
+    md5: "d7299dbaec0e0ed7af281b07cc40c8c1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/c3p0-0.9.5.4.jar",
+    md5: "45fd4a89c9fd671a0d1dc97c0ec77abe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/mchange-commons-java-0.2.15.jar",
+    md5: "97c4575d9d49d9afb71492e6bb4417da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/HikariCP-java7-2.4.13.jar",
+    md5: "b1f2b595c174b2e399416a9f26f6dbad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/quartz-jobs-2.3.2.jar",
+    md5: "bc62af72677d2c4fa66fa7b820d3ca06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jta-1.1.jar",
+    md5: "82a10ce714f411b28f13850059de09ee",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/httpcore5-5.2.4.jar",
+    md5: "5a3d417ea4e65e0f74194263dc5c6c43",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/httpclient5-5.3.1.jar",
+    md5: "de1810a606b27192cbf5bbad9c25a648",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/httpcore5-h2-5.2.4.jar",
+    md5: "d407b8144029db656ac5ba3d54ef801f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/commons-logging-1.3.3.jar",
+    md5: "62de1aea096b3ac52e46b908dac4ac97",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/commons-io-2.16.1.jar",
+    md5: "ed8191a5a217940140001b0acfed18d9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/commons-pool2-2.12.0.jar",
+    md5: "0516bf5ac1549e8ba78f6b7c49d09ed2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/commons-lang3-3.16.0.jar",
+    md5: "67bc6dbd753fc276d69aeb4cfa205e15",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/javax.annotation-api-1.3.2.jar",
+    md5: "2ab1973eefffaa2aeec47d50b9e40b9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-api-services-androidpublisher-v3-rev142-1.25.0.jar",
+    md5: "23938c300651e2f432a2c1e4d1997550",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-api-client-1.25.0.jar",
+    md5: "dbeddb59844ea8fbd9416a0c017a627f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-oauth-client-1.25.0.jar",
+    md5: "6fd6dc606bb8c17c9a6d61e21533f010",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-http-client-1.25.0.jar",
+    md5: "d28fdd84656ffe586d56ab6492509dd6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/httpclient-4.5.5.jar",
+    md5: "97e7e5b135476b7d25a5ab31e1ea4922",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/httpcore-4.4.9.jar",
+    md5: "b89455507839c09d6119661defd2166a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/commons-codec-1.10.jar",
+    md5: "353cf6a2bdba09595ccfa073b78c7fcb",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/google-http-client-jackson2-1.25.0.jar",
+    md5: "5e7de7ec9216d4747dcbdc5b6d08d560",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/twitter-api-java-sdk-1.1.4.jar",
+    md5: "8990f9b912112c2f170d5838926a2acc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/swagger-annotations-1.6.3.jar",
+    md5: "942481616f73ad3273893e9c390985aa",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/gson-2.9.0.jar",
+    md5: "53fa3e6753e90d931d62cb89580fde2f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/logging-interceptor-4.9.2.jar",
+    md5: "059e2387af7bb53c1ef93e9152593881",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/gson-fire-1.8.5.jar",
+    md5: "ae5e36f0920acb48775fb02fb75f06f1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/org.apache.oltu.oauth2.client-1.0.1.jar",
+    md5: "5557f16d785776596b85e18cdb00fd37",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/org.apache.oltu.oauth2.common-1.0.1.jar",
+    md5: "5a0fe9d8a357ff9f2db68531856e045c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/joauth-6.0.3.jar",
+    md5: "26d3e98d66c3ae2e8783ec0723506b36",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jsr311-api-1.1.1.jar",
+    md5: "c9803468299ec255c047a280ddec510f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/javax.ws.rs-api-2.0.jar",
+    md5: "3bc8176d36becb7746e1f2594346ed66",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/scribejava-apis-8.3.1.jar",
+    md5: "b1e82282b8b871d7c2440ce26b897432",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/scribejava-core-8.3.1.jar",
+    md5: "c295499a16b7a74b545edffaefb968a2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/scribejava-java8-8.3.1.jar",
+    md5: "15e2929eb2f31ce18545f6c674b86b8e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-databind-nullable-0.2.1.jar",
+    md5: "53aceff9ce47d3db51f961024ab4d2b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-starter-web-3.3.2.jar",
+    md5: "995ad2c4733d9dd2a1334f8e652d8d86",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-starter-json-3.3.2.jar",
+    md5: "ea08052d26549310c740e6bfd8f8eab2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-datatype-jdk8-2.17.2.jar",
+    md5: "91bac611e3aa2883dc0e8850d7790f04",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-datatype-jsr310-2.17.2.jar",
+    md5: "6b3cd2fed41104d9ee9d8695547672af",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/jackson-module-parameter-names-2.17.2.jar",
+    md5: "897853481f7a59b2e9d0566d8f7aacab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-boot-starter-tomcat-3.3.2.jar",
+    md5: "069f3c09e7fd4012ad3c3523b2a141f0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/tomcat-embed-core-10.1.26.jar",
+    md5: "5b2f76a6e7d1b674e144f0ee916f2a3d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/tomcat-embed-el-10.1.26.jar",
+    md5: "2e7509dee451cb074fc1422a95369205",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/tomcat-embed-websocket-10.1.26.jar",
+    md5: "f38e269822f165552599c3c49c6ed1a1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-web-6.1.11.jar",
+    md5: "25642932a93a9973aa42d89d79b0bff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-beans-6.1.11.jar",
+    md5: "740043976560fd2dcb9ba6a58dc75b34",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-webmvc-6.1.11.jar",
+    md5: "56071c2648d5e1da2796d84f30326a48",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/lib/spring-expression-6.1.11.jar",
+    md5: "cb8e127e042c691b3f8408272d3d1e06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/application.yml",
+    md5: "3952cb5e6d9fde18947c02389e9afca3",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/banner.txt",
+    md5: "eef20fbb649aa7d5a33b95b482a6c350",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/log4j2.xml",
+    md5: "f1f32305bbdfcd446d2c005a400dd127",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/logs/pay.log",
+    md5: "d41d8cd98f00b204e9800998ecf8427e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/redis.xml",
+    md5: "06ad5891c36fdbfc76f813307e21a92e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/start.sh",
+    md5: "e7b1d2b0b644711f2dde466e8315a1a2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/pay_orange/stop.sh",
+    md5: "12bfa944822e758f973bd45b2f140535",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/client_secret.json",
+    md5: "089c1d5ebf9b8e4ff6e052140bf68266",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-api-client-1.23.0.jar",
+    md5: "9b49735ba9880c285b7e55810d010cf3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-oauth-client-1.23.0.jar",
+    md5: "788bc24f9d1cf7a8b42d49f3902eee4d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-1.23.0.jar",
+    md5: "f6480f590e03a9bff6eaecf8e043c218",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-jackson2-1.23.0.jar",
+    md5: "45a704cf8eff0a7af182e92de1a79653",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/guava-jdk5-17.0.jar",
+    md5: "2bbd64238b1e2225664e2c27394f3339",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-oauth-client-jetty-1.23.0.jar",
+    md5: "b2193dd143b83b9bc59bfb1a1bd14081",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-oauth-client-java6-1.23.0.jar",
+    md5: "419a8cba40c218ee6b7521bb29b947a4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jetty-6.1.26.jar",
+    md5: "12b65438bbaf225102d0396c21236052",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jetty-util-6.1.26.jar",
+    md5: "450fedce4f7f8ad3761577b10a664200",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/servlet-api-2.5-20081211.jar",
+    md5: "083898d794cc261853922ca941aee390",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-api-services-people-v1-rev537-1.25.0.jar",
+    md5: "29df585095d33010077d6c140a4680a7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/GameApiServer-1.jar",
+    md5: "d132d76677adc82ddc7dab95babf5f4d",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-starter-3.3.2.jar",
+    md5: "1a484a738acb71e500d57cdbccf94923",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-3.3.2.jar",
+    md5: "24ec79308b95ab30a2b08cbd1a0a075e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-autoconfigure-3.3.2.jar",
+    md5: "bb28d0585f0abcaf8e0e50a59d4ef6f2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jakarta.annotation-api-2.1.1.jar",
+    md5: "5dac2f68e8288d0add4dc92cb161711d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-core-6.1.11.jar",
+    md5: "cbb792e9142ca9c01007b9a34461e3fa",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-jcl-6.1.11.jar",
+    md5: "57f19f127742c25495098fcb032fc69c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/snakeyaml-2.2.jar",
+    md5: "d78aacf5f2de5b52f1a327470efd1ad7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-starter-data-mongodb-3.3.2.jar",
+    md5: "d9c8d71a64224cd757c6a1b73bc3ad32",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/mongodb-driver-sync-5.0.1.jar",
+    md5: "62e2d9654959cd1ba805d7d254fd8410",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/bson-5.0.1.jar",
+    md5: "0f540f4d128cb2e6797a65dccc4e8f5c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/mongodb-driver-core-5.0.1.jar",
+    md5: "c2878e33422e5a8d49dfb024bb21bfa6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/bson-record-codec-5.0.1.jar",
+    md5: "5d809c6d3624059dc4e3b8353f5e8bac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-data-mongodb-4.3.2.jar",
+    md5: "88cf39671b3ff0136c99340221b54a49",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-tx-6.1.9.jar",
+    md5: "46fcde41a076224532957ce2621036cc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-data-commons-3.3.2.jar",
+    md5: "235433d517cc15c7c32a74540333ccac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/lombok-1.18.32.jar",
+    md5: "56e9be7b9a26802ac0c784ad824f3a29",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/log4j-core-2.23.1.jar",
+    md5: "34fad2df975cf874a2fdf4b797122f16",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/log4j-api-2.23.1.jar",
+    md5: "bee2e2dcbeeb983bdb6b71c9c3476b6a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/slf4j-simple-2.0.16.jar",
+    md5: "58c531dfe60020700c53c45fdf6234bf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/slf4j-api-2.0.16.jar",
+    md5: "c8de8f5d740584cb24b5652cfba8b3c4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-all-4.1.112.Final.jar",
+    md5: "d706c14d753c010f7808e7dabf2a0ce1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-buffer-4.1.112.Final.jar",
+    md5: "58aea7c4ed4cd55a64c5e2c2cbdb090f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-4.1.112.Final.jar",
+    md5: "5a9f3285ddcbbf7fefa9333a57f9f46d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-dns-4.1.112.Final.jar",
+    md5: "c7634ccdc99763099995132e2500e5b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-haproxy-4.1.112.Final.jar",
+    md5: "19c9211861a92018ac52baf1ef68bf5a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-http-4.1.112.Final.jar",
+    md5: "ac138ddb64f1c09f63ce03738dfcfa51",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-http2-4.1.112.Final.jar",
+    md5: "1a2969d32a978ae4a5b58baf780067d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-memcache-4.1.112.Final.jar",
+    md5: "bef6e34c47a3bbc31d91fc877c2bb1d2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-mqtt-4.1.112.Final.jar",
+    md5: "e3a7be36ea01dad5eb73ab65ef5fa901",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-redis-4.1.112.Final.jar",
+    md5: "b51bf2f9b9f5e1a897b5fe66ec3ed2d0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-smtp-4.1.112.Final.jar",
+    md5: "42997507b4275a1fc466c0397c265724",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-socks-4.1.112.Final.jar",
+    md5: "4b70c8269ea7dc6a3393c2ca8b16e213",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-stomp-4.1.112.Final.jar",
+    md5: "101f2ada5655e4e0dbb4cbd04fa08622",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-codec-xml-4.1.112.Final.jar",
+    md5: "1b3d21449ae309d675f58bfec28cb486",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-common-4.1.112.Final.jar",
+    md5: "768d09de5d2736819e0bf4d9b20acc2d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-handler-4.1.112.Final.jar",
+    md5: "48e6897165f934821ec327c7be732008",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-native-unix-common-4.1.112.Final.jar",
+    md5: "b002eb68abd75113421e024a46532591",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-handler-proxy-4.1.112.Final.jar",
+    md5: "6c39481ec5f8d98b50c89a4401f25776",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-handler-ssl-ocsp-4.1.112.Final.jar",
+    md5: "7df7d310555e28aa52d3d76f9119ea85",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-resolver-4.1.112.Final.jar",
+    md5: "cddf7d313c3a32d807d9b001ae60a5cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-resolver-dns-4.1.112.Final.jar",
+    md5: "e14533d528a8aa805f5d7a62e300358a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-4.1.112.Final.jar",
+    md5: "e37825cc517e682da37e05c181e1a487",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-rxtx-4.1.112.Final.jar",
+    md5: "19eb7cef59d397a30853425447cc930d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-sctp-4.1.112.Final.jar",
+    md5: "8f4ebb3777f5a1e419100291d56bbc90",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-udt-4.1.112.Final.jar",
+    md5: "24479cf8499c8cf47838e07f0fbb166b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-classes-epoll-4.1.112.Final.jar",
+    md5: "7e9e19792fb995bae557c96328cacdd5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-classes-kqueue-4.1.112.Final.jar",
+    md5: "442aa9704a151be3c24556deaee4f1b9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-resolver-dns-classes-macos-4.1.112.Final.jar",
+    md5: "f63bd2235ad7bc69358033d619241f7e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar",
+    md5: "1ceffee2a610d52d4c7b77b9de584166",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-aarch_64.jar",
+    md5: "7d60fce221b2bcdbcfb5d163b1858242",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-native-epoll-4.1.112.Final-linux-riscv64.jar",
+    md5: "80948b9d4b7a7c549e73e98632637cf5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-x86_64.jar",
+    md5: "dcb4b9ab43ac4bb527dc9967925c93dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-transport-native-kqueue-4.1.112.Final-osx-aarch_64.jar",
+    md5: "02ab7f7cbdc2c8bd30f1121d983112b8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar",
+    md5: "7e3e9dc320cfe4fed3694c5d14e1cf65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/netty-resolver-dns-native-macos-4.1.112.Final-osx-aarch_64.jar",
+    md5: "ed7dc10a3c4fb8a2b5a8114896818eda",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/protobuf-java-4.27.3.jar",
+    md5: "69902ea125e74079eb430f4e342e5d63",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-all-1.66.0.jar",
+    md5: "778938c6578ec7cfc57050aac63f1d46",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-api-1.66.0.jar",
+    md5: "e2d44a1075af4019389547bb2274ded1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jsr305-3.0.2.jar",
+    md5: "dd83accb899363c32b07d7a1b2e4ce40",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/error_prone_annotations-2.28.0.jar",
+    md5: "9e5d2181ddb6acb58fe08e86198c4232",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-auth-1.66.0.jar",
+    md5: "590a544338bb2152e4033f85f26c169e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/google-auth-library-credentials-1.23.0.jar",
+    md5: "d83b994e3e0e03d92f087a054df03ea6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-core-1.66.0.jar",
+    md5: "8ef28bd667824e3da2e913af02ee3026",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/annotations-4.1.1.4.jar",
+    md5: "c2cdd26a6ae577f24775e8ce75da1fdc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/animal-sniffer-annotations-1.24.jar",
+    md5: "508b8c41cb5b48cdd2d9db436c367bb0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/perfmark-api-0.27.0.jar",
+    md5: "73bcc9c91e5b65c4f75b0567e7a5590f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-context-1.66.0.jar",
+    md5: "33950e448c4eef283ce747891f51ec65",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-grpclb-1.66.0.jar",
+    md5: "ddfa5afe7202ee9c958974a2f46c95e0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/protobuf-java-util-3.25.3.jar",
+    md5: "a348527264875a668acaebff2476a481",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-gcp-csm-observability-1.66.0.jar",
+    md5: "ce8223c7dcf32beccc9e869e88e2cf87",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-gcp-resources-1.36.0-alpha.jar",
+    md5: "5b36b08db502b8012a86ae9dd9f0c773",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-1.38.0.jar",
+    md5: "23f92da8783f0c9eb7dbd3b9b578959d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-common-1.38.0.jar",
+    md5: "700256cea41f2b329ec77ee3e8a5a2ba",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-trace-1.38.0.jar",
+    md5: "641a97ede16ef5ec62c521698d6fac9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-metrics-1.38.0.jar",
+    md5: "2f5d49274b1897b8bd64a2a90640c2cf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-logs-1.38.0.jar",
+    md5: "59525384de6a701746edab9daff058dc",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/detector-resources-support-0.29.0.jar",
+    md5: "4b543117ed73c7bbf37ba5cb9736efc3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-semconv-1.25.0-alpha.jar",
+    md5: "44b727a6673a05783c19aa47f540823a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar",
+    md5: "616cced59aa3dd913191fd5f0ab148c6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar",
+    md5: "e785ce72548fdcbcd50d60c056784929",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-api-incubator-1.40.0-alpha.jar",
+    md5: "4448f8edcb1655877522a1dce32ea784",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-inprocess-1.66.0.jar",
+    md5: "59cef474a2ec09eea73bf59acdde3fe3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-netty-1.66.0.jar",
+    md5: "591c2ffb064de1b862fc8abdaed2d767",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-okhttp-1.66.0.jar",
+    md5: "d76fa4fcca9005c1a386426328f507a0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-opentelemetry-1.66.0.jar",
+    md5: "373acd9e99977b763a3b56de652ba217",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-api-1.40.0.jar",
+    md5: "27db699d83d284db1aa48952a0131a0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opentelemetry-context-1.40.0.jar",
+    md5: "5f822f7270ad2a3663cfe433291ae9f1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/auto-value-annotations-1.11.0.jar",
+    md5: "8fc3c2d0bbdef8927f08a5c7c829a768",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-protobuf-1.66.0.jar",
+    md5: "676d46f636ab4b8b8263a3fe5399a8de",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/proto-google-common-protos-2.41.0.jar",
+    md5: "34f905dc1d9cf3280b12a64f03c6bfd8",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-protobuf-lite-1.66.0.jar",
+    md5: "2dc8da97960356b2af4c9a65a85681d7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-rls-1.66.0.jar",
+    md5: "c3b7d48fb81e43c4d1df94ab573ff451",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-services-1.66.0.jar",
+    md5: "a76c47e95615a242bf5388345b2ca5da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/j2objc-annotations-3.0.0.jar",
+    md5: "f59529b29202a5baf37f491ea5ec8627",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-servlet-1.66.0.jar",
+    md5: "c65b1e421dfaa972ac1bbbfade894e21",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-servlet-jakarta-1.66.0.jar",
+    md5: "78525aede548ca1a7fb0dffdd6617359",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-stub-1.66.0.jar",
+    md5: "b2f9bbac5e069391aea79367feb4a3ab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-testing-1.66.0.jar",
+    md5: "37f41798f8e922db39334aad641991b2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/junit-4.13.2.jar",
+    md5: "d98a9a02a99a9acd22d7653cbcc1f31f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/hamcrest-core-1.3.jar",
+    md5: "6393363b47ddcbba82321110c3e07519",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-util-1.66.0.jar",
+    md5: "640d58547c7ef67db1389b2af27ee7b7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-xds-1.66.0.jar",
+    md5: "9efc099a9aeec73ad9d3194db8d001c3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-alts-1.66.0.jar",
+    md5: "f88fddc2082d329cf9000509f02ab57d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/conscrypt-openjdk-uber-2.5.2.jar",
+    md5: "34c8ec40831d77372b2bea95139783b0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/google-auth-library-oauth2-http-1.23.0.jar",
+    md5: "35deb5dba280426cf64f73ee72699cf3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/google-http-client-1.43.3.jar",
+    md5: "806427c3d16ae724be920277ef45ee39",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opencensus-api-0.31.1.jar",
+    md5: "a5e7092bb89baaaee424f5a7b20d1bad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opencensus-contrib-http-util-0.31.1.jar",
+    md5: "9ecc9c428eb87dc734ae8d07b820ce26",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/google-http-client-gson-1.43.3.jar",
+    md5: "472f29d64b61f652b3ce977772e28393",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/re2j-1.7.jar",
+    md5: "deb6ffa7ed6d2cc06e6ac1182755c735",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grpc-netty-shaded-1.66.0.jar",
+    md5: "efcf8bd3860282c929e748d40b543112",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/guava-33.2.1-jre.jar",
+    md5: "872309e5982530bdc7e68096c0d53cd2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/failureaccess-1.0.2.jar",
+    md5: "3f75955b49b6758fd6d1e1bd9bf777b3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    md5: "d094c22570d65e132c19cea5d352e381",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/checker-qual-3.42.0.jar",
+    md5: "4c55448dcbfe9c3702f7758fc8fe0086",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kcp-netty-1.5.2.jar",
+    md5: "0b6b24e3cbf770b3f1587b3eaeda62ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jedis-5.1.4.jar",
+    md5: "cf5f4212b542e6219fb22c49f8e6af71",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/json-20231013.jar",
+    md5: "1a0702c57783ce9e948252c34644f328",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/gson-2.10.1.jar",
+    md5: "df6097815738cb31fc56391553210843",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/redisson-3.34.1.jar",
+    md5: "2893189be47d64c5a3213ef18ba3743c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/cache-api-1.1.1.jar",
+    md5: "dfdac9358e140e61c574abb1ada84dc9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/reactor-core-3.6.2.jar",
+    md5: "c7553524c90891b9adf11dda72356a96",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/reactive-streams-1.0.4.jar",
+    md5: "eda7978509c32d99166745cc144c99cd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/rxjava-3.1.8.jar",
+    md5: "a7ae568329e957b7b1b522c261a1ddb2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kryo-5.6.0.jar",
+    md5: "92eab6b5f4c33d6406896850fdd0e959",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/reflectasm-1.11.9.jar",
+    md5: "602377b51e9843ef87ed48b790945c3e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/objenesis-3.3.jar",
+    md5: "ab0e0b2ab81affdd7f38bcc60fd85571",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/minlog-1.3.1.jar",
+    md5: "46908e11b408080d53246e4be44e66db",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-dataformat-yaml-2.17.1.jar",
+    md5: "3257d599754342666ba50b7eaed555b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/byte-buddy-1.14.17.jar",
+    md5: "9236614cb260676d7b7489ca96da4af4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jodd-util-6.2.2.jar",
+    md5: "81b19295e0e2d5d858137e4529204212",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/fastjson2-2.0.52.jar",
+    md5: "284bc3ef3c9e14a457bd02d1adc934df",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/quartz-2.3.2.jar",
+    md5: "d7299dbaec0e0ed7af281b07cc40c8c1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/c3p0-0.9.5.4.jar",
+    md5: "45fd4a89c9fd671a0d1dc97c0ec77abe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/mchange-commons-java-0.2.15.jar",
+    md5: "97c4575d9d49d9afb71492e6bb4417da",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/HikariCP-java7-2.4.13.jar",
+    md5: "b1f2b595c174b2e399416a9f26f6dbad",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/quartz-jobs-2.3.2.jar",
+    md5: "bc62af72677d2c4fa66fa7b820d3ca06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jta-1.1.jar",
+    md5: "82a10ce714f411b28f13850059de09ee",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/httpcore5-5.2.4.jar",
+    md5: "5a3d417ea4e65e0f74194263dc5c6c43",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/httpclient5-5.3.1.jar",
+    md5: "de1810a606b27192cbf5bbad9c25a648",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/httpcore5-h2-5.2.4.jar",
+    md5: "d407b8144029db656ac5ba3d54ef801f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/commons-logging-1.3.3.jar",
+    md5: "62de1aea096b3ac52e46b908dac4ac97",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/commons-io-2.16.1.jar",
+    md5: "ed8191a5a217940140001b0acfed18d9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/commons-pool2-2.12.0.jar",
+    md5: "0516bf5ac1549e8ba78f6b7c49d09ed2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/commons-lang3-3.16.0.jar",
+    md5: "67bc6dbd753fc276d69aeb4cfa205e15",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/javax.annotation-api-1.3.2.jar",
+    md5: "2ab1973eefffaa2aeec47d50b9e40b9d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-starter-web-3.3.2.jar",
+    md5: "995ad2c4733d9dd2a1334f8e652d8d86",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-starter-json-3.3.2.jar",
+    md5: "ea08052d26549310c740e6bfd8f8eab2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-datatype-jdk8-2.17.2.jar",
+    md5: "91bac611e3aa2883dc0e8850d7790f04",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-datatype-jsr310-2.17.2.jar",
+    md5: "6b3cd2fed41104d9ee9d8695547672af",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-module-parameter-names-2.17.2.jar",
+    md5: "897853481f7a59b2e9d0566d8f7aacab",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-starter-tomcat-3.3.2.jar",
+    md5: "069f3c09e7fd4012ad3c3523b2a141f0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/tomcat-embed-core-10.1.26.jar",
+    md5: "5b2f76a6e7d1b674e144f0ee916f2a3d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/tomcat-embed-websocket-10.1.26.jar",
+    md5: "f38e269822f165552599c3c49c6ed1a1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-web-6.1.11.jar",
+    md5: "25642932a93a9973aa42d89d79b0bff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-beans-6.1.11.jar",
+    md5: "740043976560fd2dcb9ba6a58dc75b34",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/micrometer-observation-1.12.8.jar",
+    md5: "c066b3fca59fae9a8473d276c685a2e7",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/micrometer-commons-1.12.8.jar",
+    md5: "2ad121ad7c10c6d258b52295402e0320",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-webmvc-6.1.11.jar",
+    md5: "56071c2648d5e1da2796d84f30326a48",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-aop-6.1.11.jar",
+    md5: "209d4c6d658a566b2945a8b2bec9a39d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-context-6.1.11.jar",
+    md5: "c8bf0c5b5ad065e15b64948a57ae3ff2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-expression-6.1.11.jar",
+    md5: "cb8e127e042c691b3f8408272d3d1e06",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/spring-boot-starter-validation-3.3.2.jar",
+    md5: "30c24f8e7af625821a353d71f0c4211f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/tomcat-embed-el-10.1.26.jar",
+    md5: "2e7509dee451cb074fc1422a95369205",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/hibernate-validator-8.0.1.Final.jar",
+    md5: "66985b6bf8da17611031e2421c235241",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jakarta.validation-api-3.0.2.jar",
+    md5: "3a1ee6efca3e41e3320599790f54c5eb",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jboss-logging-3.4.3.Final.jar",
+    md5: "b298d4b79e591843c1eb1458ea79f070",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/classmate-1.5.1.jar",
+    md5: "e91fcd30ba329fd1b0b6dc5321fd067c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jjwt-0.12.6.jar",
+    md5: "c8be21584cff8800568ad7a5a807514b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jjwt-api-0.12.6.jar",
+    md5: "995d2066feaa206de5e880045c9407d4",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jjwt-impl-0.12.6.jar",
+    md5: "e96f699bad6353508953424e82e5de45",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jjwt-jackson-0.12.6.jar",
+    md5: "a6f99a3cc5d2c7fd820f2aad638ca401",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/sol4k-0.4.2.jar",
+    md5: "1123fe4fdbaacca929b27abebc565191",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kotlin-stdlib-1.9.24.jar",
+    md5: "bfbb362013fc67d71fb0c9655c7cc308",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/annotations-13.0.jar",
+    md5: "f4fb462172517b46b6cd90003508515a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kotlinx-serialization-json-jvm-1.6.3.jar",
+    md5: "f7480e5e9c7239a8197747ced7208c13",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kotlin-stdlib-common-1.9.22.jar",
+    md5: "aaf27621ea0825a063c09f58fa0fdb2d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kotlinx-serialization-core-jvm-1.6.3.jar",
+    md5: "a53de86f751fdde057be40958fad42ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/tweetnacl-0.1.6.jar",
+    md5: "bc806c4f0ce786d8eed8e79e9fa57702",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/utilities-0.1.0.jar",
+    md5: "3b71fe83ccf0d464f5e4155ad2eb5e52",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/JDA-5.0.2.jar",
+    md5: "8ac546bebbe95ae452308a6a2fbbf211",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/nv-websocket-client-2.14.jar",
+    md5: "27cf8d475bf9dcf035e0966810bdded2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/okhttp-4.12.0.jar",
+    md5: "6acba053af88fed87e710c6c29911d7c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/okio-3.6.0.jar",
+    md5: "990f7b25bbd4fee8787ffabf89aa229f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/okio-jvm-3.6.0.jar",
+    md5: "26370180ff99a7e8a12dcaac2a70cc6e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kotlin-stdlib-jdk8-1.8.21.jar",
+    md5: "59e5a79996f1d856ddea6533a1080f86",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/kotlin-stdlib-jdk7-1.8.21.jar",
+    md5: "0735e3e69d099e8cc8fc03e45be84c46",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opus-java-1.1.1.jar",
+    md5: "86e5d32e96eb516138cbc95ccb6d9c18",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opus-java-api-1.1.1.jar",
+    md5: "ea6c7917563db24e91b4358afb20ee0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jna-4.4.0.jar",
+    md5: "34d3537524a6c8c134e840e7be601569",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/opus-java-natives-1.1.1.jar",
+    md5: "c12a536be2288d2b11b880fd0c56ac02",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/commons-collections4-4.4.jar",
+    md5: "4a37023740719b391f10030362c86be6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/core-3.1.0.jar",
+    md5: "db61170eb992d933f4119172326df9b6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-core-2.17.2.jar",
+    md5: "50c2dab1f29136714d5ef5c6c640336c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-databind-2.17.2.jar",
+    md5: "3e1ff7c1f0fda885946619a47ef9d5de",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/twitter4j-core-4.0.7.jar",
+    md5: "0b29f294502332836ec6a8077ceb678d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/telegrambots-6.7.0.jar",
+    md5: "a5f17b45e2e7d07e9954770213c7ef5c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/telegrambots-meta-6.7.0.jar",
+    md5: "e87459ee074bdf2c8843c0037202ebcf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-annotations-2.14.2.jar",
+    md5: "10d19982a8890f6eb37557af2f58e272",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-jaxrs-json-provider-2.14.2.jar",
+    md5: "4c435f3fc9dbb44d75151d6264d1917b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-jaxrs-base-2.14.2.jar",
+    md5: "b89c32604e673885c3e8eb46b24262b1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jackson-module-jaxb-annotations-2.14.2.jar",
+    md5: "9558568d00a9abb34728e05d9ebc4e0c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jakarta.xml.bind-api-2.3.3.jar",
+    md5: "61286918ca0192e9f87d1358aef718dd",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-hk2-2.35.jar",
+    md5: "3b6630c199f38793d8c654c09f4a3e09",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-common-2.35.jar",
+    md5: "a0b9a2cea9ecbaf2170ed0757020ed05",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/osgi-resource-locator-1.0.3.jar",
+    md5: "e7e82b82118c5387ae45f7bf3892909b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/hk2-locator-2.6.1.jar",
+    md5: "dfd358720393d83b01747928db6e3912",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/aopalliance-repackaged-2.6.1.jar",
+    md5: "0237846ebdaa7db36b356044a373ffba",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/hk2-api-2.6.1.jar",
+    md5: "23e8c18dae0c7b776bed756763d5153f",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/hk2-utils-2.6.1.jar",
+    md5: "75ccb55538a77bf878996497ffeb86f3",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/javassist-3.25.0-GA.jar",
+    md5: "3a4267e01989478be188d127b7a39425",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-media-json-jackson-2.35.jar",
+    md5: "358d8222ad61a17e21315ffe9215fd1d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-entity-filtering-2.35.jar",
+    md5: "57c92e30f2c77fea91fa843ec35b7441",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-container-grizzly2-http-2.35.jar",
+    md5: "4d13296e715847b5c819bb264649bef9",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jakarta.inject-2.6.1.jar",
+    md5: "4d7c80a1e3cd54531af03bef4537f7af",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grizzly-http-server-2.4.4.jar",
+    md5: "cda181b8990fbd82851f1e3a09c2cb4b",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grizzly-http-2.4.4.jar",
+    md5: "306f3d1e0509909679b7ddeea0fbc1e2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/grizzly-framework-2.4.4.jar",
+    md5: "1bf52be5e755156d33b3839a4f9ecccb",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jakarta.ws.rs-api-2.1.6.jar",
+    md5: "c3892382aeb5c54085b22b1890511d29",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-server-2.35.jar",
+    md5: "35b97c2f6cf76195628135cb9300d41e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jersey-client-2.35.jar",
+    md5: "690961343e41659f42bb0190e65cb5ef",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/httpclient-4.5.13.jar",
+    md5: "40d6b9075fbd28fa10292a45a0db9457",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/httpcore-4.4.13.jar",
+    md5: "e07a248f61c52776a2366c075dcd4963",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/commons-codec-1.11.jar",
+    md5: "567159b1ae257a43e1391a8f59d24cfe",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/httpmime-4.5.13.jar",
+    md5: "3f0c1ef2c9dc47b62b780192f54b0c18",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jbcrypt-0.4.jar",
+    md5: "d2b39d874e0d512f85386a72b0083682",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/application.yml",
+    md5: "e113426e516d8bc9317ff4a58c04a2fb",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/banner.txt",
+    md5: "eef20fbb649aa7d5a33b95b482a6c350",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/log4j2.xml",
+    md5: "c7852a2f561ae2c14b96ccaabe9ed721",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/logs/webbg.log",
+    md5: "d41d8cd98f00b204e9800998ecf8427e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/quartz.properties",
+    md5: "8812ea73d853f6c8f32b34525b69a7ac",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/redis.xml",
+    md5: "e1712800bc7dc2a2705a01ec11592e90",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/start.sh",
+    md5: "b2178ba547746fe0d3a932c2e0c56aa0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/stop.sh",
+    md5: "c695a2f2b6b7365818f47d4485503065",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/GameWebBgServer-1.jar",
+    md5: "a7af1c18bb87ae2168606fbb07570b4f",
+    change: true,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/solanaj-1.17.6.jar",
+    md5: "2f3e865dcf2f81803e389ce4d2b900d0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/bitcoinj-core-0.16.3.jar",
+    md5: "da4f3c89942a8c39ff405ce05cd54762",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jcip-annotations-1.0.jar",
+    md5: "9d5272954896c5a5d234f66b7372b17a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/bcprov-jdk15to18-1.78.1.jar",
+    md5: "5d34921d2fbed7df86696f2b2fb3cdc0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/guava-33.2.1-android.jar",
+    md5: "6c73caaf0c25d5058a99d78060c85c3c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/error_prone_annotations-2.26.1.jar",
+    md5: "64c623e550068e3b2708e5d901865c56",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/protobuf-javalite-4.27.2.jar",
+    md5: "027097c18d7eb4a366d065a3ce4847c2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/moshi-1.15.1.jar",
+    md5: "fa56b54bb3d3c0d8b3c14d7405e05702",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/okio-jvm-3.7.0.jar",
+    md5: "bdb01a48f533e036d6a0484ff69d44c6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/moshi-adapters-1.15.1.jar",
+    md5: "4cdc580c1e44b2a82b2f9b973a4348b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/Java-WebSocket-1.5.6.jar",
+    md5: "0f1954158331fd4e8891669f103c935c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/eddsa-0.3.0.jar",
+    md5: "ee7de3b6f19de76a06e465efc978f669",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/nft.json",
+    md5: "91364639bc171906bc28c69a943115d1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-api-client-2.6.0.jar",
+    md5: "1840d7d8ecc5e3393a513e0a16d728f1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/commons-codec-1.17.0.jar",
+    md5: "ca1f080782f7e77cb3aec451e7a7f02d",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-oauth-client-1.36.0.jar",
+    md5: "cd3b00455dfe0eaecc6a572f36c891bf",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/auto-value-annotations-1.10.4.jar",
+    md5: "8d1fd626bf1a426ee635ab11b7edb414",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/error_prone_annotations-2.18.0.jar",
+    md5: "64145d0e7fee5a69ed7b84cf402de998",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-gson-1.44.2.jar",
+    md5: "8ead28bb7ab551003b3bc2316a0ecc08",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/guava-33.1.0-jre.jar",
+    md5: "4117dd61f73b1204fac466ce5c23d590",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-apache-v2-1.44.2.jar",
+    md5: "8fe96967faf7a57ca9f1be10ca3cf0f6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-http-client-1.44.2.jar",
+    md5: "ca9a28c13f65018f0199ec0497cdd473",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/grpc-context-1.60.1.jar",
+    md5: "f431ebdcf7fee4381ab379ba6174ea78",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-oauth-client-jetty-1.35.0.jar",
+    md5: "96e4cc49411c6c376a202fa2c99196fb",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/google-oauth-client-java6-1.35.0.jar",
+    md5: "8aab095ed233ca34e689b320c3167521",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/solanaj-1.18.0.jar",
+    md5: "edec362c07018e034740b902fd87fa59",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/solanaj-1.18.0.jar",
+    md5: "edec362c07018e034740b902fd87fa59",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/bitcoinj-core-0.16.3.jar",
+    md5: "da4f3c89942a8c39ff405ce05cd54762",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/jcip-annotations-1.0.jar",
+    md5: "9d5272954896c5a5d234f66b7372b17a",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/bcprov-jdk15to18-1.78.1.jar",
+    md5: "5d34921d2fbed7df86696f2b2fb3cdc0",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/guava-33.2.1-android.jar",
+    md5: "6c73caaf0c25d5058a99d78060c85c3c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/error_prone_annotations-2.26.1.jar",
+    md5: "64c623e550068e3b2708e5d901865c56",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/protobuf-javalite-4.27.2.jar",
+    md5: "027097c18d7eb4a366d065a3ce4847c2",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/moshi-1.15.1.jar",
+    md5: "fa56b54bb3d3c0d8b3c14d7405e05702",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/okio-jvm-3.7.0.jar",
+    md5: "bdb01a48f533e036d6a0484ff69d44c6",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/moshi-adapters-1.15.1.jar",
+    md5: "4cdc580c1e44b2a82b2f9b973a4348b5",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/Java-WebSocket-1.5.6.jar",
+    md5: "0f1954158331fd4e8891669f103c935c",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/eddsa-0.3.0.jar",
+    md5: "ee7de3b6f19de76a06e465efc978f669",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/solanaj-1.19.2.jar",
+    md5: "fe0bc861d5c6cf969ff0c4272ac56d84",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webbg_orange/lib/solanaj-1.19.2.jar",
+    md5: "fe0bc861d5c6cf969ff0c4272ac56d84",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/twitter-api-java-sdk-2.0.2.jar",
+    md5: "5b81eb87d8b692f805aff7cbaa4a1cae",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/swagger-annotations-1.6.5.jar",
+    md5: "bbeeba27725fb6fb1f808684fce98f77",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/logging-interceptor-4.9.3.jar",
+    md5: "8ab1d25980fa862c063f7204082ed11e",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/jackson-databind-nullable-0.2.2.jar",
+    md5: "d7a3198d5a4f2942a725b7a0cecdba81",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+db.getCollection("z_yw_game_file_md5").insert([ {
+    _id: "/data/editions/webgame_orange/lib/javax.ws.rs-api-2.1.1.jar",
+    md5: "23b81452f9e2076ffefede649975b0d1",
+    change: false,
+    _class: "com.game.config.YwFileMd5"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_game_message
+// ----------------------------
+db.getCollection("z_yw_game_message").drop();
+db.createCollection("z_yw_game_message");
+
+// ----------------------------
+// Documents of z_yw_game_message
+// ----------------------------
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("101101"),
+    name: "Heart",
+    gameMessageTypeName: "Heart",
+    type: "CS",
+    queue: "Heart",
+    manager: "com.game.check.manager.CheckManager",
+    explain: "请求心跳(10秒钟一次)",
+    messageName: "ReqHeart",
+    packageName: "com.game.heart",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeartProto",
+    protoPackageName: "com.game.heart.proto.HeartProto.ReqHeart",
+    handlerPackageName: "com.game.heart.handler.ReqHeartHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("101201"),
+    name: "Heart",
+    gameMessageTypeName: "Heart",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回心跳(10秒钟一次)",
+    messageName: "ResHeart",
+    packageName: "com.game.heart",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeartProto",
+    protoPackageName: "com.game.heart.proto.HeartProto.ResHeart",
+    handlerPackageName: "com.game.heart.handler.ResHeartHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("102101"),
+    name: "Login",
+    gameMessageTypeName: "Login",
+    type: "CS",
+    queue: "Login",
+    manager: "com.game.login.manager.LoginManager",
+    explain: "请求登陆",
+    messageName: "ReqLogin",
+    packageName: "com.game.login",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "LoginProto",
+    protoPackageName: "com.game.login.proto.LoginProto.ReqLogin",
+    handlerPackageName: "com.game.login.handler.ReqLoginHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("102201"),
+    name: "Login",
+    gameMessageTypeName: "Login",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回登录",
+    messageName: "ResLogin",
+    packageName: "com.game.login",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "LoginProto",
+    protoPackageName: "com.game.login.proto.LoginProto.ResLogin",
+    handlerPackageName: "com.game.login.handler.ResLoginHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106101"),
+    name: "Open",
+    gameMessageTypeName: "Mail",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求打开邮件并且设置已读",
+    messageName: "ReqMailOpen",
+    packageName: "com.game.mail",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ReqMailOpen",
+    handlerPackageName: "com.game.mail.handler.ReqMailOpenHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106201"),
+    name: "Open",
+    gameMessageTypeName: "Mail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回打开邮件并且设置已读",
+    messageName: "ResMailOpen",
+    packageName: "com.game.mail",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ResMailOpen",
+    handlerPackageName: "com.game.mail.handler.ResMailOpenHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106102"),
+    name: "Award",
+    gameMessageTypeName: "Mail",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求领取邮件奖励",
+    messageName: "ReqMailAward",
+    packageName: "com.game.mail",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ReqMailAward",
+    handlerPackageName: "com.game.mail.handler.ReqMailAwardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106202"),
+    name: "Award",
+    gameMessageTypeName: "Mail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回邮件已领取成功",
+    messageName: "ResMailAward",
+    packageName: "com.game.mail",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ResMailAward",
+    handlerPackageName: "com.game.mail.handler.ResMailAwardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106103"),
+    name: "Delete",
+    gameMessageTypeName: "Mail",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求删除邮件",
+    messageName: "ReqMailDelete",
+    packageName: "com.game.mail",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ReqMailDelete",
+    handlerPackageName: "com.game.mail.handler.ReqMailDeleteHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106203"),
+    name: "Delete",
+    gameMessageTypeName: "Mail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回删除邮件成功",
+    messageName: "ResMailDelete",
+    packageName: "com.game.mail",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ResMailDelete",
+    handlerPackageName: "com.game.mail.handler.ResMailDeleteHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106204"),
+    name: "Info",
+    gameMessageTypeName: "Mail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回推送邮件",
+    messageName: "ResMailInfo",
+    packageName: "com.game.mail",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ResMailInfo",
+    handlerPackageName: "com.game.mail.handler.ResMailInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106105"),
+    name: "List",
+    gameMessageTypeName: "Mail",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求邮件列表",
+    messageName: "ReqMailList",
+    packageName: "com.game.mail",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ReqMailList",
+    handlerPackageName: "com.game.mail.handler.ReqMailListHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("106205"),
+    name: "List",
+    gameMessageTypeName: "Mail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回邮件列表",
+    messageName: "ResMailList",
+    packageName: "com.game.mail",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "MailProto",
+    protoPackageName: "com.game.mail.proto.MailProto.ResMailList",
+    handlerPackageName: "com.game.mail.handler.ResMailListHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108101"),
+    name: "UseItem",
+    gameMessageTypeName: "Pack",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pack.manager.PackManager",
+    explain: "请求背包使用物品",
+    messageName: "ReqPackUseItem",
+    packageName: "com.game.pack",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ReqPackUseItem",
+    handlerPackageName: "com.game.pack.handler.ReqPackUseItemHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108201"),
+    name: "UseItem",
+    gameMessageTypeName: "Pack",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回背包使用物品",
+    messageName: "ResPackUseItem",
+    packageName: "com.game.pack",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ResPackUseItem",
+    handlerPackageName: "com.game.pack.handler.ResPackUseItemHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108102"),
+    name: "PutOnEquip",
+    gameMessageTypeName: "Pack",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pack.manager.PackManager",
+    explain: "请求穿戴装备",
+    messageName: "ReqPackPutOnEquip",
+    packageName: "com.game.pack",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ReqPackPutOnEquip",
+    handlerPackageName: "com.game.pack.handler.ReqPackPutOnEquipHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108202"),
+    name: "PutOnEquip",
+    gameMessageTypeName: "Pack",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回穿戴装备",
+    messageName: "ResPackPutOnEquip",
+    packageName: "com.game.pack",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ResPackPutOnEquip",
+    handlerPackageName: "com.game.pack.handler.ResPackPutOnEquipHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108103"),
+    name: "DecomposeEquip",
+    gameMessageTypeName: "Pack",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pack.manager.PackManager",
+    explain: "请求分级装备",
+    messageName: "ReqPackDecomposeEquip",
+    packageName: "com.game.pack",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ReqPackDecomposeEquip",
+    handlerPackageName: "com.game.pack.handler.ReqPackDecomposeEquipHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108203"),
+    name: "DecomposeEquip",
+    gameMessageTypeName: "Pack",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回分级装备",
+    messageName: "ResPackDecomposeEquip",
+    packageName: "com.game.pack",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ResPackDecomposeEquip",
+    handlerPackageName: "com.game.pack.handler.ResPackDecomposeEquipHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103201"),
+    name: "Alert",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回推送角色报错通知信息",
+    messageName: "ResPlayerAlert",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerAlert",
+    handlerPackageName: "com.game.player.handler.ResPlayerAlertHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103202"),
+    name: "ItemChange",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "推送资源道具信息改变",
+    messageName: "ResPlayerItemChange",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerItemChange",
+    handlerPackageName: "com.game.player.handler.ResPlayerItemChangeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103103"),
+    name: "Setting",
+    gameMessageTypeName: "Player",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.player.manager.PlayerManager",
+    explain: "请求玩家设置",
+    messageName: "ReqPlayerSetting",
+    packageName: "com.game.player",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ReqPlayerSetting",
+    handlerPackageName: "com.game.player.handler.ReqPlayerSettingHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103203"),
+    name: "Setting",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回玩家设置",
+    messageName: "ResPlayerSetting",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerSetting",
+    handlerPackageName: "com.game.player.handler.ResPlayerSettingHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103204"),
+    name: "TlPush",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回推送玩家体力其他信息变化",
+    messageName: "ResPlayerTlPush",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerTlPush",
+    handlerPackageName: "com.game.player.handler.ResPlayerTlPushHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103107"),
+    name: "InfoChange",
+    gameMessageTypeName: "Player",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.player.manager.PlayerManager",
+    explain: "请求玩家信息修改",
+    messageName: "ReqPlayerInfoChange",
+    packageName: "com.game.player",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ReqPlayerInfoChange",
+    handlerPackageName: "com.game.player.handler.ReqPlayerInfoChangeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103207"),
+    name: "InfoChange",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回玩家信息修改",
+    messageName: "ResPlayerInfoChange",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerInfoChange",
+    handlerPackageName: "com.game.player.handler.ResPlayerInfoChangeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("117101"),
+    name: "ShovelCoal",
+    gameMessageTypeName: "Smelter",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.smelter.manager.SmelterManager",
+    explain: "请求铲煤",
+    messageName: "ReqSmelterShovelCoal",
+    packageName: "com.game.smelter",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SmelterProto",
+    protoPackageName: "com.game.smelter.proto.SmelterProto.ReqSmelterShovelCoal",
+    handlerPackageName: "com.game.smelter.handler.ReqSmelterShovelCoalHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("117201"),
+    name: "ShovelCoal",
+    gameMessageTypeName: "Smelter",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回铲煤",
+    messageName: "ResSmelterShovelCoal",
+    packageName: "com.game.smelter",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SmelterProto",
+    protoPackageName: "com.game.smelter.proto.SmelterProto.ResSmelterShovelCoal",
+    handlerPackageName: "com.game.smelter.handler.ResSmelterShovelCoalHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("117102"),
+    name: "LvUp",
+    gameMessageTypeName: "Smelter",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.smelter.manager.SmelterManager",
+    explain: "请求升级熔炉",
+    messageName: "ReqSmelterLvUp",
+    packageName: "com.game.smelter",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SmelterProto",
+    protoPackageName: "com.game.smelter.proto.SmelterProto.ReqSmelterLvUp",
+    handlerPackageName: "com.game.smelter.handler.ReqSmelterLvUpHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("117202"),
+    name: "LvUp",
+    gameMessageTypeName: "Smelter",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回升级熔炉",
+    messageName: "ResSmelterLvUp",
+    packageName: "com.game.smelter",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SmelterProto",
+    protoPackageName: "com.game.smelter.proto.SmelterProto.ResSmelterLvUp",
+    handlerPackageName: "com.game.smelter.handler.ResSmelterLvUpHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("117203"),
+    name: "LvUpNotify",
+    gameMessageTypeName: "Smelter",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "熔炉升级完成推送",
+    messageName: "ResSmelterLvUpNotify",
+    packageName: "com.game.smelter",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SmelterProto",
+    protoPackageName: "com.game.smelter.proto.SmelterProto.ResSmelterLvUpNotify",
+    handlerPackageName: "com.game.smelter.handler.ResSmelterLvUpNotifyHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("111201"),
+    name: "List",
+    gameMessageTypeName: "Activity",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回推送活动列表信息",
+    messageName: "ResActivityList",
+    packageName: "com.game.activity",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "ActivityProto",
+    protoPackageName: "com.game.activity.proto.ActivityProto.ResActivityList",
+    handlerPackageName: "com.game.activity.handler.ResActivityListHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("111102"),
+    name: "Operation",
+    gameMessageTypeName: "Activity",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.activity.manager.ActivityManager",
+    explain: "请求活动操作",
+    messageName: "ReqActivityOperation",
+    packageName: "com.game.activity",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "ActivityProto",
+    protoPackageName: "com.game.activity.proto.ActivityProto.ReqActivityOperation",
+    handlerPackageName: "com.game.activity.handler.ReqActivityOperationHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("111202"),
+    name: "Operation",
+    gameMessageTypeName: "Activity",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回活动操作",
+    messageName: "ResActivityOperation",
+    packageName: "com.game.activity",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "ActivityProto",
+    protoPackageName: "com.game.activity.proto.ActivityProto.ResActivityOperation",
+    handlerPackageName: "com.game.activity.handler.ResActivityOperationHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("113101"),
+    name: "Pay",
+    gameMessageTypeName: "Pay",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pay.manager.PayManager",
+    explain: "请求充值创建订单",
+    messageName: "ReqPay",
+    packageName: "com.game.pay",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PayProto",
+    protoPackageName: "com.game.pay.proto.PayProto.ReqPay",
+    handlerPackageName: "com.game.pay.handler.ReqPayHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("113201"),
+    name: "Pay",
+    gameMessageTypeName: "Pay",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回充值订单信息",
+    messageName: "ResPay",
+    packageName: "com.game.pay",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PayProto",
+    protoPackageName: "com.game.pay.proto.PayProto.ResPay",
+    handlerPackageName: "com.game.pay.handler.ResPayHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("113202"),
+    name: "Success",
+    gameMessageTypeName: "Pay",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "充值成功返回信息",
+    messageName: "ResPaySuccess",
+    packageName: "com.game.pay",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PayProto",
+    protoPackageName: "com.game.pay.proto.PayProto.ResPaySuccess",
+    handlerPackageName: "com.game.pay.handler.ResPaySuccessHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("113103"),
+    name: "Check",
+    gameMessageTypeName: "Pay",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pay.manager.PayManager",
+    explain: "请求充值订单验证",
+    messageName: "ReqPayCheck",
+    packageName: "com.game.pay",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PayProto",
+    protoPackageName: "com.game.pay.proto.PayProto.ReqPayCheck",
+    handlerPackageName: "com.game.pay.handler.ReqPayCheckHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("110101"),
+    name: "Award",
+    gameMessageTypeName: "Quest",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.quest.manager.QuestManager",
+    explain: "请求任务领取奖励",
+    messageName: "ReqQuestAward",
+    packageName: "com.game.quest",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "QuestProto",
+    protoPackageName: "com.game.quest.proto.QuestProto.ReqQuestAward",
+    handlerPackageName: "com.game.quest.handler.ReqQuestAwardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("110201"),
+    name: "Award",
+    gameMessageTypeName: "Quest",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回任务领取奖励",
+    messageName: "ResQuestAward",
+    packageName: "com.game.quest",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "QuestProto",
+    protoPackageName: "com.game.quest.proto.QuestProto.ResQuestAward",
+    handlerPackageName: "com.game.quest.handler.ResQuestAwardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("110202"),
+    name: "Update",
+    gameMessageTypeName: "Quest",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回任务进度更新",
+    messageName: "ResQuestUpdate",
+    packageName: "com.game.quest",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "QuestProto",
+    protoPackageName: "com.game.quest.proto.QuestProto.ResQuestUpdate",
+    handlerPackageName: "com.game.quest.handler.ResQuestUpdateHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206101"),
+    name: "ServerRegister",
+    gameMessageTypeName: "PublicMail",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.server.manager.ServerManager",
+    explain: "请求向邮件注册服务器信息",
+    messageName: "ReqPublicMailServerRegister",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameMailServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ReqPublicMailServerRegister",
+    handlerPackageName: "com.game.publicmailserver.handler.ReqPublicMailServerRegisterHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206201"),
+    name: "ServerRegister",
+    gameMessageTypeName: "PublicMail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回服务器连接邮件服务器状态",
+    messageName: "ResPublicMailServerRegister",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameMailServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ResPublicMailServerRegister",
+    handlerPackageName: "com.game.publicmailserver.handler.ResPublicMailServerRegisterHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206202"),
+    name: "Server2ServerHeartbeat",
+    gameMessageTypeName: "PublicMail",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "邮件服务器to服务器之间心跳",
+    messageName: "ResPublicMailServer2ServerHeartbeat",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameMailServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ResPublicMailServer2ServerHeartbeat",
+    handlerPackageName: "com.game.publicmailserver.handler.ResPublicMailServer2ServerHeartbeatHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206103"),
+    name: "All",
+    gameMessageTypeName: "PublicMail",
+    type: "CS",
+    queue: "Mail",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求向邮件服获取玩家所有邮件(登录)",
+    messageName: "ReqPublicMailAll",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameMailServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ReqPublicMailAll",
+    handlerPackageName: "com.game.publicmailserver.handler.ReqPublicMailAllHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206104"),
+    name: "SendMail",
+    gameMessageTypeName: "PublicMail",
+    type: "CS",
+    queue: "Mail",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求向邮件服发送玩家邮件",
+    messageName: "ReqPublicMailSendMail",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameMailServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ReqPublicMailSendMail",
+    handlerPackageName: "com.game.publicmailserver.handler.ReqPublicMailSendMailHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206105"),
+    name: "Open",
+    gameMessageTypeName: "PublicMail",
+    type: "CS",
+    queue: "Mail",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求向邮件服打开邮件并设置已读",
+    messageName: "ReqPublicMailOpen",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameMailServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ReqPublicMailOpen",
+    handlerPackageName: "com.game.publicmailserver.handler.ReqPublicMailOpenHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206205"),
+    name: "Open",
+    gameMessageTypeName: "PublicMail",
+    type: "SC",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "返回邮件打开内容",
+    messageName: "ResPublicMailOpen",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameMailServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ResPublicMailOpen",
+    handlerPackageName: "com.game.publicmailserver.handler.ResPublicMailOpenHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206106"),
+    name: "Award",
+    gameMessageTypeName: "PublicMail",
+    type: "CS",
+    queue: "Mail",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求向邮件服领取邮件奖励",
+    messageName: "ReqPublicMailAward",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameMailServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ReqPublicMailAward",
+    handlerPackageName: "com.game.publicmailserver.handler.ReqPublicMailAwardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206206"),
+    name: "Award",
+    gameMessageTypeName: "PublicMail",
+    type: "SC",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "返回邮件服邮件已领取成功",
+    messageName: "ResPublicMailAward",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameMailServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ResPublicMailAward",
+    handlerPackageName: "com.game.publicmailserver.handler.ResPublicMailAwardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206107"),
+    name: "Delete",
+    gameMessageTypeName: "PublicMail",
+    type: "CS",
+    queue: "Mail",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "请求向邮件服删除邮件",
+    messageName: "ReqPublicMailDelete",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameMailServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ReqPublicMailDelete",
+    handlerPackageName: "com.game.publicmailserver.handler.ReqPublicMailDeleteHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206207"),
+    name: "Delete",
+    gameMessageTypeName: "PublicMail",
+    type: "SC",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "返回邮件服删除邮件成功",
+    messageName: "ResPublicMailDelete",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameMailServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ResPublicMailDelete",
+    handlerPackageName: "com.game.publicmailserver.handler.ResPublicMailDeleteHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("206208"),
+    name: "Info",
+    gameMessageTypeName: "PublicMail",
+    type: "SC",
+    queue: "null",
+    manager: "com.game.mail.manager.MailManager",
+    explain: "返回邮件服推送邮件给玩家",
+    messageName: "ResPublicMailInfo",
+    packageName: "com.game.publicmailserver",
+    reqProjectName: "GameMailServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicMailProto",
+    protoPackageName: "com.game.publicmailserver.proto.PublicMailProto.ResPublicMailInfo",
+    handlerPackageName: "com.game.publicmailserver.handler.ResPublicMailInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208101"),
+    name: "ServerRegister",
+    gameMessageTypeName: "PublicPay",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.server.manager.ServerManager",
+    explain: "请求向充值注册服务器信息",
+    messageName: "ReqPublicPayServerRegister",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GamePayServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ReqPublicPayServerRegister",
+    handlerPackageName: "com.game.publicpayserver.handler.ReqPublicPayServerRegisterHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208201"),
+    name: "ServerRegister",
+    gameMessageTypeName: "PublicPay",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回服务器连接充值服务器状态",
+    messageName: "ResPublicPayServerRegister",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GamePayServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ResPublicPayServerRegister",
+    handlerPackageName: "com.game.publicpayserver.handler.ResPublicPayServerRegisterHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208202"),
+    name: "Server2ServerHeartbeat",
+    gameMessageTypeName: "PublicPay",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "充值服务器to服务器之间心跳",
+    messageName: "ResPublicPayServer2ServerHeartbeat",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GamePayServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ResPublicPayServer2ServerHeartbeat",
+    handlerPackageName: "com.game.publicpayserver.handler.ResPublicPayServer2ServerHeartbeatHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208103"),
+    name: "ServerCreateOrder",
+    gameMessageTypeName: "PublicPay",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pay.manager.PayManager",
+    explain: "请求充值服创建一个充值订单",
+    messageName: "ReqPublicPayServerCreateOrder",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GamePayServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ReqPublicPayServerCreateOrder",
+    handlerPackageName: "com.game.publicpayserver.handler.ReqPublicPayServerCreateOrderHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208203"),
+    name: "ServerCreateOrder",
+    gameMessageTypeName: "PublicPay",
+    type: "SC",
+    queue: "null",
+    manager: "com.game.pay.manager.PayManager",
+    explain: "返回充值服创建一个充值订单",
+    messageName: "ResPublicPayServerCreateOrder",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GamePayServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ResPublicPayServerCreateOrder",
+    handlerPackageName: "com.game.publicpayserver.handler.ResPublicPayServerCreateOrderHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208204"),
+    name: "Back",
+    gameMessageTypeName: "PublicPay",
+    type: "SC",
+    queue: "null",
+    manager: "com.game.pay.manager.PayManager",
+    explain: "充值服务器返回游戏服务器充值状态",
+    messageName: "ResPublicPayBack",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GamePayServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ResPublicPayBack",
+    handlerPackageName: "com.game.publicpayserver.handler.ResPublicPayBackHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("208105"),
+    name: "Check",
+    gameMessageTypeName: "PublicPay",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pay.manager.PayManager",
+    explain: "请求充值服充值订单验证",
+    messageName: "ReqPublicPayCheck",
+    packageName: "com.game.publicpayserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GamePayServer",
+    protoName: "PublicPayProto",
+    protoPackageName: "com.game.publicpayserver.proto.PublicPayProto.ReqPublicPayCheck",
+    handlerPackageName: "com.game.publicpayserver.handler.ReqPublicPayCheckHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103108"),
+    name: "ItemForce",
+    gameMessageTypeName: "Player",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.player.manager.PlayerManager",
+    explain: "请求玩家道具战力",
+    messageName: "ReqPlayerItemForce",
+    packageName: "com.game.player",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ReqPlayerItemForce",
+    handlerPackageName: "com.game.player.handler.ReqPlayerItemForceHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103208"),
+    name: "ItemForce",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回玩家道具战力",
+    messageName: "ResPlayerItemForce",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerItemForce",
+    handlerPackageName: "com.game.player.handler.ResPlayerItemForceHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103209"),
+    name: "OpenFunction",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回推送玩家新开启的功能id",
+    messageName: "ResPlayerOpenFunction",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerOpenFunction",
+    handlerPackageName: "com.game.player.handler.ResPlayerOpenFunctionHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103210"),
+    name: "AttrChange",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回玩家属性变化",
+    messageName: "ResPlayerAttrChange",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerAttrChange",
+    handlerPackageName: "com.game.player.handler.ResPlayerAttrChangeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103111"),
+    name: "AllAttrInfo",
+    gameMessageTypeName: "Player",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.player.manager.PlayerManager",
+    explain: "请求玩家所有属性",
+    messageName: "ReqPlayerAllAttrInfo",
+    packageName: "com.game.player",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ReqPlayerAllAttrInfo",
+    handlerPackageName: "com.game.player.handler.ReqPlayerAllAttrInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("103211"),
+    name: "AllAttrInfo",
+    gameMessageTypeName: "Player",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回玩家所有属性",
+    messageName: "ResPlayerAllAttrInfo",
+    packageName: "com.game.player",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PlayerProto",
+    protoPackageName: "com.game.player.proto.PlayerProto.ResPlayerAllAttrInfo",
+    handlerPackageName: "com.game.player.handler.ResPlayerAllAttrInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("202101"),
+    name: "ServerRegister",
+    gameMessageTypeName: "PublicClans",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.server.manager.ServerManager",
+    explain: "请求向公会服务器注册",
+    messageName: "ReqPublicClansServerRegister",
+    packageName: "com.game.publicclansserver",
+    reqProjectName: "GameServerServer",
+    resProjectName: "GameClansServer",
+    protoName: "PublicClansProto",
+    protoPackageName: "com.game.publicclansserver.proto.PublicClansProto.ReqPublicClansServerRegister",
+    handlerPackageName: "com.game.publicclansserver.handler.ReqPublicClansServerRegisterHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("202201"),
+    name: "ServerRegister",
+    gameMessageTypeName: "PublicClans",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回向公会服务器注册",
+    messageName: "ResPublicClansServerRegister",
+    packageName: "com.game.publicclansserver",
+    reqProjectName: "GameClansServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicClansProto",
+    protoPackageName: "com.game.publicclansserver.proto.PublicClansProto.ResPublicClansServerRegister",
+    handlerPackageName: "com.game.publicclansserver.handler.ResPublicClansServerRegisterHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("202202"),
+    name: "Server2ServerHeartbeat",
+    gameMessageTypeName: "PublicClans",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "公会服务器to游戏服务器之间心跳",
+    messageName: "ResPublicClansServer2ServerHeartbeat",
+    packageName: "com.game.publicclansserver",
+    reqProjectName: "GameClansServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicClansProto",
+    protoPackageName: "com.game.publicclansserver.proto.PublicClansProto.ResPublicClansServer2ServerHeartbeat",
+    handlerPackageName: "com.game.publicclansserver.handler.ResPublicClansServer2ServerHeartbeatHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("202203"),
+    name: "Failure",
+    gameMessageTypeName: "PublicClans",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回跨服操作失败",
+    messageName: "ResPublicClansFailure",
+    packageName: "com.game.publicclansserver",
+    reqProjectName: "GameClansServer",
+    resProjectName: "GameServerServer",
+    protoName: "PublicClansProto",
+    protoPackageName: "com.game.publicclansserver.proto.PublicClansProto.ResPublicClansFailure",
+    handlerPackageName: "com.game.publicclansserver.handler.ResPublicClansFailureHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("115101"),
+    name: "Start",
+    gameMessageTypeName: "Fight",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.fight.manager.FightManager",
+    explain: "请求战斗开始",
+    messageName: "ReqFightStart",
+    packageName: "com.game.fight",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "FightProto",
+    protoPackageName: "com.game.fight.proto.FightProto.ReqFightStart",
+    handlerPackageName: "com.game.fight.handler.ReqFightStartHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("115201"),
+    name: "Start",
+    gameMessageTypeName: "Fight",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回战斗开始消息，通知结果",
+    messageName: "ResFightStart",
+    packageName: "com.game.fight",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "FightProto",
+    protoPackageName: "com.game.fight.proto.FightProto.ResFightStart",
+    handlerPackageName: "com.game.fight.handler.ResFightStartHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118101"),
+    name: "PoolRefresh",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄召唤池刷新",
+    messageName: "ReqHeroPoolRefresh",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroPoolRefresh",
+    handlerPackageName: "com.game.hero.handler.ReqHeroPoolRefreshHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118201"),
+    name: "PoolRefresh",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄召唤池刷新",
+    messageName: "ResHeroPoolRefresh",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroPoolRefresh",
+    handlerPackageName: "com.game.hero.handler.ResHeroPoolRefreshHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118102"),
+    name: "Summon",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄召唤",
+    messageName: "ReqHeroSummon",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroSummon",
+    handlerPackageName: "com.game.hero.handler.ReqHeroSummonHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118202"),
+    name: "Summon",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄召唤",
+    messageName: "ResHeroSummon",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroSummon",
+    handlerPackageName: "com.game.hero.handler.ResHeroSummonHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118103"),
+    name: "Up",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄成长",
+    messageName: "ReqHeroUp",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroUp",
+    handlerPackageName: "com.game.hero.handler.ReqHeroUpHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118203"),
+    name: "Up",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄成长",
+    messageName: "ResHeroUp",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroUp",
+    handlerPackageName: "com.game.hero.handler.ResHeroUpHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118104"),
+    name: "Reset",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄重置",
+    messageName: "ReqHeroReset",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroReset",
+    handlerPackageName: "com.game.hero.handler.ReqHeroResetHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118204"),
+    name: "Reset",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄重置",
+    messageName: "ResHeroReset",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroReset",
+    handlerPackageName: "com.game.hero.handler.ResHeroResetHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118105"),
+    name: "JoinBattle",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄上阵",
+    messageName: "ReqHeroJoinBattle",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroJoinBattle",
+    handlerPackageName: "com.game.hero.handler.ReqHeroJoinBattleHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118205"),
+    name: "JoinBattle",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄上阵",
+    messageName: "ResHeroJoinBattle",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroJoinBattle",
+    handlerPackageName: "com.game.hero.handler.ResHeroJoinBattleHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118106"),
+    name: "PackGridUnlock",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄背包格子解锁",
+    messageName: "ReqHeroPackGridUnlock",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroPackGridUnlock",
+    handlerPackageName: "com.game.hero.handler.ReqHeroPackGridUnlockHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118206"),
+    name: "PackGridUnlock",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄背包格子解锁",
+    messageName: "ResHeroPackGridUnlock",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroPackGridUnlock",
+    handlerPackageName: "com.game.hero.handler.ResHeroPackGridUnlockHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118207"),
+    name: "FetterInfo",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄羁绊信息",
+    messageName: "ResHeroFetterInfo",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroFetterInfo",
+    handlerPackageName: "com.game.hero.handler.ResHeroFetterInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118108"),
+    name: "MaxAwardChoose",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求选择大保底",
+    messageName: "ReqHeroMaxAwardChoose",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroMaxAwardChoose",
+    handlerPackageName: "com.game.hero.handler.ReqHeroMaxAwardChooseHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118208"),
+    name: "MaxAwardChoose",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回选择大保底",
+    messageName: "ResHeroMaxAwardChoose",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroMaxAwardChoose",
+    handlerPackageName: "com.game.hero.handler.ResHeroMaxAwardChooseHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119101"),
+    name: "Rescue",
+    gameMessageTypeName: "Survivor",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.survivor.manager.SurvivorManager",
+    explain: "请求幸存者营救",
+    messageName: "ReqSurvivorRescue",
+    packageName: "com.game.survivor",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ReqSurvivorRescue",
+    handlerPackageName: "com.game.survivor.handler.ReqSurvivorRescueHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119201"),
+    name: "Rescue",
+    gameMessageTypeName: "Survivor",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回幸存者营救",
+    messageName: "ResSurvivorRescue",
+    packageName: "com.game.survivor",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ResSurvivorRescue",
+    handlerPackageName: "com.game.survivor.handler.ResSurvivorRescueHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119102"),
+    name: "CraftOrUpgrade",
+    gameMessageTypeName: "Survivor",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.survivor.manager.SurvivorManager",
+    explain: "请求幸存者合成或升级",
+    messageName: "ReqSurvivorCraftOrUpgrade",
+    packageName: "com.game.survivor",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ReqSurvivorCraftOrUpgrade",
+    handlerPackageName: "com.game.survivor.handler.ReqSurvivorCraftOrUpgradeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119202"),
+    name: "CraftOrUpgrade",
+    gameMessageTypeName: "Survivor",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回幸存者合成或升级",
+    messageName: "ResSurvivorCraftOrUpgrade",
+    packageName: "com.game.survivor",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ResSurvivorCraftOrUpgrade",
+    handlerPackageName: "com.game.survivor.handler.ResSurvivorCraftOrUpgradeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119103"),
+    name: "ResonanceActiveOrUpgrade",
+    gameMessageTypeName: "Survivor",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.survivor.manager.SurvivorManager",
+    explain: "请求幸存者共鸣激活或升级",
+    messageName: "ReqSurvivorResonanceActiveOrUpgrade",
+    packageName: "com.game.survivor",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ReqSurvivorResonanceActiveOrUpgrade",
+    handlerPackageName: "com.game.survivor.handler.ReqSurvivorResonanceActiveOrUpgradeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119203"),
+    name: "ResonanceActiveOrUpgrade",
+    gameMessageTypeName: "Survivor",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回幸存者共鸣激活或升级",
+    messageName: "ResSurvivorResonanceActiveOrUpgrade",
+    packageName: "com.game.survivor",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ResSurvivorResonanceActiveOrUpgrade",
+    handlerPackageName: "com.game.survivor.handler.ResSurvivorResonanceActiveOrUpgradeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119104"),
+    name: "JoinOrRemoveBattle",
+    gameMessageTypeName: "Survivor",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.survivor.manager.SurvivorManager",
+    explain: "请求幸存者加入或退出战斗",
+    messageName: "ReqSurvivorJoinOrRemoveBattle",
+    packageName: "com.game.survivor",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ReqSurvivorJoinOrRemoveBattle",
+    handlerPackageName: "com.game.survivor.handler.ReqSurvivorJoinOrRemoveBattleHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119204"),
+    name: "JoinOrRemoveBattle",
+    gameMessageTypeName: "Survivor",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回幸存者加入或退出战斗",
+    messageName: "ResSurvivorJoinOrRemoveBattle",
+    packageName: "com.game.survivor",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ResSurvivorJoinOrRemoveBattle",
+    handlerPackageName: "com.game.survivor.handler.ResSurvivorJoinOrRemoveBattleHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119105"),
+    name: "BattleGroupChange",
+    gameMessageTypeName: "Survivor",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.survivor.manager.SurvivorManager",
+    explain: "请求幸存者编队更换",
+    messageName: "ReqSurvivorBattleGroupChange",
+    packageName: "com.game.survivor",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ReqSurvivorBattleGroupChange",
+    handlerPackageName: "com.game.survivor.handler.ReqSurvivorBattleGroupChangeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("119205"),
+    name: "BattleGroupChange",
+    gameMessageTypeName: "Survivor",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回幸存者编队更换",
+    messageName: "ResSurvivorBattleGroupChange",
+    packageName: "com.game.survivor",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "SurvivorProto",
+    protoPackageName: "com.game.survivor.proto.SurvivorProto.ResSurvivorBattleGroupChange",
+    handlerPackageName: "com.game.survivor.handler.ResSurvivorBattleGroupChangeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("120101"),
+    name: "Unlock",
+    gameMessageTypeName: "Wing",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.wing.manager.WingManager",
+    explain: "请求翅膀解锁",
+    messageName: "ReqWingUnlock",
+    packageName: "com.game.wing",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "WingProto",
+    protoPackageName: "com.game.wing.proto.WingProto.ReqWingUnlock",
+    handlerPackageName: "com.game.wing.handler.ReqWingUnlockHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("120201"),
+    name: "Unlock",
+    gameMessageTypeName: "Wing",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回翅膀解锁",
+    messageName: "ResWingUnlock",
+    packageName: "com.game.wing",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "WingProto",
+    protoPackageName: "com.game.wing.proto.WingProto.ResWingUnlock",
+    handlerPackageName: "com.game.wing.handler.ResWingUnlockHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("120102"),
+    name: "Upgrade",
+    gameMessageTypeName: "Wing",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.wing.manager.WingManager",
+    explain: "请求翅膀升级",
+    messageName: "ReqWingUpgrade",
+    packageName: "com.game.wing",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "WingProto",
+    protoPackageName: "com.game.wing.proto.WingProto.ReqWingUpgrade",
+    handlerPackageName: "com.game.wing.handler.ReqWingUpgradeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("120202"),
+    name: "Upgrade",
+    gameMessageTypeName: "Wing",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回翅膀升级",
+    messageName: "ResWingUpgrade",
+    packageName: "com.game.wing",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "WingProto",
+    protoPackageName: "com.game.wing.proto.WingProto.ResWingUpgrade",
+    handlerPackageName: "com.game.wing.handler.ResWingUpgradeHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("120103"),
+    name: "Wear",
+    gameMessageTypeName: "Wing",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.wing.manager.WingManager",
+    explain: "请求翅膀穿戴",
+    messageName: "ReqWingWear",
+    packageName: "com.game.wing",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "WingProto",
+    protoPackageName: "com.game.wing.proto.WingProto.ReqWingWear",
+    handlerPackageName: "com.game.wing.handler.ReqWingWearHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("120203"),
+    name: "Wear",
+    gameMessageTypeName: "Wing",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回翅膀穿戴",
+    messageName: "ResWingWear",
+    packageName: "com.game.wing",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "WingProto",
+    protoPackageName: "com.game.wing.proto.WingProto.ResWingWear",
+    handlerPackageName: "com.game.wing.handler.ResWingWearHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("121101"),
+    name: "Info",
+    gameMessageTypeName: "Rank",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.rank.manager.RankManager",
+    explain: "请求排行榜信息",
+    messageName: "ReqRankInfo",
+    packageName: "com.game.rank",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "RankProto",
+    protoPackageName: "com.game.rank.proto.RankProto.ReqRankInfo",
+    handlerPackageName: "com.game.rank.handler.ReqRankInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("121201"),
+    name: "Info",
+    gameMessageTypeName: "Rank",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回排行榜信息",
+    messageName: "ResRankInfo",
+    packageName: "com.game.rank",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "RankProto",
+    protoPackageName: "com.game.rank.proto.RankProto.ResRankInfo",
+    handlerPackageName: "com.game.rank.handler.ResRankInfoHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("107101"),
+    name: "ChallengeList",
+    gameMessageTypeName: "Arena",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.arena.manager.ArenaManager",
+    explain: "请求竞技场挑战列表",
+    messageName: "ReqArenaChallengeList",
+    packageName: "com.game.arena",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "ArenaProto",
+    protoPackageName: "com.game.arena.proto.ArenaProto.ReqArenaChallengeList",
+    handlerPackageName: "com.game.arena.handler.ReqArenaChallengeListHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("107201"),
+    name: "ChallengeList",
+    gameMessageTypeName: "Arena",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回竞技场挑战列表",
+    messageName: "ResArenaChallengeList",
+    packageName: "com.game.arena",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "ArenaProto",
+    protoPackageName: "com.game.arena.proto.ArenaProto.ResArenaChallengeList",
+    handlerPackageName: "com.game.arena.handler.ResArenaChallengeListHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118109"),
+    name: "PasswordOpt",
+    gameMessageTypeName: "Hero",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.hero.manager.HeroManager",
+    explain: "请求英雄密码操作",
+    messageName: "ReqHeroPasswordOpt",
+    packageName: "com.game.hero",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ReqHeroPasswordOpt",
+    handlerPackageName: "com.game.hero.handler.ReqHeroPasswordOptHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("118209"),
+    name: "PasswordOpt",
+    gameMessageTypeName: "Hero",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回英雄密码操作",
+    messageName: "ResHeroPasswordOpt",
+    packageName: "com.game.hero",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "HeroProto",
+    protoPackageName: "com.game.hero.proto.HeroProto.ResHeroPasswordOpt",
+    handlerPackageName: "com.game.hero.handler.ResHeroPasswordOptHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108104"),
+    name: "PotentialStimulation",
+    gameMessageTypeName: "Pack",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.pack.manager.PackManager",
+    explain: "请求潜能激发",
+    messageName: "ReqPackPotentialStimulation",
+    packageName: "com.game.pack",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ReqPackPotentialStimulation",
+    handlerPackageName: "com.game.pack.handler.ReqPackPotentialStimulationHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("108204"),
+    name: "PotentialStimulation",
+    gameMessageTypeName: "Pack",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回潜能激发",
+    messageName: "ResPackPotentialStimulation",
+    packageName: "com.game.pack",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "PackProto",
+    protoPackageName: "com.game.pack.proto.PackProto.ResPackPotentialStimulation",
+    handlerPackageName: "com.game.pack.handler.ResPackPotentialStimulationHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("122102"),
+    name: "BuffChoose",
+    gameMessageTypeName: "Tower",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.tower.manager.TowerManager",
+    explain: "请求buff选择",
+    messageName: "ReqTowerBuffChoose",
+    packageName: "com.game.tower",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "TowerProto",
+    protoPackageName: "com.game.tower.proto.TowerProto.ReqTowerBuffChoose",
+    handlerPackageName: "com.game.tower.handler.ReqTowerBuffChooseHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("122202"),
+    name: "BuffChoose",
+    gameMessageTypeName: "Tower",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回buff选择",
+    messageName: "ResTowerBuffChoose",
+    packageName: "com.game.tower",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "TowerProto",
+    protoPackageName: "com.game.tower.proto.TowerProto.ResTowerBuffChoose",
+    handlerPackageName: "com.game.tower.handler.ResTowerBuffChooseHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("122103"),
+    name: "StageReward",
+    gameMessageTypeName: "Tower",
+    type: "CS",
+    queue: "null",
+    manager: "com.game.tower.manager.TowerManager",
+    explain: "请求层数奖励",
+    messageName: "ReqTowerStageReward",
+    packageName: "com.game.tower",
+    reqProjectName: "Client",
+    resProjectName: "GameServerServer",
+    protoName: "TowerProto",
+    protoPackageName: "com.game.tower.proto.TowerProto.ReqTowerStageReward",
+    handlerPackageName: "com.game.tower.handler.ReqTowerStageRewardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+db.getCollection("z_yw_game_message").insert([ {
+    _id: NumberInt("122203"),
+    name: "StageReward",
+    gameMessageTypeName: "Tower",
+    type: "SC",
+    queue: "null",
+    manager: "",
+    explain: "返回层数奖励",
+    messageName: "ResTowerStageReward",
+    packageName: "com.game.tower",
+    reqProjectName: "GameServerServer",
+    resProjectName: "Client",
+    protoName: "TowerProto",
+    protoPackageName: "com.game.tower.proto.TowerProto.ResTowerStageReward",
+    handlerPackageName: "com.game.tower.handler.ResTowerStageRewardHandler",
+    _class: "com.game.code.msg.structs.GameMessage"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_game_message_type
+// ----------------------------
+db.getCollection("z_yw_game_message_type").drop();
+db.createCollection("z_yw_game_message_type");
+
+// ----------------------------
+// Documents of z_yw_game_message_type
+// ----------------------------
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("101"),
+    name: "Heart",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---心跳相关协议",
+    packageName: "com.game.heart",
+    protoName: "HeartProto",
+    protoFileName: "heartMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("102"),
+    name: "Login",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---登录相关协议",
+    packageName: "com.game.login",
+    protoName: "LoginProto",
+    protoFileName: "loginMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("103"),
+    name: "Player",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---玩家相关协议",
+    packageName: "com.game.player",
+    protoName: "PlayerProto",
+    protoFileName: "playerMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("104"),
+    name: "Chat",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---聊天相关协议",
+    packageName: "com.game.chat",
+    protoName: "ChatProto",
+    protoFileName: "chatMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("105"),
+    name: "Map",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---地图副本相关协议",
+    packageName: "com.game.map",
+    protoName: "MapProto",
+    protoFileName: "mapMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("106"),
+    name: "Mail",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---邮件相关协议",
+    packageName: "com.game.mail",
+    protoName: "MailProto",
+    protoFileName: "mailMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("107"),
+    name: "Arena",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---竞技场相关协议",
+    packageName: "com.game.arena",
+    protoName: "ArenaProto",
+    protoFileName: "arenaMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("108"),
+    name: "Pack",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---背包相关协议",
+    packageName: "com.game.pack",
+    protoName: "PackProto",
+    protoFileName: "packMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("109"),
+    name: "Shop",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---商店相关协议",
+    packageName: "com.game.shop",
+    protoName: "ShopProto",
+    protoFileName: "shopMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("110"),
+    name: "Quest",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---任务相关协议",
+    packageName: "com.game.quest",
+    protoName: "QuestProto",
+    protoFileName: "questMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("111"),
+    name: "Activity",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---活动相关协议",
+    packageName: "com.game.activity",
+    protoName: "ActivityProto",
+    protoFileName: "activityMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("112"),
+    name: "Friend",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---好友相关协议",
+    packageName: "com.game.friend",
+    protoName: "FriendProto",
+    protoFileName: "friendMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("113"),
+    name: "Pay",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---充值相关协议",
+    packageName: "com.game.pay",
+    protoName: "PayProto",
+    protoFileName: "payMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("114"),
+    name: "Book",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---图鉴相关协议",
+    packageName: "com.game.book",
+    protoName: "BookProto",
+    protoFileName: "bookMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("115"),
+    name: "Fight",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---战斗相关协议",
+    packageName: "com.game.fight",
+    protoName: "FightProto",
+    protoFileName: "fightMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("116"),
+    name: "Room",
+    clientProjectName: "Client",
+    serverProjectName: "GameRoomServer",
+    explain: "前后端协议---房间相关协议（帧同步游戏）",
+    packageName: "com.game.room",
+    protoName: "RoomProto",
+    protoFileName: "roomMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("117"),
+    name: "Smelter",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---熔炉相关协议",
+    packageName: "com.game.smelter",
+    protoName: "SmelterProto",
+    protoFileName: "smelterMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("118"),
+    name: "Hero",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---英雄相关协议",
+    packageName: "com.game.hero",
+    protoName: "HeroProto",
+    protoFileName: "heroMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("119"),
+    name: "Survivor",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---幸存者相关协议",
+    packageName: "com.game.survivor",
+    protoName: "SurvivorProto",
+    protoFileName: "survivorMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("120"),
+    name: "Wing",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---翅膀相关协议",
+    packageName: "com.game.wing",
+    protoName: "WingProto",
+    protoFileName: "wingMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("121"),
+    name: "Rank",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---排行榜相关协议",
+    packageName: "com.game.rank",
+    protoName: "RankProto",
+    protoFileName: "rankMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("201"),
+    name: "PublicMail",
+    clientProjectName: "GameServerServer",
+    serverProjectName: "GameMailServer",
+    explain: "逻辑服-邮件服相关协议",
+    packageName: "com.game.publicmail",
+    protoName: "PublicMailProto",
+    protoFileName: "publicMailMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+db.getCollection("z_yw_game_message_type").insert([ {
+    _id: NumberInt("122"),
+    name: "Tower",
+    clientProjectName: "Client",
+    serverProjectName: "GameServerServer",
+    explain: "前后端协议---爬塔相关协议",
+    packageName: "com.game.tower",
+    protoName: "TowerProto",
+    protoFileName: "towerMessage.proto",
+    _class: "com.game.code.msg.structs.GameMessageType"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_game_packagedeploy
+// ----------------------------
+db.getCollection("z_yw_game_packagedeploy").drop();
+db.createCollection("z_yw_game_packagedeploy");
+
+// ----------------------------
+// Documents of z_yw_game_packagedeploy
+// ----------------------------
+db.getCollection("z_yw_game_packagedeploy").insert([ {
+    _id: "7403395046927499265",
+    projectName: "Ynd_WebGame_GameServer",
+    localPath: "/data/work_git/Ynd_WebGame_GameServer",
+    remotePath: "ssh://git@47.108.135.62:18222/work/ynd/webgame/Ynd_WebGame_GameServer.git",
+    branch: "master",
+    projectClone: true,
+    packing: "Y",
+    _class: "com.game.packagedeploy.structs.GamePackageDeploy"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_game_server
+// ----------------------------
+db.getCollection("z_yw_game_server").drop();
+db.createCollection("z_yw_game_server");
+
+// ----------------------------
+// Documents of z_yw_game_server
+// ----------------------------
+db.getCollection("z_yw_game_server").insert([ {
+    _id: NumberInt("21101"),
+    serverName: "网页游戏服21101",
+    outIp: "18.178.115.102",
+    inIp: "172.31.38.87",
+    outPort: NumberInt("0"),
+    inPort: NumberInt("0"),
+    httpPort: NumberInt("19401"),
+    rpcServerPort: NumberInt("19451"),
+    memory: "1g",
+    path: "/data/game",
+    simpleName: "webgame21101",
+    db: "webgame_game",
+    dbOutIp: "18.178.115.102",
+    data: "webgame_game_data",
+    dataOutIp: "18.178.115.102",
+    logDb: "webgame_game_log",
+    logDbOutIp: "18.178.115.102",
+    redis: "server,172.31.38.87;center,172.31.38.87",
+    sheetName: "webgame_orange",
+    payId: NumberInt("0"),
+    chatId: NumberInt("0"),
+    arenaId: NumberInt("0"),
+    clansId: NumberInt("0"),
+    friendId: NumberInt("0"),
+    mailId: NumberInt("0"),
+    openServerTime: NumberLong("0"),
+    motherServerId: NumberInt("0"),
+    _class: "com.game.config.YwGameConfig"
+} ]);
+db.getCollection("z_yw_game_server").insert([ {
+    _id: NumberInt("20101"),
+    serverName: "中心服20101",
+    outIp: "18.178.115.102",
+    inIp: "172.31.38.87",
+    outPort: NumberInt("0"),
+    inPort: NumberInt("18201"),
+    httpPort: NumberInt("0"),
+    rpcServerPort: NumberInt("18251"),
+    memory: "500m",
+    path: "/data/game",
+    simpleName: "center20101",
+    db: "webgame_game",
+    dbOutIp: "18.178.115.102",
+    data: "webgame_game_data",
+    dataOutIp: "18.178.115.102",
+    logDb: "webgame_game_log",
+    logDbOutIp: "18.178.115.102",
+    redis: "server,172.31.38.87;center,172.31.38.87",
+    sheetName: "center_orange",
+    areaId: NumberInt("0"),
+    payId: NumberInt("0"),
+    chatId: NumberInt("0"),
+    arenaId: NumberInt("0"),
+    clansId: NumberInt("0"),
+    friendId: NumberInt("0"),
+    mailId: NumberInt("0"),
+    openServerTime: NumberLong("0"),
+    motherServerId: NumberInt("0"),
+    _class: "com.game.config.YwGameConfig"
+} ]);
+db.getCollection("z_yw_game_server").insert([ {
+    _id: NumberInt("20201"),
+    serverName: "充值服20201",
+    outIp: "18.178.115.102",
+    inIp: "172.31.38.87",
+    outPort: NumberInt("0"),
+    inPort: NumberInt("18301"),
+    httpPort: NumberInt("18351"),
+    rpcServerPort: NumberInt("18371"),
+    memory: "500m",
+    path: "/data/game",
+    simpleName: "pay20201",
+    db: "webgame_game",
+    dbOutIp: "18.178.115.102",
+    data: "webgame_game_data",
+    dataOutIp: "18.178.115.102",
+    logDb: "webgame_game_log",
+    logDbOutIp: "18.178.115.102",
+    redis: "server,172.31.38.87;center,172.31.38.87",
+    sheetName: "pay_orange",
+    areaId: NumberInt("0"),
+    payId: NumberInt("0"),
+    chatId: NumberInt("0"),
+    arenaId: NumberInt("0"),
+    clansId: NumberInt("0"),
+    friendId: NumberInt("0"),
+    mailId: NumberInt("0"),
+    openServerTime: NumberLong("0"),
+    motherServerId: NumberInt("0"),
+    _class: "com.game.config.YwGameConfig"
+} ]);
+db.getCollection("z_yw_game_server").insert([ {
+    _id: NumberInt("21201"),
+    serverName: "网页游戏后台服21201",
+    outIp: "18.178.115.102",
+    inIp: "172.31.38.87",
+    outPort: NumberInt("0"),
+    inPort: NumberInt("0"),
+    httpPort: NumberInt("19501"),
+    rpcServerPort: NumberInt("19551"),
+    memory: "500m",
+    path: "/data/game",
+    simpleName: "webbg21201",
+    db: "webgame_game",
+    dbOutIp: "18.178.115.102",
+    data: "webgame_game_data",
+    dataOutIp: "18.178.115.102",
+    logDb: "webgame_game_log",
+    logDbOutIp: "18.178.115.102",
+    redis: "server,172.31.38.87;center,172.31.38.87",
+    sheetName: "webbg_orange",
+    areaId: NumberInt("0"),
+    payId: NumberInt("0"),
+    chatId: NumberInt("0"),
+    arenaId: NumberInt("0"),
+    clansId: NumberInt("0"),
+    friendId: NumberInt("0"),
+    mailId: NumberInt("0"),
+    openServerTime: NumberLong("0"),
+    motherServerId: NumberInt("0"),
+    _class: "com.game.config.YwGameConfig"
+} ]);
+
+// ----------------------------
+// Collection structure for z_yw_timing_data
+// ----------------------------
+db.getCollection("z_yw_timing_data").drop();
+db.createCollection("z_yw_timing_data");
+
+// ----------------------------
+// Documents of z_yw_timing_data
+// ----------------------------

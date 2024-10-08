@@ -38,7 +38,6 @@ public class QuestController {
     public ResponseBean<Object> list(@CurrentPlayer WebPlayer player) {
         try {
             // 请求任务之前先检测每日刷新
-            // 请求刷新
             playerManager.resetPlayer(player, ResetPlayerType.ONEDAYPLAYER);
             ResQuestList info = questManager.buildQuestAll(player);
             if (info != null) {

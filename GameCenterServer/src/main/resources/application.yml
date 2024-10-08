@@ -18,12 +18,12 @@ spring:
   data:
     mongodb:
       #db库连接地址
-      uri: mongodb://xxx:xxx@192.168.2.119:27017/bx_game?authSource=admin
+      uri: mongodb://orange:Orange_qnmw2018_3@192.168.2.119:27017/bx_game?authSource=admin
       #配置库连接地址（自定义）
       data:
-        uri: mongodb://xxx:xxx@192.168.2.119:27017/bx_game_data?authSource=admin
+        uri: mongodb://orange:Orange_qnmw2018_3@192.168.2.119:27017/bx_game_data?authSource=admin
       logs:
-        uri: mongodb://xxx:xxx@192.168.2.119:27017/bx_game_log?authSource=admin
+        uri: mongodb://orange:Orange_qnmw2018_3@192.168.2.119:27017/bx_game_log?authSource=admin
       #根据注解自动生成mongo索引
       auto-index-creation: true
       #生成复合索引，下面的注解放在实体类名上面

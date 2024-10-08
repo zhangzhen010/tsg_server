@@ -132,18 +132,27 @@ public class TwitterManager {
             OffsetDateTime endTime = OffsetDateTime.ofInstant(endTimeInstant, japanZoneId);
             // 测试获取推文
             Get2UsersIdTweetsResponse get2UsersIdTweetsResponse = twitterApi.tweets().usersIdTweets(player.getTwitterUserId()).startTime(startTime).endTime(endTime).execute();
-            log.info("获取用户今日的推文条数：" + get2UsersIdTweetsResponse.getData().size());
-            boolean isComplete = false;
-            for (Tweet tweet : get2UsersIdTweetsResponse.getData()) {
-                if (tweet.getText().contains("@TokyoStupidGame")) {
-                    log.info("玩家[" + player.getPlayerId() + "]完成在Twitter上发推文内容@Tsg任务！");
-                    questManager.updateQuestTarget(player, MyEnumQuestTargetType.X_POST_TAG_TSG, 1);
-                    isComplete = true;
-                    break;
+            if (get2UsersIdTweetsResponse.getErrors() != null && !get2UsersIdTweetsResponse.getErrors().isEmpty()) {
+                for (int i = 0; i < get2UsersIdTweetsResponse.getErrors().size(); i++) {
+                    log.info("获取用户推文错误：" + get2UsersIdTweetsResponse.getErrors().get(i).getTitle() + " " + get2UsersIdTweetsResponse.getErrors().get(i).getDetail());
                 }
             }
-            if (!isComplete) {
-                log.info("玩家[" + player.getPlayerId() + "]今日没有发推文内容@TokyoStupidGame，无法完成任务！");
+            if (get2UsersIdTweetsResponse.getData() != null) {
+                log.info("获取用户今日的推文条数：" + get2UsersIdTweetsResponse.getData().size());
+                boolean isComplete = false;
+                for (Tweet tweet : get2UsersIdTweetsResponse.getData()) {
+                    if (tweet.getText().contains("@TokyoStupidGame")) {
+                        log.info("玩家[" + player.getPlayerId() + "]完成在Twitter上发推文内容@Tsg任务！");
+                        questManager.updateQuestTarget(player, MyEnumQuestTargetType.X_POST_TAG_TSG, 1);
+                        isComplete = true;
+                        break;
+                    }
+                }
+                if (!isComplete) {
+                    log.info("玩家[" + player.getPlayerId() + "]今日没有发推文内容@TokyoStupidGame，无法完成任务！");
+                }
+            } else {
+                log.info("玩家[" + player.getPlayerId() + "]今日没有推文，无法完成任务！");
             }
         } catch (Exception e) {
             log.info("验证twitter分享异常：", e);

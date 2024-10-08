@@ -50,7 +50,7 @@ public class JwtUtil {
      * @return JWT规则生成的token
      */
     public static String getJwtToken(Long userId, String userName) {
-        return Jwts.builder().header().add("typ", "JWT").add("alg", "HS256").and().claim("userId", userId).claim("userName", userName).id(UUID.randomUUID().toString()).expiration(Date.from(Instant.now().plusSeconds(TimeUtil.DAY_SEC))).issuedAt(new Date()).subject("xxx").issuer("xxx").signWith(KEY, ALGORITHM).compact();
+        return Jwts.builder().header().add("typ", "JWT").add("alg", "HS256").and().claim("userId", userId).claim("userName", userName).id(UUID.randomUUID().toString()).expiration(Date.from(Instant.now().plusSeconds(TimeUtil.DAY_SEC))).issuedAt(new Date()).subject("Orange").issuer("orange").signWith(KEY, ALGORITHM).compact();
     }
 
     /**

@@ -19,23 +19,23 @@ server:
     # url
     url: https://api.moonpay.com/v3/currencies/
     # apiKey
-    apiKey: xxx
+    apiKey: pk_test_tF2Du6V1C7BcwuzoJywSaVATf8CK6N3
     # secret
-    secret: xxx
+    secret: sk_test_YJm4nYxWvU8mlnlFfQC0v0qytOFqE0
     # webhook
-    webhook: xxx
+    webhook: wk_test_yH4MaNtg6AXF43YCvRZNnrU3o3945F
 
 #mongodb
 spring:
   data:
     mongodb:
       #db库连接地址
-      uri: mongodb://xxx:xxx@47.108.135.62:27017/webgame_game?authSource=admin
+      uri: mongodb://orange:Orange_qnmw2018_3@47.108.135.62:27017/webgame_game?authSource=admin
       #配置库连接地址（自定义）
       data:
-        uri: mongodb://xxx:xxx@47.108.135.62:27017/webgame_game_data?authSource=admin
+        uri: mongodb://orange:Orange_qnmw2018_3@47.108.135.62:27017/webgame_game_data?authSource=admin
       logs:
-        uri: mongodb://xxx:xxx@47.108.135.62:27017/webgame_game_log?authSource=admin
+        uri: mongodb://orange:Orange_qnmw2018_3@47.108.135.62:27017/webgame_game_log?authSource=admin
       #根据注解自动生成mongo索引
       auto-index-creation: true
       #生成复合索引，下面的注解放在实体类名上面

@@ -9,7 +9,7 @@ import com.game.data.myenum.MyEnumResourceId;
 import com.game.log.manager.LogsManager;
 import com.game.login.structs.ResetPlayerType;
 import com.game.pack.manager.PackManager;
-import com.game.player.structs.GachaCardRefundType;
+import com.game.player.structs.*;
 import com.game.quest.manager.QuestManager;
 import com.game.redis.manager.RedisManager;
 import com.game.redis.structs.RedisKey;
@@ -283,6 +283,22 @@ public class PlayerManager {
     }
 
     /**
+     * 隔天刷新所有玩家数据
+     */
+    public void resetPlayerAll() {
+        synchronized (players) {
+            Set<Entry<Long, WebPlayer>> entrySet = players.getCache().entrySet();
+            for (Entry<Long, WebPlayer> en : entrySet) {
+                log.info("refresh everyday playerId=" + en.getValue().getPlayerId());
+                WebPlayer player = en.getValue();
+                // 每日刷新
+                resetPlayer(player, ResetPlayerType.ONEDAYPLAYER);
+            }
+            log.info("每日刷新玩家完成，刷新数量：" + entrySet.size());
+        }
+    }
+
+    /**
      * 重置 玩家 属性（如 天数属性等）
      *
      * @param player
@@ -314,6 +330,7 @@ public class PlayerManager {
                     player.setLoginDay(player.getLoginDay() + 1);
                     // 保存玩家数据
                     savePlayer(player);
+                    log.info("玩家[" + player.getPlayerId() + "]完成每日数据刷新!");
                 } else {
 
                 }
@@ -557,7 +574,7 @@ public class PlayerManager {
             // 计算返利
             if (gachaCardRefund.getType() == GachaCardRefundType.CANDY.getType()) {
                 // candy与美分比例 1:10，即1000candy=1美元
-                int addCandy = (int) (gachaCard.getUsd() / GameUtil.bfb * gachaCard.getBurnCandyRatio())  * 10;
+                int addCandy = (int) (gachaCard.getUsd() / GameUtil.bfb * gachaCard.getBurnCandyRatio()) * 10;
                 if (addCandy <= 0) {
                     log.error("销毁卡片返还资源异常：卡牌销毁比例异常，playerId=" + playerId + " data=" + JSON.toJSONString(gachaCard) + " addCandy=" + addCandy);
                     return;

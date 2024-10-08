@@ -32,7 +32,7 @@ server:
     # 元数据存放地址（访问元数据所在服务器域名）https://tokyostupidgames.io    http://192.168.110.234:19401
     metaUri: https://tokyostupidgames.io
     # 智能合约程序地址
-    programId: xxx
+    programId: 8CuEsn6Eo17nWBPitifacduC9M214dThi7DZ6iF3GgLE
 
 # 项目相关配置
 orange-web:
@@ -49,12 +49,12 @@ spring:
   data:
     mongodb:
       #db库连接地址 47.108.135.62 192.168.110.111
-      uri: mongodb://xxx:xxx@192.168.110.111:27017/webgame_game?authSource=admin
+      uri: mongodb://orange:Orange_qnmw2018_3@192.168.110.111:27017/webgame_game?authSource=admin
       #配置库连接地址（自定义）
       data:
-        uri: mongodb://xxx:xxx@192.168.110.111:27017/webgame_game_data?authSource=admin
+        uri: mongodb://orange:Orange_qnmw2018_3@192.168.110.111:27017/webgame_game_data?authSource=admin
       logs:
-        uri: mongodb://xxx:xxx@192.168.110.111:27017/webgame_game_log?authSource=admin
+        uri: mongodb://orange:Orange_qnmw2018_3@192.168.110.111:27017/webgame_game_log?authSource=admin
       #根据注解自动生成mongo索引
       auto-index-creation: true
       #生成复合索引，下面的注解放在实体类名上面
