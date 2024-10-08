@@ -19,7 +19,7 @@ tsg server, written in pure Java.
 
 - Java 17+
 
-## 🏗️ Build
+## 🏗️ Setting
 
 1. Before starting the project, you need to install the MongoDB and Redis databases locally.
 
