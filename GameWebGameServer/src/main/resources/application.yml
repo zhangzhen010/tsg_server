@@ -30,11 +30,11 @@ server:
   #discord相关
   discord:
     # 机器人 Token
-    token: MTI3NDk4OTMyMjAwOTA1NTI1NA.Gvy69b.Cnn5pEQAMiE5TkGxFZz8vWDXbs9bn0YtCJHmE0
+    token: MTI3NDk4OTMyMjAwOasdfaTA1NTI1NA.Gvy69b.Cnn5pEQAMiE5TkGxFZz8vWDXbs9bn0YtCJHmE0
     # 登录授权 clientId
-    clientId: 1274989322009055254
+    clientId: 1274989322009123055254
     # 登录授权 clientSecret
-    clientSecret: VGwBCAYfDyJmWdYcaaHp8FOnDkDHMybw
+    clientSecret: VGwBCAYfDyJmWdYcaasdfaHp8FOnDkDHMybw
     # 登录授权 accessTokenUrl
     accessTokenUrl: https://discord.com/api/v10/oauth2/token
     # 登录授权 redirectUrl
@@ -43,44 +43,22 @@ server:
     userInfoUrl: https://discord.com/api/v10/users/@me
   # twitter相关
   twitter:
-    # APP TokyoStupidGame
     # 获取数据 apiKey
-#    apiKey: HZTe8LG9ugbMsmxHqvrL3wzSn
-#    # 获取数据 Secret Key
-#    apiSecretKey: BkRMIpYD4axjeJNpzZqyVMLx1IkW2RrLpd4RIjN8JtDou7QksK
-#    # 获取数据 accessToken
-#    accessToken: 1802732834052042752-b3JRvskjyNOejoRLxsplzy5NIcde0u
-#    # 获取数据 access Token Secret
-#    accessTokenSecret: ZmGdXpxeBaBGz1hbeljJay55VMk7lO0S5dOLb0gGSqNxI
-#    # 需要分享的内容包含的链接（任务：分享关于tsg的文章）
-#    shareUrl: https://tokyostupidgames.io
-#    # 获取数据 bearerToken
-#    bearerToken: AAAAAAAAAAAAAAAAAAAAABfGvgEAAAAAmiKKG%2FnkpQOxlVk28Kzm1fk3z%2FM%3D0Vnq3tBnufRE6LHzxg3KbUVTPCzvREzSKRSlDj1FAkIseJ0dhP
-#    # 登录授权
-#    clientId: NWd3d2RJTGtUS3dpMmViUjYzWVQ6MTpjaQ
-#    # 登录授权
-#    clientSecret: lcm8FWHYD5Fs5s9vAe6CWgiCkTwFU6CSMpuv3Y5UzC7kPQpZDa
-#    # 登录授权 token url
-#    tokenUrl: https://api.twitter.com/2/oauth2/token
-#    # 登录授权 redirectUrl
-#    redirectUri: https://tokyostupidgames.io
-    # APP TokyoStupid
-    # 获取数据 apiKey
-    apiKey: pKG2IG9eNi0NLSOmfV9JIr8Qa
+    apiKey: pKG2IG9eNi0NLSOadsmfV9JIr8Qa
     # 获取数据 Secret Key
-    apiSecretKey: jz3oA6ah5K1O8GzNbjR50b91MX6GObsdZILOL3Q9VOO7eNHyaI
+    apiSecretKey: jz3oA6ah5K1O8GzNbjR50b91MXsdf6GObsdZILOL3Q9VOO7eNHyaI
     # 获取数据 accessToken
-    accessToken: 1802732834052042752-unWzZtnwQX2we5WmpZwaK6Ugsmx49q
+    accessToken: 18027328df34052042752-unWzZtnwQX2we5WmpZwaK6Ugsmx49q
     # 获取数据 access Token Secret
-    accessTokenSecret: r61JaaajK22Nh0RR52GU0KDhu796HHqHWshtmwNr7ATae
+    accessTokenSecret: r61JaaajK22Nssfh0RR52GU0KDu796HHqHWshtmwNr7ATae
     # 需要分享的内容包含的链接（任务：分享关于tsg的文章）
     shareUrl: https://tokyostupidgames.io
     # 获取数据 bearerToken
     bearerToken: AAAAAAAAAAAAAAAAAAAAAPgFvgEAAAAAYKB5YET771n5GQnRcP8%2Ba2RE9xs%3DqOxPMl7cBNEiZPgUp4RgecRmA4etJH1PVTKzPJqY20qP6T7bGR
     # 登录授权
-    clientId: NlVRWi05ZkFYVzVTX3RkWnBsdkY6MTpjaQ
+    clientId: NlVRWi05ZkFYVzVTXsdf3RkWnsdkY6MTpjaQ
     # 登录授权
-    clientSecret: Ttd684YjC_jYBQJAsWQUVTDdYX9lc1mdsvmU1-8Envx6iZ8BpC
+    clientSecret: Ttd684YjC_jYBQJAsWQUVTDsdfdYX9lc1smdsvmU1Envx6iZ8BpC
     # 登录授权 token url
     tokenUrl: https://api.twitter.com/2/oauth2/token
     # 登录授权 redirectUrl
@@ -88,7 +66,7 @@ server:
   # telegram 相关
   telegram:
     # 机器人 Token
-    botToken: 7114922232:AAG0WYZAbFDxMUu5LDXMVAx-McuYt2enV4U
+    botToken: 7114922232:AbG0WYZAbsFDMUu5LDXMVAx-McuYt2enV4U
     # 机器人 name
     botName: cxnx_bot
   # MoonPay
@@ -104,9 +82,9 @@ server:
   # Google登录
   google:
     # clientId
-    clientId: 753235075367-ojfpmgrnold60alog8r8bfapt21k2aut.apps.googleusercontent.com
+    clientId: 753231250767-ojfpmgrnold60alogs8r8bfapt2c1k2aut.apps.googleubsercontent.com
     # clientSecret
-    clientSecret: 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
+    clientSecret: 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
     # redirectUri  https://tokyostupidgames.com   http://localhost:3050
     redirectUri: https://toysverseparty.com
 

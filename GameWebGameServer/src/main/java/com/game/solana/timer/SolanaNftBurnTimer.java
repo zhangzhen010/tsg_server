@@ -23,7 +23,7 @@ public class SolanaNftBurnTimer extends TimerEvent {
 
 
     public SolanaNftBurnTimer() {
-        super(-1, TimeUtil.TWO_MILLIS);
+        super(-1, TimeUtil.FIVE_MILLIS);
     }
 
     @Override

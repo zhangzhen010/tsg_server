@@ -8,6 +8,7 @@ import com.game.redis.structs.RedisKey;
 import com.game.server.task.EverydayTask;
 import com.game.server.thread.ServerThread;
 import com.game.solana.timer.SolanaNftBurnTimer;
+import com.game.solana.timer.SolanaNftTransferSolTimer;
 import com.game.solana.timer.SolanaNftTransferTimer;
 import com.game.thread.manager.ThreadManager;
 import com.game.utils.TimeUtil;
@@ -50,8 +51,9 @@ public class WebServer extends Server implements CommandLineRunner {
     private @Resource RedisManager redisManager;
     private @Resource ThreadManager threadManager;
 
-    private @Resource SolanaNftTransferTimer solanaNftTransferTimer;
+    private @Resource SolanaNftTransferTimer solanaNftTransferNftTimer;
     private @Resource SolanaNftBurnTimer solanaNftBurnTimer;
+    private @Resource SolanaNftTransferSolTimer solanaNftTransferSolTimer;
 
     private @Resource Server2ServerGmService server2ServerGmService;
 
@@ -101,8 +103,9 @@ public class WebServer extends Server implements CommandLineRunner {
             scheduler.start();
             // 启动线程管理
             ServerThread solanaNftThread = threadManager.addThread(threadManager.getSolanaNftThreadName());
-            solanaNftThread.addTimerEvent(solanaNftTransferTimer);
+            solanaNftThread.addTimerEvent(solanaNftTransferNftTimer);
             solanaNftThread.addTimerEvent(solanaNftBurnTimer);
+            solanaNftThread.addTimerEvent(solanaNftTransferSolTimer);
             solanaNftThread.start();
             // 启动grpc（使用grpc通信，关闭内网通信）
             grpcManager.addService(server2ServerGmService);

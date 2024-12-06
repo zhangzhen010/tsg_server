@@ -622,7 +622,6 @@ public class QuestManager {
         try {
             B_quest_target_Bean targetBean = dataManager.c_quest_target_Container.getMap().get(targetId);
             if (targetValue < targetBean.getTargetValue()) {
-                log.info("任务未完成 player=" + player.getPlayerId() + " targetValue=" + targetValue + " < targetBean.getTargetValue()=" + targetBean.getTargetValue() + "targetBean=" + JSON.toJSONString(targetBean));
                 return QuestState.DOING;// 未完成
             } else {
                 return QuestState.COMPLETE;
@@ -734,10 +733,13 @@ public class QuestManager {
                         if (!player.getTwitterUserId().isEmpty()) {
                             twitterManager.checkTwitterPostTagTsg(player);
                         }
+                    } else if (questTargetBean.getTargetType() == MyEnumQuestTargetType.DISCORD_JOIN.getType().intValue()) {
+                        if (discordManager.checkUserJoinDiscordServer(player)) {
+                            updateQuestTarget(player, MyEnumQuestTargetType.getMyEnumQuestTargetType(questTargetBean.getTargetType()), 1);
+                        }
                     } else {
                         // discord身分组检查任务系统（需要twitter付费版才支持获取数据，改为使用discord身分组验证，身分组在discord的逻辑中是可以买卖的，我只管拥有身分组即可完成任务），
-                        // 新增完成任务还必须要先跳转链接
-                        if (quest.isSkip() && discordManager.checkUserRoleInCurrentGuild(player, questBean.getDiscordRoleName())) {
+                        if (discordManager.checkUserRoleInCurrentGuild(player, questBean.getDiscordRoleName())) {
                             updateQuestTarget(player, MyEnumQuestTargetType.getMyEnumQuestTargetType(questTargetBean.getTargetType()), 1);
                         }
                     }
@@ -773,8 +775,11 @@ public class QuestManager {
                 playerQuest.getGetIdSet().add(bean.getId());
                 // 需要身分组领取后就需要移除
                 if (!StringUtil.isEmptyOrNull(bean.getDiscordRoleName())) {
-                    // 移除身分组
-                    discordManager.removeRoleFromUserInCurrentGuild(player, player.getDiscordUserId(), bean.getDiscordRoleName());
+                    // 主线任务不移除身分组，防止用户再次购买身分组
+                    if (bean.getQuestType() != MyEnumQuestType.MAIN.getType().intValue()) {
+                        // 移除身分组
+                        discordManager.removeRoleFromUserInCurrentGuild(player, player.getDiscordUserId(), bean.getDiscordRoleName());
+                    }
                 }
                 // 发放奖励
                 if (bean.getAwardId() > 0) {

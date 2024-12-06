@@ -4,8 +4,11 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.game.config.RestTemplateFactory;
 import com.game.data.myenum.MyEnumQuestTargetType;
+import com.game.data.myenum.MyEnumResourceId;
 import com.game.discord.listener.DiscordListener;
 import com.game.player.manager.PlayerManager;
+import com.game.player.manager.PlayerOtherManager;
+import com.game.player.structs.PlayerPack;
 import com.game.player.structs.WebPlayer;
 import com.game.quest.manager.QuestManager;
 import com.game.utils.StringUtil;
@@ -52,6 +55,7 @@ public class DiscordManager {
     private @Resource QuestManager questManager;
     private @Resource MongoTemplate mongoTemplate;
     private @Resource PlayerManager playerManager;
+    private @Resource PlayerOtherManager playerOtherManager;
     private @Value("${server.discord.clientId}") String clientId;
     private @Value("${server.discord.clientSecret}") String clientSecret;
     private @Value("${server.discord.accessTokenUrl}") String accessTokenUrl;
@@ -74,9 +78,8 @@ public class DiscordManager {
             this.jda = JDABuilder.createDefault(token).enableIntents(Arrays.asList(GatewayIntent.values())).addEventListeners(discordListener).build().awaitReady();
             // 打印服务器信息
             List<Guild> guilds = jda.getGuilds();
-            for (int i = 0; i < guilds.size(); i++) {
-                Guild guild = guilds.get(i);
-                log.info("Discord当前服务器：id=[" + guild.getId() + "] name=[" + guild.getName() + "]");
+            for (Guild guild : guilds) {
+                log.info("*************************Discord当前服务器：id=[" + guild.getId() + "] name=[" + guild.getName() + "]*************************");
             }
         } catch (Exception e) {
             log.error("discord初始化异常：", e);
@@ -131,6 +134,35 @@ public class DiscordManager {
             return false;
         } catch (Exception e) {
             log.error("获取用户在当前服务器中的身分组列表异常：", e);
+            return false;
+        }
+    }
+
+    /**
+     * 检查用户是否在当前服务器中
+     *
+     * @param player
+     * @return
+     */
+    public boolean checkUserJoinDiscordServer(WebPlayer player) {
+        try {
+            if (player.getDiscordUserId().isEmpty()) {
+                return false;
+            }
+            // 一个机器人目前只会加入到一个discord服务器
+            net.dv8tion.jda.api.entities.Guild currentGuild = jda.getGuilds().get(0);
+            Member member = null;
+            try {
+                member = currentGuild.retrieveMemberById(player.getDiscordUserId()).complete();
+            } catch (Exception ignored) {
+            }
+            if (member == null) {
+                log.info("任务：加入discord，检查用户不在当前服务器中，player=" + player.getPlayerId());
+                return false;
+            }
+            return true;
+        } catch (Exception e) {
+            log.error("检查用户是否在当前服务器中异常：", e);
             return false;
         }
     }
@@ -192,7 +224,7 @@ public class DiscordManager {
             // 获取消息内容
             Message message = event.getMessage();
             String content = message.getContentRaw();
-            log.info("discord收到聊天频道信息：channelName=" + message.getChannel().getName() + " message=" + content);
+//            log.info("discord收到聊天频道信息：channelName=" + message.getChannel().getName() + " message=" + content);
             // 检查消息是否为 "GM"(每日任务：在我们的 Discord 频道里说早上好)(改为说任何话都可以)
             if (!content.isEmpty()) {
                 // 收到指定消息，执行奖励逻辑，获取discord用户信息(如果消息是在一个私聊频道中发送的，那么你需要使用 event.getAuthor() 而不是 event.getMember()，因为私聊中没有成员对象)
@@ -204,6 +236,15 @@ public class DiscordManager {
                     // 完成任务
                     questManager.updateQuestTarget(webPlayer, MyEnumQuestTargetType.DISCORD_CHAT, 1);
                     playerManager.savePlayer(webPlayer);
+                    // 如果是特殊指令，则执行对应逻辑
+                    if ("/candy".equalsIgnoreCase(content)) {
+                        PlayerPack playerPack = playerOtherManager.getPlayerPack(webPlayer, false);
+                        if (playerPack != null) {
+                            Long candy = playerPack.getResourceMap().get(MyEnumResourceId.CANDY.getId());
+                            // 机器人发送回discord聊天频道
+                            message.getChannel().sendMessage(event.getMember().getUser().getAsMention() + " Your Candy count: " + candy).queue();
+                        }
+                    }
                 }
             }
         } catch (Exception e) {

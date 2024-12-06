@@ -7,8 +7,10 @@ import com.game.config.OrangeWebConfig;
 import com.game.controller.structs.ResponseBean;
 import com.game.controller.structs.ResponseCodeEnum;
 import com.game.data.define.MyDefineItemChangeReason;
+import com.game.data.myenum.MyEnumCardHistoryType;
 import com.game.data.myenum.MyEnumResourceId;
 import com.game.discord.manager.DiscordManager;
+import com.game.log.manager.LogsManager;
 import com.game.login.structs.ResetPlayerType;
 import com.game.pack.manager.PackManager;
 import com.game.player.manager.PlayerManager;
@@ -57,6 +59,7 @@ public class PlayerController {
     private @Resource PackManager packManager;
     private @Resource RedisManager redisManager;
     private @Resource ThreadManager threadManager;
+    private @Resource LogsManager logsManager;
 
     /**
      * 请求每日刷新
@@ -197,7 +200,7 @@ public class PlayerController {
             // 不为空修改头像地址
             if (!reqUpdatePlayerInfo.getAvatarUrl().isEmpty()) {
                 if (reqUpdatePlayerInfo.getAvatarUrl().length() > 512) {
-                    return ResponseBean.fail("avatarUrl is too long.playerId=" + player.getPlayerId());
+                    return ResponseBean.fail("avatarUrl is too long.playerId=" + player.getPlayerId() + " avatarUrl=" + reqUpdatePlayerInfo.getAvatarUrl());
                 }
                 // 更新玩家头像URL
                 player.setAvatarUrl(reqUpdatePlayerInfo.getAvatarUrl());
@@ -522,6 +525,8 @@ public class PlayerController {
     public ResponseBean<Object> gachaDraw(@CurrentPlayer WebPlayer player, @RequestParam("gachaPoolId") String gachaPoolId, @RequestParam("count") int count) {
         // redisson分布式锁
         boolean publicLock = false;
+        // 是否保存玩家数据
+        boolean savePlayer = false;
         try {
             publicLock = redisManager.publicLock(redisManager.getCenterRedisson(), "gachaDraw", TimeUtil.TWO_MILLIS);
             if (publicLock) {
@@ -539,15 +544,6 @@ public class PlayerController {
                     log.error("请求抽卡失败，卡池已关闭 playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId);
                     return ResponseBean.fail("gachaPool is stop!");
                 }
-                // 计算总权重
-                int totalWeight = 0;
-                for (int i = 0; i < gachaPool.getWeightList().size(); i++) {
-                    totalWeight += gachaPool.getWeightList().get(i).getWeight();
-                }
-                if (totalWeight == 0) {
-                    log.error("卡池总权重为0，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId);
-                    return ResponseBean.fail("totalWeight is 0");
-                }
                 // 验证抽卡价格
                 if (gachaPool.getCandy() <= 0) {
                     log.error("卡池抽卡价格异常，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " cost=" + gachaPool.getCandy());
@@ -557,8 +553,28 @@ public class PlayerController {
                 JSONObject resultJsonObject = new JSONObject();
                 // 记录成功抽取的卡片
                 List<GachaCard> gachaCardList = new ArrayList<>();
+                // 记录需要转账的队列(防止多线程问题，solana线程也在移除操作DataGroup)
+                List<SolanaAddTransferQueueTimer> transferTimerList = new ArrayList<>();
                 // 抽卡
                 for (int i = 0; i < count; i++) {
+                    // 计算总权重
+                    int totalWeight = 0;
+                    for (int j = 0; j < gachaPool.getWeightList().size(); j++) {
+                        // 如果某种类似数量为0，则跳过
+                        boolean isAddWeight = false;
+                        GachaPoolWeight gachaPoolWeight = gachaPool.getWeightList().get(j);
+                        // 如果有至少一个数量大于0，则添加权重
+                        if (gachaPoolWeight.getCardInfoList().stream().anyMatch(cardInfo -> cardInfo.getNum() > 0)) {
+                            isAddWeight = true;
+                        }
+                        if (isAddWeight) {
+                            totalWeight += gachaPool.getWeightList().get(j).getWeight();
+                        }
+                    }
+                    if (totalWeight == 0) {
+                        log.error("卡池总权重为0，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId);
+                        return ResponseBean.fail("totalWeight is 0");
+                    }
                     // 抽卡消耗(抽一次卡扣一次钱，防止扣完因为其他问题，抽卡失败)
                     List<Integer> costList = List.of(MyEnumResourceId.CANDY.getId(), gachaPool.getCandy());
                     // 扣除抽卡消耗
@@ -590,7 +606,7 @@ public class PlayerController {
                         }
                     }
                     if (gachaPoolWeight == null) {
-                        log.error("卡池权重计算失败1，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId);
+                        log.error("卡池权重计算失败1，无法抽卡playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " totalWeight=" + totalWeight + " weightRandom=" + weightRandom);
                         return ResponseBean.fail("gachaPoolWeight is null,playerId=" + player.getPlayerId());
                     }
                     // 从当前选中的权重卡池中，随机获得一个卡片模板组
@@ -622,7 +638,7 @@ public class PlayerController {
                     log.info("抽卡成功playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " gachaCardId=" + gachaCard.getId());
                     // 调用Solana转移NFT
                     SolanaAddTransferQueueTimer solanaAddTransferQueueTimer = new SolanaAddTransferQueueTimer(gachaCard, player.getWalletAddress());
-                    threadManager.getThread(threadManager.getSolanaNftThreadName()).addTimerEvent(solanaAddTransferQueueTimer);
+                    transferTimerList.add(solanaAddTransferQueueTimer);
                     // 不管是否transfer成功，游戏内部要先修改卡片以及卡池数据
                     log.info("Solana添加转移NFT任务 playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " gachaCardId=" + gachaCard.getId());
                     // 记录已被抽取
@@ -649,7 +665,18 @@ public class PlayerController {
                     gachaPool.setDrawCardCount(gachaPool.getDrawCardCount() + 1);
                     // 保存
                     mongoTemplate.save(gachaPool);
+                    savePlayer = true;
+                    // 记录抽卡历史
+                    playerManager.addGachaCardHistory(player.getPlayerId(), gachaCard.getId(), MyEnumCardHistoryType.GACHA.getName(), "", "");
                     log.info("保存卡池成功playerId=" + player.getPlayerId() + " gachaPoolId=" + gachaPoolId + " gachaCardId=" + gachaCard.getId());
+                }
+                if(savePlayer){
+                    playerManager.savePlayer(player);
+                }
+                // 添加transfer timer
+                for (int i = 0; i < transferTimerList.size(); i++) {
+                    SolanaAddTransferQueueTimer solanaAddTransferQueueTimer = transferTimerList.get(i);
+                    threadManager.getThread(threadManager.getSolanaNftThreadName()).addTimerEvent(solanaAddTransferQueueTimer);
                 }
                 // 返回结果
                 resultJsonObject.put("gachaCardList", gachaCardList);
@@ -662,6 +689,9 @@ public class PlayerController {
             log.error("请求抽卡异常：", e);
             return ResponseBean.fail("gachaDraw error: " + e.getMessage());
         } finally {
+            if(savePlayer){
+                playerManager.savePlayer(player);
+            }
             if (publicLock) {
                 log.info("玩家请求抽卡完成，释放分布式锁！player=" + player.getPlayerId());
                 redisManager.publicUnlock(redisManager.getCenterRedisson(), "gachaDraw");
@@ -688,6 +718,7 @@ public class PlayerController {
                     return ResponseBean.fail("burn transactionId is empty,playerId=" + player.getPlayerId());
                 }
             }
+            List<SolanaAddBurnQueueTimer> burnTimerList = new ArrayList<>();
             for (int i = 0; i < reqData.getRefundList().size(); i++) {
                 GachaCardRefund gachaCardRefund = reqData.getRefundList().get(i);
                 // 赋值唯一id
@@ -696,7 +727,30 @@ public class PlayerController {
                 gachaCardRefund.setPlayerId(player.getPlayerId());
                 // 设置创建事件
                 gachaCardRefund.setCreateTime(System.currentTimeMillis());
+                // 记录销毁历史
+                if (gachaCardRefund.getType() == 1) {
+                    GachaCard gachaCard = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(gachaCardRefund.getGachaCardId())), GachaCard.class);
+                    // candy与美分比例 1:10，即1000candy=1美元
+                    int addCandy = (int) (gachaCard.getUsd() / GameUtil.bfb * gachaCard.getBurnCandyRatio()) * 10;
+                    playerManager.addGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.BURN_CANDY.getName(), "" + addCandy, gachaCardRefund.getTransactionId());
+                } else if (gachaCardRefund.getType() == 2) {
+                    playerManager.addGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.BURN_SOL.getName(), gachaCardRefund.getValue(), gachaCardRefund.getTransactionId());
+                } else if (gachaCardRefund.getType() == 3) {
+                    if (player.getShippingAddress().getPostcode().isEmpty() || player.getShippingAddress().getCity().isEmpty() || player.getShippingAddress().getName().isEmpty() || player.getShippingAddress().getPhone().isEmpty() || player.getShippingAddress().getAddress().isEmpty()) {
+                        return ResponseBean.fail("burnCard error: shippingAddress is null!");
+                    }
+                    GachaCard gachaCard = mongoTemplate.findById(gachaCardRefund.getGachaCardId(), GachaCard.class);
+                    GachaCardTemplate gachaCardTemplate = mongoTemplate.findById(gachaCard.getGachaCardTemplateId(), GachaCardTemplate.class);
+                    if (gachaCardTemplate.getShippingCode().isEmpty()) {
+                        log.error("销毁卡片兑换实体卡片异常：卡牌模板未配置物流信息，playerId=" + player.getPlayerId() + " id=" + gachaCard.getId() + " templateId=" + gachaCard.getGachaCardTemplateId() + " shippingCode=" + gachaCardTemplate.getShippingCode());
+                        return ResponseBean.fail("burnCard error: shippingCode is null!");
+                    }
+                    playerManager.addGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.SHIPPING.getName(), "", gachaCardRefund.getTransactionId());
+                }
                 SolanaAddBurnQueueTimer solanaAddBurnQueueTimer = new SolanaAddBurnQueueTimer(gachaCardRefund);
+                burnTimerList.add(solanaAddBurnQueueTimer);
+            }
+            for (SolanaAddBurnQueueTimer solanaAddBurnQueueTimer : burnTimerList) {
                 threadManager.getThread(threadManager.getSolanaNftThreadName()).addTimerEvent(solanaAddBurnQueueTimer);
             }
             // 返回结果
@@ -708,57 +762,97 @@ public class PlayerController {
     }
 
     /**
+     * 临时假的 销毁卡片兑换实物
+     *
+     * @param player
+     * @param reqData
+     * @return
+     */
+//    @PostMapping("/burnCardShipping")
+//    public ResponseBean<Object> burnCardShipping(@CurrentPlayer WebPlayer player, @RequestBody GachaCardRefundList reqData) {
+//        try {
+//            // 验证信息是否正确
+//            for (int i = 0; i < reqData.getRefundList().size(); i++) {
+//                GachaCardRefund gachaCardRefund = reqData.getRefundList().get(i);
+//                if (StringUtil.isEmptyOrNull(gachaCardRefund.getTransactionId())) {
+//                    log.error("销毁卡片交易id为空,playerId=" + player.getPlayerId());
+//                    return ResponseBean.fail("burn transactionId is empty,playerId=" + player.getPlayerId());
+//                }
+//            }
+//            for (int i = 0; i < reqData.getRefundList().size(); i++) {
+//                GachaCardRefund gachaCardRefund = reqData.getRefundList().get(i);
+//                // 赋值唯一id
+//                gachaCardRefund.setId(Long.toString(ID.getId()));
+//                // 赋值玩家id
+//                gachaCardRefund.setPlayerId(player.getPlayerId());
+//                // 设置创建事件
+//                gachaCardRefund.setCreateTime(System.currentTimeMillis());
+//                // 记录销毁历史
+//                if (gachaCardRefund.getType() == 3) {
+//                    playerManager.addGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.SHIPPING.getName(), "", gachaCardRefund.getTransactionId());
+//                    playerManager.updateGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.SHIPPING.getName(),"");
+//                }
+//            }
+//            // 返回结果
+//            return ResponseBean.success();
+//        } catch (Exception e) {
+//            log.error("请求销毁卡片异常：", e);
+//            return ResponseBean.fail("burnCardShipping error: " + e.getMessage());
+//        }
+//    }
+
+    /**
      * 请求销毁卡片（测试使用，不去链上验证）
      *
      * @param player
      * @param cardId
      * @return
      */
-    @PostMapping("/burnCardNoVerify")
-    public ResponseBean<Object> burnCardNoVerify(@CurrentPlayer WebPlayer player, @RequestBody String cardId) {
-        try {
-            // burn成功后，删除卡片信息发放奖励
-            GachaCard gachaCard = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(cardId)), GachaCard.class);
-            // 设置已销毁
-            gachaCard.setBurn(true);
-            gachaCard.setOwnerPlayerId(0);
-            mongoTemplate.save(gachaCard);
-            // 移除玩家背包卡片
-            packManager.removeCard(player, Long.parseLong(cardId), MyDefineItemChangeReason.SOLANA_BURN);
-            // 计算返利
-            // candy与美分比例 1:10，即1000candy=1美元
-            int addCandy = (int) (gachaCard.getUsd() / GameUtil.bfb * gachaCard.getBurnCandyRatio()) * 10;
-            if (addCandy <= 0) {
-                log.error("测试：销毁卡片返还资源异常：卡牌销毁比例异常，playerId=" + player.getPlayerId() + " data=" + JSON.toJSONString(gachaCard) + " addCandy=" + addCandy);
-                return ResponseBean.fail("burnCard error: candy ratio error");
-            }
-            // 返利candy
-            packManager.addItemByConfigId(player, MyEnumResourceId.CANDY.getId(), addCandy, MyDefineItemChangeReason.SOLANA_BURN);
-            log.info("测试：玩家成功销毁卡片返还Candy资源：playerId=" + player.getPlayerId() + " id=" + cardId + " addCandy=" + addCandy);
-            // 返回结果
-            return ResponseBean.success();
-        } catch (Exception e) {
-            log.error("请求销毁卡片异常：", e);
-            return ResponseBean.fail("burnCard error: " + e.getMessage());
-        }
-    }
+//    @PostMapping("/burnCardNoVerify")
+//    public ResponseBean<Object> burnCardNoVerify(@CurrentPlayer WebPlayer player, @RequestBody String cardId) {
+//        try {
+//            // burn成功后，删除卡片信息发放奖励
+//            GachaCard gachaCard = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(cardId)), GachaCard.class);
+//            // 设置已销毁
+//            gachaCard.setBurn(true);
+//            gachaCard.setOwnerPlayerId(0);
+//            mongoTemplate.save(gachaCard);
+//            // 移除玩家背包卡片
+//            packManager.removeCard(player, Long.parseLong(cardId), MyDefineItemChangeReason.SOLANA_BURN);
+//            // 计算返利
+//            // candy与美分比例 1:10，即1000candy=1美元
+//            int addCandy = (int) (gachaCard.getUsd() / GameUtil.bfb * gachaCard.getBurnCandyRatio()) * 10;
+//            if (addCandy <= 0) {
+//                log.error("测试：销毁卡片返还资源异常：卡牌销毁比例异常，playerId=" + player.getPlayerId() + " data=" + JSON.toJSONString(gachaCard) + " addCandy=" + addCandy);
+//                return ResponseBean.fail("burnCard error: candy ratio error");
+//            }
+//            // 返利candy
+//            packManager.addItemByConfigId(player, MyEnumResourceId.CANDY.getId(), addCandy, MyDefineItemChangeReason.SOLANA_BURN);
+//            log.info("测试：玩家成功销毁卡片返还Candy资源：playerId=" + player.getPlayerId() + " id=" + cardId + " addCandy=" + addCandy);
+//            // 返回结果
+//            return ResponseBean.success();
+//        } catch (Exception e) {
+//            log.error("请求销毁卡片异常：", e);
+//            return ResponseBean.fail("burnCard error: " + e.getMessage());
+//        }
+//    }
 
     /**
      * 获取卡片列表
      */
     @GetMapping("/cardList")
-    public ResponseBean<Object> cardList(@CurrentPlayer WebPlayer player, @RequestParam("pageNum") int pageNum, @RequestParam("pageSize") int pageSize, @RequestParam("quality") String quality, @RequestParam("all") boolean all) {
+    public ResponseBean<Object> cardList(@CurrentPlayer WebPlayer player, @RequestParam("pageNum") int pageNum, @RequestParam("pageSize") int pageSize, @RequestParam("rarity") String rarity, @RequestParam("all") boolean all) {
         try {
             Query query = new Query();
-            if (!quality.isEmpty()) {
-                query.addCriteria(Criteria.where("quality").is(quality));
+            if (!rarity.isEmpty()) {
+                query.addCriteria(Criteria.where("rarity").is(rarity));
             }
             // 如果不是查看所有，就只查询未被抽走的
             if (!all) {
                 // 排除已被抽走的卡片
                 query.addCriteria(Criteria.where("ownerPlayerId").is(0));
                 // 排除未被其他卡池选中的卡片（用于展示可被玩家抽取的卡片）
-                query.addCriteria(Criteria.where("gachaPoolId").ne(0));
+                query.addCriteria(Criteria.where("gachaPoolId").ne("0"));
             }
             // 只查询未被销毁的卡片
             query.addCriteria(Criteria.where("burn").is(false));
@@ -775,6 +869,138 @@ public class PlayerController {
         } catch (Exception e) {
             log.error("获取卡片列表异常：", e);
             return ResponseBean.fail("cardList error" + e.getMessage());
+        }
+    }
+
+    /**
+     * 进入网页记录登录游戏日志
+     *
+     * @param player
+     * @return
+     */
+    @GetMapping("/loginLogs")
+    public ResponseBean<Object> loginLogs(@CurrentPlayer WebPlayer player) {
+        try {
+            // 发送日志
+            logsManager.savePlayerLoginLog(player);
+            return ResponseBean.success();
+        } catch (Exception e) {
+            log.error("进入网页记录登录游戏日志异常：", e);
+            return ResponseBean.fail("loginLogs error" + e.getMessage());
+        }
+    }
+
+    /**
+     * 查看卡片历史记录
+     *
+     * @param player
+     * @return
+     */
+    @GetMapping("/cardHistory")
+    public ResponseBean<Object> cardHistory(@CurrentPlayer WebPlayer player) {
+        try {
+            List<GachaCardHistory> list = mongoTemplate.find(Query.query(Criteria.where("playerId").is(player.getPlayerId())), GachaCardHistory.class);
+            JSONObject dataTableJson = new JSONObject();
+            // 倒叙
+            Collections.reverse(list);
+            // 放入卡片
+            for (GachaCardHistory gachaCardHistory : list) {
+                gachaCardHistory.setGachaCard(mongoTemplate.findOne(Query.query(Criteria.where("_id").is(gachaCardHistory.getGachaCardId())), GachaCard.class));
+            }
+            dataTableJson.put("history", list);
+            return ResponseBean.success(dataTableJson);
+        } catch (Exception e) {
+            log.error("查看卡片历史记录异常：", e);
+            return ResponseBean.fail("cardHistory error" + e.getMessage());
+        }
+    }
+
+    /**
+     * 获取收货地址信息
+     *
+     * @param player
+     * @return
+     */
+    @GetMapping("/getShippingAddress")
+    public ResponseBean<Object> getShippingAddress(@CurrentPlayer WebPlayer player) {
+        try {
+            JSONObject dataTableJson = new JSONObject();
+            dataTableJson.put("shippingAddress", player.getShippingAddress());
+            return ResponseBean.success(dataTableJson);
+        } catch (Exception e) {
+            log.error("获取收货地址信息异常：", e);
+            return ResponseBean.fail("getShippingAddress error" + e.getMessage());
+        }
+    }
+
+    /**
+     * 修改收货地址信息
+     *
+     * @param player
+     * @return
+     */
+    @PostMapping("/upShippingAddress")
+    public ResponseBean<Object> upShippingAddress(@CurrentPlayer WebPlayer player, @RequestBody PlayerShippingAddress reqData) {
+        try {
+            player.setShippingAddress(reqData);
+            playerManager.savePlayer(player);
+            return ResponseBean.success();
+        } catch (Exception e) {
+            log.error("修改收货地址信息异常：", e);
+            return ResponseBean.fail("upShippingAddress error" + e.getMessage());
+        }
+    }
+
+    /**
+     * 请求聊天消息
+     */
+    @GetMapping("/chatMessage")
+    public ResponseBean<Object> chatMessage(@CurrentPlayer WebPlayer player) {
+        try {
+            // 获取聊天记录
+            TsgChat tsgChat = mongoTemplate.findById(player.getPlayerId(), TsgChat.class);
+            if (tsgChat == null) {
+                long currentTime = System.currentTimeMillis();
+                tsgChat = new TsgChat();
+                tsgChat.setPlayerId(player.getPlayerId());
+                tsgChat.setCreateTime(currentTime);
+                tsgChat.setUpdateTime(currentTime);
+                mongoTemplate.insert(tsgChat);
+            }
+            JSONObject dataTableJson = new JSONObject();
+            dataTableJson.put("msgList", tsgChat.getMsgList());
+            return ResponseBean.success(dataTableJson);
+        } catch (Exception e) {
+            log.error("请求聊天消息异常：", e);
+            return ResponseBean.fail("chatMessage error" + e.getMessage());
+        }
+    }
+
+    /**
+     * 发送聊天消息
+     */
+    @PostMapping("/sendChatMessage")
+    public ResponseBean<Object> sendChatMessage(@CurrentPlayer WebPlayer player, @RequestBody ReqPlayerContactMeInfo reqData) {
+        try {
+            if (reqData.getMessage().length() > 500) {
+                return ResponseBean.fail("contactMe message too long");
+            }
+            // 在数据库中，查找此用户的聊天数据记录，追加进去(这里有可能与后台网站同时保存，先不管)
+            TsgChat tsgChat = mongoTemplate.findById(player.getPlayerId(), TsgChat.class);
+            TsgChatMessage tsgChatMessage = new TsgChatMessage();
+            tsgChatMessage.setType(0);
+            tsgChatMessage.setContent(reqData.getMessage());
+            tsgChatMessage.setSendTime(System.currentTimeMillis());
+            if (tsgChat.getMsgList().size() > 100) {
+                tsgChat.getMsgList().remove(0);
+            }
+            tsgChat.getMsgList().add(tsgChatMessage);
+            tsgChat.setUpdateTime(System.currentTimeMillis());
+            mongoTemplate.save(tsgChat);
+            return ResponseBean.success(tsgChatMessage);
+        } catch (Exception e) {
+            log.error("发送聊天消息异常：", e);
+            return ResponseBean.fail("sendChatMessage error" + e.getMessage());
         }
     }
 

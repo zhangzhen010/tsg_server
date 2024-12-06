@@ -75,7 +75,7 @@ public class SolanaManager {
     /**
      * 钱包主账户账户私钥
      */
-    private final String secretKey = "2TN32qYEM51YE7WrJ7jSRsGjAxiKdyoNNbskRxYpnJFB5ccHRPsVa7zDKauVnKCFeJcrqwtbemHJTkpZXn4ak6pj";
+    private final String secretKey = "**********************************************************************************";
     /**
      * 钱包账户公钥
      */

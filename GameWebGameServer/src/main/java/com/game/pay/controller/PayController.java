@@ -6,10 +6,7 @@ import com.game.pay.manager.PayManager;
 import com.game.player.structs.WebPlayer;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 充值
@@ -39,6 +36,59 @@ public class PayController {
         } catch (Exception e) {
             log.error("请求MoonPayUrl签名异常：", e);
             return ResponseBean.fail("request moonPay sign exception:" + e.getMessage());
+        }
+    }
+
+    /**
+     * 请求钱包充值创建订单
+     *
+     * @param player
+     * @param baseCurrencyCode
+     * @param baseCurrencyAmount
+     * @param currencyCode
+     * @return
+     */
+    @GetMapping("/reqWalletPayCreateOrder")
+    public ResponseBean<Object> reqWalletPayCreateOrder(@CurrentPlayer WebPlayer player, @RequestParam("baseCurrencyCode") String baseCurrencyCode, @RequestParam("baseCurrencyAmount") int baseCurrencyAmount, @RequestParam("currencyCode") String currencyCode) {
+        try {
+            return payManager.reqWalletPayCreateOrder(player, baseCurrencyCode, baseCurrencyAmount, currencyCode);
+        } catch (Exception e) {
+            log.error("请求钱包充值创建订单异常：", e);
+            return ResponseBean.fail("request wallet pay create order exception:" + e.getMessage());
+        }
+    }
+
+    /**
+     * 请求钱包充值
+     *
+     * @param player
+     * @param gameOrderId
+     * @param transactionId
+     * @return
+     */
+    @GetMapping("/reqWalletPay")
+    public ResponseBean<Object> reqWalletPay(@CurrentPlayer WebPlayer player, @RequestParam("gameOrderId") String gameOrderId, @RequestParam("transactionId") String transactionId) {
+        try {
+            return payManager.reqWalletPay(player, gameOrderId, transactionId);
+        } catch (Exception e) {
+            log.error("请求钱包充值异常：", e);
+            return ResponseBean.fail("request wallet pay exception:" + e.getMessage());
+        }
+    }
+
+    /**
+     * 请求钱包充值
+     *
+     * @param player
+     * @return
+     */
+    @GetMapping("/reqWalletPayState")
+    public ResponseBean<Object> reqWalletPayState(@CurrentPlayer WebPlayer player) {
+        try {
+            return payManager.reqWalletPayState(player);
+        } catch (Exception e) {
+            log.error("请求钱包充值异常：", e);
+            return ResponseBean.fail("request wallet pay exception:" + e.getMessage());
         }
     }
 

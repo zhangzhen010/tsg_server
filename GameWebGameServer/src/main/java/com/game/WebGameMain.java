@@ -2,6 +2,7 @@ package com.game;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * 网页游戏服务器入口
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @time 2024/8/12 20:50
  */
 @SpringBootApplication
+@EnableAsync
 public class WebGameMain {
     public static void main(String[] args) {
         // 忽略slf4j-simpler（第三方jar使用）实现的info及以下的日志

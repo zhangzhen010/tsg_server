@@ -1,9 +1,11 @@
 package com.game.player.manager;
 
 import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
 import com.game.cache.impl.PlayerCache;
 import com.game.data.define.MyDefineConstant;
 import com.game.data.define.MyDefineItemChangeReason;
+import com.game.data.myenum.MyEnumCardHistoryType;
 import com.game.data.myenum.MyEnumQuestType;
 import com.game.data.myenum.MyEnumResourceId;
 import com.game.log.manager.LogsManager;
@@ -18,7 +20,9 @@ import com.game.server.SaveServer;
 import com.game.server.WebServer;
 import com.game.utils.GameUtil;
 import com.game.utils.ID;
+import com.game.utils.StringUtil;
 import com.game.utils.TimeUtil;
+import com.game.utils.openlogi.OpenLogiUtils;
 import jakarta.annotation.Resource;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
@@ -27,6 +31,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -53,6 +58,7 @@ public class PlayerManager {
     private @Resource SaveManager saveManager;
     private @Resource LogsManager logsManager;
     private @Resource PackManager packManager;
+    private @Resource OpenLogiUtils openLogiUtils;
 
     /**
      * 数据库日志
@@ -167,7 +173,7 @@ public class PlayerManager {
      * @param userName
      * @return
      */
-    public WebPlayer createPlayer(String userName, String walletAddress, String googleEmail) {
+    public WebPlayer createPlayer(String userName, String walletAddress, String email) {
         try {
             // 获取玩家全局唯一id
             long newPlayerId = 0;
@@ -185,7 +191,7 @@ public class PlayerManager {
             player.setPlayerName(playerName);
             player.setCreateTime(System.currentTimeMillis());
             player.setWalletAddress(walletAddress);
-            player.setEmail(googleEmail);
+            player.setEmail(email);
             // 添加到本地缓存
             players.put(player.getPlayerId(), player);
             // 初始化玩家其他数据
@@ -480,8 +486,8 @@ public class PlayerManager {
             checkPlayerNewVersion(player);
             // 检查玩家任务是否过期
             questManager.checkPlayerQuest(player);
-            // 发送日志
-            logsManager.savePlayerLoginLog(player);
+            // 发送日志(因为token有效期为1天，有时候不会登录，改为客户端进入网页主动请求发送)
+//            logsManager.savePlayerLoginLog(player);
             // 进入游戏保存一次数据
             savePlayer(player);
             // 设置玩家最后一次登录的逻辑服务器id到redis
@@ -508,6 +514,8 @@ public class PlayerManager {
                     playerPack.getResourceMap().put(resourceId, 0L);
                 }
             }
+            // 是否有新增任务
+            questManager.questReceive(player, MyEnumQuestType.MAIN);
             {
                 /* 用于玩家版本兼容统一处理，根据不同的版本号做不同的兼容处理 */
                 for (int i = player.getVer(); i < PLAYER_VERSION; i++) {
@@ -529,23 +537,18 @@ public class PlayerManager {
      * 销毁卡片返还资源
      *
      * @param playerId
-     * @param gachaCardId
+     * @param gachaCard
      * @param gachaCardRefund
      */
-    public void burnCard(long playerId, String gachaCardId, GachaCardRefund gachaCardRefund) {
+    public void burnCard(long playerId, GachaCard gachaCard, GachaCardRefund gachaCardRefund) {
         try {
             WebPlayer player = getPlayer(playerId, true);
             if (player == null) {
                 log.error("销毁卡片返还资源异常：玩家不存在，playerId=" + playerId);
                 return;
             }
-            GachaCard gachaCard = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(gachaCardId)), GachaCard.class);
-            if (gachaCard == null) {
-                log.error("销毁卡片返还资源异常：卡牌不存在，playerId=" + player.getPlayerId() + " id=" + gachaCardId);
-                return;
-            }
             if (gachaCard.getOwnerPlayerId() <= 0) {
-                log.error("销毁卡片返还资源异常：卡牌还未被抽取，playerId=" + player.getPlayerId() + " id=" + gachaCardId);
+                log.error("销毁卡片返还资源异常：卡牌不属于此玩家，playerId=" + player.getPlayerId() + " ownerPlayerId=" + gachaCard.getOwnerPlayerId() + " id=" + gachaCard.getId());
                 return;
             }
             // 卡片被玩家在网上交易了，这里判断不了
@@ -554,7 +557,7 @@ public class PlayerManager {
 //                return;
 //            }
             if (gachaCard.isBurn()) {
-                log.error("销毁卡片返还资源异常：卡牌已销毁，playerId=" + playerId + " id=" + gachaCardId);
+                log.error("销毁卡片返还资源异常：卡牌已销毁，playerId=" + playerId + " id=" + gachaCard.getId());
                 return;
             }
             if (gachaCard.getBurnCandyRatio() < 0 || gachaCard.getBurnCandyRatio() > GameUtil.bfb) {
@@ -570,7 +573,7 @@ public class PlayerManager {
             gachaCard.setOwnerPlayerId(0);
             mongoTemplate.save(gachaCard);
             // 移除玩家背包卡片
-            packManager.removeCard(player, Long.parseLong(gachaCardId), MyDefineItemChangeReason.SOLANA_BURN);
+            packManager.removeCard(player, Long.parseLong(gachaCard.getId()), MyDefineItemChangeReason.SOLANA_BURN);
             // 计算返利
             if (gachaCardRefund.getType() == GachaCardRefundType.CANDY.getType()) {
                 // candy与美分比例 1:10，即1000candy=1美元
@@ -579,18 +582,94 @@ public class PlayerManager {
                     log.error("销毁卡片返还资源异常：卡牌销毁比例异常，playerId=" + playerId + " data=" + JSON.toJSONString(gachaCard) + " addCandy=" + addCandy);
                     return;
                 }
+                log.info("玩家销毁卡片，即将返还Candy资源：playerId=" + playerId + " 卡片id=" + gachaCard.getId() + " 卡片价值usd=" + gachaCard.getUsd() + " 返现candy比例=" + gachaCard.getBurnCandyRatio() + " 最终获得candy=" + addCandy);
                 // 返利candy
                 packManager.addItemByConfigId(player, MyEnumResourceId.CANDY.getId(), addCandy, MyDefineItemChangeReason.SOLANA_BURN);
-                log.info("玩家成功销毁卡片返还Candy资源：playerId=" + playerId + " id=" + gachaCardId + " addCandy=" + addCandy);
+                log.info("玩家成功销毁卡片返还Candy资源：playerId=" + playerId + " id=" + gachaCard.getId() + " addCandy=" + addCandy);
             } else if (gachaCardRefund.getType() == GachaCardRefundType.FT.getType()) {
-                // 设置卡片xiangq
+                // 记录选择返现sol数量
                 gachaCardRefund.setGachaCard(gachaCard);
                 mongoTemplate.insert(gachaCardRefund);
-                log.info("玩家成功销毁卡片返还FT资源(仅作记录)：playerId=" + playerId + " id=" + gachaCardId + " gachaCardRefundId=" + gachaCardRefund.getId());
+                log.info("玩家成功销毁卡片返还FT资源(仅作记录)：playerId=" + playerId + " id=" + gachaCard.getId() + " gachaCardRefundId=" + gachaCardRefund.getId());
+            } else if (gachaCardRefund.getType() == GachaCardRefundType.SHIPPING.getType()) {
+                // 通过卡片模板id获取卡片模板数据
+                GachaCardTemplate gachaCardTemplate = mongoTemplate.findById(gachaCard.getGachaCardTemplateId(), GachaCardTemplate.class);
+                if (gachaCardTemplate == null) {
+                    log.error("销毁卡片返还资源异常：卡牌模板不存在，playerId=" + playerId + " id=" + gachaCard.getId() + " templateId=" + gachaCard.getGachaCardTemplateId());
+                    return;
+                }
+                if (gachaCardTemplate.getShippingCode().isEmpty()) {
+                    log.error("销毁卡片返还资源异常：卡牌模板未配置物流信息，playerId=" + playerId + " id=" + gachaCard.getId() + " templateId=" + gachaCard.getGachaCardTemplateId() + " shippingCode=" + gachaCardTemplate.getShippingCode());
+                    return;
+                }
+                player.getShippingAddress().setCode(gachaCardTemplate.getShippingCode());
+                JSONObject resultJsonObject = openLogiUtils.send(player.getShippingAddress());
+                if (resultJsonObject == null) {
+                    log.error("销毁卡片返还资源异常：卡牌模板物流信息异常，playerId=" + playerId + " id=" + gachaCard.getId() + " templateId=" + gachaCard.getGachaCardTemplateId() + " shippingCode=" + gachaCardTemplate.getShippingCode());
+                } else {
+                    log.info("销毁卡片返还实体卡片，已调用openlogi物流接口：playerId=" + playerId + " id=" + gachaCard.getId() + " shippingCode=" + gachaCardTemplate.getShippingCode());
+                    OpenLogiShipments openLogiShipments = new OpenLogiShipments();
+                    openLogiShipments.setId(resultJsonObject.getString("id"));
+                    openLogiShipments.setData(resultJsonObject);
+                    openLogiShipments.setCreateTime(System.currentTimeMillis());
+                    mongoTemplate.insert(openLogiShipments);
+                }
             }
-            log.info("玩家成功销毁卡片返还资源：playerId=" + playerId + " id=" + gachaCardId);
+            savePlayer(player);
+            log.info("玩家成功销毁卡片返还资源：playerId=" + playerId + " id=" + gachaCard.getId());
+            // 更新销毁卡片历史
+            if (gachaCardRefund.getType() == 1) {
+                updateGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.BURN_CANDY.getName(), gachaCardRefund.getTransactionId());
+            } else if (gachaCardRefund.getType() == 2) {
+                updateGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.BURN_SOL.getName(), gachaCardRefund.getTransactionId());
+            } else if (gachaCardRefund.getType() == 3) {
+                updateGachaCardHistory(player.getPlayerId(), gachaCardRefund.getGachaCardId(), MyEnumCardHistoryType.SHIPPING.getName(), gachaCardRefund.getTransactionId());
+            }
         } catch (Exception e) {
             log.error("销毁卡片返还资源异常：", e);
+        }
+    }
+
+    /**
+     * 记录抽卡历史
+     *
+     * @param playerId
+     * @param gachaCardId
+     * @param historyType
+     * @param value
+     * @param transactionId
+     */
+    public void addGachaCardHistory(long playerId, String gachaCardId, String historyType, String value, String transactionId) {
+        try {
+            GachaCardHistory gachaCardHistory = new GachaCardHistory();
+            gachaCardHistory.setId(ID.getId());
+            gachaCardHistory.setPlayerId(playerId);
+            gachaCardHistory.setGachaCardId(gachaCardId);
+            gachaCardHistory.setHistoryType(historyType);
+            gachaCardHistory.setValue(value);
+            gachaCardHistory.setTransactionId(transactionId);
+            gachaCardHistory.setState(0);
+            gachaCardHistory.setCreateTime(System.currentTimeMillis());
+            mongoTemplate.insert(gachaCardHistory);
+        } catch (Exception e) {
+            log.error("记录抽卡历史：", e);
+        }
+    }
+
+    /**
+     * 更新抽卡历史
+     */
+    public void updateGachaCardHistory(long playerId, String gachaCardId, String historyType, String transactionId) {
+        try {
+            Query query = Query.query(Criteria.where("playerId").is(playerId)).addCriteria(Criteria.where("gachaCardId").is(gachaCardId)).addCriteria(Criteria.where("historyType").is(historyType));
+            Update update = new Update();
+            update.set("state", 1);
+            if (!StringUtil.isEmptyOrNull(transactionId)) {
+                update.set("transactionId", transactionId);
+            }
+            mongoTemplate.updateFirst(query, update, GachaCardHistory.class);
+        } catch (Exception e) {
+            log.error("更新抽卡历史：", e);
         }
     }
 

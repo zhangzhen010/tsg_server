@@ -19,16 +19,16 @@ import org.springframework.stereotype.Component;
 @Component
 @Getter
 @Setter
-public class SolanaNftTransferTimer extends TimerEvent {
+public class SolanaNftTransferSolTimer extends TimerEvent {
 
 
-    public SolanaNftTransferTimer() {
-        super(-1, TimeUtil.FIVE_MILLIS);
+    public SolanaNftTransferSolTimer() {
+        super(-1, TimeUtil.TWO_MILLIS);
     }
 
     @Override
     public void action() {
-        SpringBootUtils.getBean(SolanaManager.class).transfer();
+        SpringBootUtils.getBean(SolanaManager.class).transferSol();
         super.action();
     }
 

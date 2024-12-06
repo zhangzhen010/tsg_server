@@ -132,6 +132,7 @@ public class PublicInfoController {
             // 构建查询条件：startTime 小于当前时间且 endTime 大于当前时间
             Criteria criteria = Criteria.where("startTime").lte(currentTimeMillis).and("endTime").gte(currentTimeMillis);
             Query query = new Query(criteria);
+            query.addCriteria(Criteria.where("delete").is(false));
             List<GachaPool> poolList = mongoTemplate.find(query, GachaPool.class);
             // 推荐的卡池
             List<GachaPool> recommendPoolList = new ArrayList<>();
@@ -213,7 +214,7 @@ public class PublicInfoController {
             gachaCard.setName("name");
             gachaCard.setImage("www.google.com");
             gachaCard.setCost(888);
-            gachaCard.setQuality("SSR");
+            gachaCard.setRarity("SSR");
             gachaCard.setOwnerPlayerId(10001);
             List<GachaCard> gachaCardList = new ArrayList<>();
             gachaCardList.add(gachaCard);
@@ -234,7 +235,7 @@ public class PublicInfoController {
         try {
             GachaDrawLog gachaDrawLog = new GachaDrawLog();
             gachaDrawLog.setId(1L);
-            gachaDrawLog.setGachaPoolId(1L);
+            gachaDrawLog.setGachaPoolId("1");
             gachaDrawLog.setGachaPoolName("gachaPoolName");
             gachaDrawLog.setPlayerId(10001L);
             gachaDrawLog.setPrice(888);
@@ -260,6 +261,14 @@ public class PublicInfoController {
             GachaCard gachaCard = mongoTemplate.findOne(Query.query(Criteria.where("id").is(cardId)), GachaCard.class);
             if (gachaCard != null) {
                 return gachaCard;
+            }
+            // mintCollection临时弄一个图片
+            if (cardId.equals("0")) {
+                gachaCard = mongoTemplate.findById("7440019787838652421", GachaCard.class);
+                log.info("测试查看mintCollection的json数据！");
+                if (gachaCard != null) {
+                    return gachaCard;
+                }
             }
             return nullCard;
         } catch (Exception e) {

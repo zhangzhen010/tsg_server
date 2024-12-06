@@ -32,7 +32,7 @@ server:
     # 元数据存放地址（访问元数据所在服务器域名）https://tokyostupidgames.io    http://192.168.110.234:19401
     metaUri: https://tokyostupidgames.io
     # 智能合约程序地址
-    programId: 8CuEsn6Eo17nWBPitifacduC9M214dThi7DZ6iF3GgLE
+    programId: 8CuEsn6Eo17nWBPitifaasdcduC9M2asdf14dThi7DZ6iF3GgLE
 
 # 项目相关配置
 orange-web:

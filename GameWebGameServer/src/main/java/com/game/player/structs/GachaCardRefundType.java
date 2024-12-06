@@ -21,6 +21,10 @@ public enum GachaCardRefundType {
      * 销毁卡片获得同质化代币
      */
     FT(2),
+    /**
+     * 销毁卡片获得实体卡片
+     */
+    SHIPPING(3),
 
     ;
 
